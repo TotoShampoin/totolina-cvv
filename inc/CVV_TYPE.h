@@ -1,5 +1,6 @@
 #ifndef __CVV_TYPE
 
+#define OOB    -1
 #define NBLINE  7
 #define NBPOS  24
 
