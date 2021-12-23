@@ -31,16 +31,31 @@ Chips * createChips(ChipsType type, int line, int position, int life, int price,
     return C;
 }
 
-int appendChips(Chips * CL, Chips * C) {
-    ;
+int appendChips(Chips ** CL, Chips * C) {
+    if ( C==NULL)return 0;
+    if (*CL == NULL){
+        *CL= C;
+        return 1;
+    }
+    Chips * tmp_c = *CL;
+    while( tmp_c->next != NULL ) {
+        tmp_c = tmp_c->next;
+    }
+    tmp_c->next = C;
+    return 1 ;
 }
 
 Chips * shiftChips(Chips * PC) {
-    ;
+    Chips *C , *NC;
+    if(PC->next != NULL) C = PC->next; else return NULL; 
+    if(C->next != NULL) NC = C->next; else NC = NULL; 
+    PC->next = NC;
+    C->next =NULL;
+    return C ;
 }
 
 void freeChips(Chips * C) {
-    ;
+    if(C !=NULL) free(C);
 }
 
 

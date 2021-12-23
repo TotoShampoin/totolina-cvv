@@ -5,7 +5,7 @@ Chips * allocChips();
 int initChips(Chips * chips, ChipsType type, int line, int position, int life, int price, int power);
 Chips * createChips(ChipsType type, int line, int position, int life, int price, int power);
 
-int appendChips(Chips * chips_list, Chips * this_chips);
+int appendChips(Chips ** chips_list, Chips * this_chips);
 
 Chips * shiftChips(Chips * prev_chips);
 
