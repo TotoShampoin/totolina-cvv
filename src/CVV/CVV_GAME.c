@@ -1,7 +1,7 @@
 #include <stdlib.h>
-#include "../../inc/CVV_GAME.h"
+#include <CVV_GAME.h>
 
-int chips_shoot_virus(Chips * C, Virus * VL) {
+int chipsShootVirus(Chips * C, Virus * VL) {
     while(VL != NULL){
         if ( C->line == VL->line && VL->prev_line == NULL) {
             VL-> life -= C-> power ;
@@ -11,7 +11,7 @@ int chips_shoot_virus(Chips * C, Virus * VL) {
     return 1;
 }
 
-int virus_mange_chips(Virus * V, Chips * CL) {
+int virusEatChips(Virus * V, Chips * CL) {
     while(CL != NULL) {
         if( CL->line == V->line && CL->position == V->position+1 ) {
             CL->life -= V->power;
@@ -21,7 +21,7 @@ int virus_mange_chips(Virus * V, Chips * CL) {
     return 1;
 }
 
-int virus_avance(Virus * V, Chips * CL) {
+int virusMove(Virus * V, Chips * CL) {
     if( V->position > -1 ) {
         int will_advance = 1;
         while( CL !=NULL ) {
@@ -41,25 +41,25 @@ int virus_avance(Virus * V, Chips * CL) {
     } return 0;
 }
 
-int action_chips(Game * game) {
+int actionChips(Game * game) {
     Chips * C = game->chips;
     while( C != NULL ) {
-        chips_shoot_virus(C, game->virus);
+        chipsShootVirus(C, game->virus);
         C = C->next;
     };
     return 1;
 }
 
-int action_virus(Game * game) {
+int actionVirus(Game * game) {
     Virus * V = game->virus;
     while( V != NULL ) {
-        virus_mange_chips(V, game->chips);
-        virus_avance(V, game->chips);
+        virusEatChips(V, game->chips);
+        virusMove(V, game->chips);
         V = V->next;
     }
 }
 
-int spawn_virus(Game * game) {
+int spawnVirus(Game * game) {
     Virus * VL = game->virus;
     while( VL != NULL && VL->turn <= game->turn ) {
         if( VL->turn == game->turn ) {
@@ -69,7 +69,7 @@ int spawn_virus(Game * game) {
     }
 }
 
-int remove_dead_chips(Chips * CL) {
+int removeDeadChips(Chips * CL) {
     Chips * prev = CL;
     while( CL != NULL ) {
         if( CL->life <= 0 ) {
@@ -81,7 +81,7 @@ int remove_dead_chips(Chips * CL) {
     return 1;
 }
 
-int remove_dead_virus(Virus * VL) {
+int removeDeadVirus(Virus * VL) {
     Virus * prev = VL;
     while( VL != NULL ) {
         if( VL->life <= 0 ) {
@@ -93,11 +93,11 @@ int remove_dead_virus(Virus * VL) {
     return 1;
 }
 
-int tour_jeu(Game * game) {
-    spawn_virus(game);
-    action_chips(game);
-    action_virus(game);
-    remove_dead_chips(game->chips);
-    remove_dead_virus(game->virus);
+int gameTurn(Game * game) {
+    spawnVirus(game);
+    actionChips(game);
+    actionVirus(game);
+    removeDeadChips(game->chips);
+    removeDeadVirus(game->virus);
     game->turn ++;
 }

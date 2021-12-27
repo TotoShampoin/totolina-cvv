@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../inc/CVV_FILE.h"
-#include "../../inc/CVV_DATA.h"
+#include <CVV_FILE.h>
+#include <CVV_DATA.h>
 
 int getLine(char * line, int len, FILE * f) {
     char c; int i = 0;

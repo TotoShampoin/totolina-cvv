@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "../../inc/CVV_DATA.h"
+#include <CVV_DATA.h>
 
 Chips * allocChips() {
     Chips * C;
