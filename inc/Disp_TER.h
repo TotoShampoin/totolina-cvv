@@ -1,0 +1,17 @@
+#include <CVV_TYPE.h>
+
+#define ELMT_STR_LEN 3
+
+void getChipsString(char * str, Chips * chips);
+
+void getVirusString(char * str, Virus * virus);
+
+void dispUpcomingWave(Virus * virus_list);
+
+void dispChipsPrompt(int current_price);
+
+void dispGame(Game * game);
+
+int  inputChips(char * type, int * line, int * position);
+
+int promptConfirm(char type, int line, int position);
