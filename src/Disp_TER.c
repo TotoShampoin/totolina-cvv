@@ -3,13 +3,15 @@
 #include <Disp_TER.h>
 
 void getChipsString(char * str, Chips * chips) {
-    sprintf(str, "%c%d", chips->type, chips->life);
-    sprintf(str, "%*s", ELMT_STR_LEN, str);
+    char s[ELMT_STR_LEN+1];
+    sprintf(s, "%c%d", chips->type, chips->life);
+    sprintf(str, "%-*s", ELMT_STR_LEN, s);
 }
 
 void getVirusString(char * str, Virus * virus) {
-    sprintf(str ,"%d%c", virus->life , virus->type);
-    sprintf(str, "%*s", ELMT_STR_LEN, str);
+    char s[ELMT_STR_LEN+1];
+    sprintf(s ,"%d%c", virus->life , virus->type);
+    sprintf(str, "%*s", ELMT_STR_LEN, s);
 }
 
 void dispUpcomingWave(Virus * VL) {
@@ -70,7 +72,7 @@ void dispGame(Game * game) {
 
 int  inputChips(char * type, int * line, int * position) {
     scanf(" %c", type);
-    if(type == 'q') return 0;
+    if(*type == 'q') return 0;
     scanf(" %d %d", line, position);
     return 1;
 }

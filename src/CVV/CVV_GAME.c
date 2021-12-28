@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <CVV/CVV_GAME.h>
+#include <CVV/CVV_DATA.h>
 
 int chipsShootVirus(Chips * C, Virus * VL) {
     while(VL != NULL){
@@ -69,26 +70,38 @@ int spawnVirus(Game * game) {
     }
 }
 
-int removeDeadChips(Chips * CL) {
-    Chips * prev = CL;
-    while( CL != NULL ) {
-        if( CL->life <= 0 ) {
-            // retirer chips de la liste (+ free)
+int removeDeadChips(Chips ** CL) {
+    if(*CL == NULL) return 0;
+    Chips * prev = *CL, * chips = *CL, * remover;
+    while( prev->next != NULL ) {
+        chips = prev->next;
+        if( chips->life <= 0 ) {
+            remover = shiftChips(prev);
+            freeChips(remover);
         }
-        prev = CL;
-        CL = CL->next;
+        prev = chips;
+    }
+    if((*CL)->life == 0) {
+        freeChips(*CL);
+        *CL = NULL;
     }
     return 1;
 }
 
-int removeDeadVirus(Virus * VL) {
-    Virus * prev = VL;
-    while( VL != NULL ) {
-        if( VL->life <= 0 ) {
-            // retirer virus de la liste (+ free)
+int removeDeadVirus(Virus ** VL) {
+    if(*VL == NULL) return 0;
+    Virus * prev = *VL, *virus = *VL, * remover;
+    while( prev->next != NULL ) {
+        virus = prev->next;
+        if( virus->life <= 0 ) {
+            remover = shiftVirus(prev);
+            freeVirus(remover);
         }
-        prev = VL;
-        VL = VL->next;
+        prev = virus;
+    }
+    if((*VL)->life == 0) {
+        freeVirus(*VL);
+        *VL = NULL;
     }
     return 1;
 }
@@ -97,7 +110,7 @@ int gameTurn(Game * game) {
     spawnVirus(game);
     actionChips(game);
     actionVirus(game);
-    removeDeadChips(game->chips);
-    removeDeadVirus(game->virus);
+    removeDeadChips(&(game->chips));
+    removeDeadVirus(&(game->virus));
     game->turn ++;
 }

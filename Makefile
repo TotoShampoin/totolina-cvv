@@ -1,8 +1,10 @@
 
 INC = inc
 
+SRC_CVV = $(wildcard src/CVV/*.c)
+
 BIN = bin/cvv
-SRC = src/main.c src/CVV/CVV_DATA.c src/CVV/CVV_FILE.c src/CVV/CVV_GAME.c src/Disp_TER.c
+SRC = src/main.c $(SRC_CVV) src/Disp_TER.c
 
 $(BIN): $(SRC)
-	gcc -i $(INC) $(SRC) -o $(BIN)
+	gcc -g -I $(INC) $(SRC) -o $(BIN)

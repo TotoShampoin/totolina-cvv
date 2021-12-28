@@ -13,9 +13,9 @@ int actionVirus(Game * game);
 
 int spawnVirus(Game * game);
 
-int removeDeadChips(Chips * chips_list);
+int removeDeadChips(Chips ** chips_list);
 
-int removeDeadVirus(Virus * virus_list);
+int removeDeadVirus(Virus ** virus_list);
 
 int gameTurn(Game * game);
 

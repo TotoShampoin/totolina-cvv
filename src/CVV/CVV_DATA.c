@@ -4,7 +4,7 @@
 
 Chips * allocChips() {
     Chips * C;
-    if ( (C = (Chips*)malloc(sizeof(Chips))!=NULL)){
+    if ( (C = (Chips*)malloc(sizeof(Chips))) != NULL){
         return C;
     }
     else {
@@ -27,7 +27,7 @@ int initChips(Chips * C, ChipsType type, int line, int position, int life, int p
 
 Chips * createChips(ChipsType type, int line, int position, int life, int price, int power) {
     Chips *C =allocChips();
-    initChips(C ,type, line, life, position, price, power);
+    initChips(C, type, line, position, life, price, power);
     return C;
 }
 
