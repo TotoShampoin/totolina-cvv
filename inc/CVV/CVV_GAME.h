@@ -1,4 +1,4 @@
-#include <CVV_TYPE.h>
+#include <CVV/CVV_TYPE.h>
 #ifndef __CVV_GAME
 
 int chipsShootVirus(Chips * this_chips, Virus * virus_list);

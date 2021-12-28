@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <CVV_GAME.h>
+#include <CVV/CVV_GAME.h>
 
 int chipsShootVirus(Chips * C, Virus * VL) {
     while(VL != NULL){
