@@ -19,5 +19,7 @@ int removeDeadVirus(Virus ** virus_list);
 
 int gameTurn(Game * game);
 
+int initGame(Game ** game);
+
 #define __CVV_GAME
 #endif

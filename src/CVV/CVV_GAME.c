@@ -114,3 +114,7 @@ int gameTurn(Game * game) {
     removeDeadVirus(&(game->virus));
     game->turn ++;
 }
+
+int initGame(Game ** game) {
+    if(*game == NULL) *game = malloc(sizeof(Game));
+}

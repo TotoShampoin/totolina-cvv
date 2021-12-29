@@ -6,7 +6,7 @@
 
 int getLine(char * line, int len, FILE * f) {
     char c; int i = 0;
-    while( (c = getc(f)) != '\n' || (c = getc(f)) != EOF || i < len ) {
+    while( (c = getc(f)) != '\n' && c != EOF && i < len ) {
         line[i] = c;
         i++;
     }
@@ -17,7 +17,12 @@ int getLine(char * line, int len, FILE * f) {
 Virus * parseVirus(const char * data) {
     int turn, line; char type;
     sscanf(data, " %d %d %c", &turn, &line, &type);
-    return createVirus(type, line, 3, 1, turn, 1);
+    Virus * tmp = createVirusFromType(type);
+    tmp->line = line; 
+    tmp->turn = turn;
+    tmp->position = OOB;
+    return tmp;
+    // return createVirus(type, line, 3, 1, turn, 1);
 }
 
 void loadGame(Game * game, FILE * f) {

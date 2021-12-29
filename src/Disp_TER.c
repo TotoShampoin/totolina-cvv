@@ -15,22 +15,24 @@ void getVirusString(char * str, Virus * virus) {
 }
 
 void dispUpcomingWave(Virus * VL) {
-    char line_strings [NBLINE][NBPOS*2];
-    char line_cell[2] = "  ";
-    int i;
-    while(VL != NULL) {
-        for(i=0; i<NBLINE; i++) {
-            if( VL->line == i-1 )
-                line_cell[1] = VL->type;
-            else 
-                line_cell[1] = ' ';
-            strcat(line_strings[i], line_cell);
+    char t [NBLINE][NBPOS];
+    int l, p;
+    for(l=0; l<NBLINE; l++) {
+        for(p=0; p<NBPOS; p++) {
+            t[l][p] = ' ';
         }
+    }
+    while(VL != NULL) {
+        t[VL->line-1][VL->turn-1] = VL->type;
         VL = VL->next;
     }
-    printf("A wave of viruses are approaching...");
-    for(i=0; i<NBLINE; i++) {
-        printf("\t%d| %s\n", i, line_strings[i]);
+    printf("A wave of viruses are approaching...\n");
+    for(l=0; l<NBLINE; l++) {
+        printf("\t%d| ", l);
+        for(p=0; p<NBPOS; p++) {
+            printf(" %c", t[l][p]);
+        }
+        printf("\n");
     }
 }
 

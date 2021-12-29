@@ -55,6 +55,8 @@ struct {
 } table_of_virus[TABVIRUS_LEN];
 
 void initTables();
+Chips * createChipsFromType(ChipsType type);
+Virus * createVirusFromType(VirusType type);
 
 typedef struct {
     Virus* virus;

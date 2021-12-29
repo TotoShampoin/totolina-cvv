@@ -25,3 +25,25 @@ void initTables() {
     memcpy(table_of_chips, toc, sizeof(toc));
     memcpy(table_of_virus, tov, sizeof(tov));
 }
+
+Chips * createChipsFromType(ChipsType type) {
+    Chips * tmp = allocChips(), * typ;
+    int i = 0;
+    do {
+        typ = &(table_of_chips[i].chips);
+        i++;
+    } while(typ->type != type && i < TABCHIPS_LEN);
+    memcpy(tmp, typ, sizeof(Chips));
+    return tmp;
+}
+
+Virus * createVirusFromType(VirusType type) {
+    Virus * tmp = allocVirus(), * typ;
+    int i = 0;
+    do {
+        typ = &(table_of_virus[i].virus);
+        i++;
+    } while(typ->type != type && i < TABCHIPS_LEN);
+    memcpy(tmp, typ, sizeof(Virus));
+    return tmp;
+}
