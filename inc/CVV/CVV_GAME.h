@@ -1,6 +1,8 @@
 #include <CVV/CVV_TYPE.h>
 #ifndef __CVV_GAME
 
+int areaAvailable(Game * G, int line, int position);
+
 int chipsShootVirus(Chips * this_chips, Virus * virus_list);
 
 int virusEatChips(Virus * this_virus, Chips * chips_list);

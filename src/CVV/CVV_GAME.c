@@ -2,6 +2,20 @@
 #include <CVV/CVV_GAME.h>
 #include <CVV/CVV_DATA.h>
 
+int areaAvailable(Game * G, int line, int position) {
+    Chips * C = G->chips;
+    while( C != NULL ) {
+        if(C->line == line && C->position == position) return 0;
+        C = C->next;
+    }
+    Virus * V = G->virus;
+    while( V != NULL ) {
+        if(V->line == line && V->position == position) return 0;
+        V = V->next;
+    }
+    return 1;
+}
+
 int chipsShootVirus(Chips * C, Virus * VL) {
     while(VL != NULL){
         if ( C->line == VL->line && VL->prev_line == NULL) {

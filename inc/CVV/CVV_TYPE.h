@@ -43,18 +43,24 @@ typedef struct virus {
     struct virus* prev_line;
 } Virus;
 
-#define TABCHIPS_LEN 5
-struct {
+typedef struct {
     Chips chips;
     char * nom;
-} table_of_chips[TABCHIPS_LEN];
-#define TABVIRUS_LEN 5
-struct {
+} ChipsData;
+
+typedef struct {
     Virus virus;
     char * nom;
-} table_of_virus[TABVIRUS_LEN];
+} VirusData;
+
+#define TABCHIPS_LEN 5
+ChipsData table_of_chips[TABCHIPS_LEN];
+#define TABVIRUS_LEN 5
+VirusData table_of_virus[TABVIRUS_LEN];
 
 void initTables();
+ChipsData * getChipsFromType(ChipsType type);
+VirusData * getVirusFromType(VirusType type);
 Chips * createChipsFromType(ChipsType type);
 Virus * createVirusFromType(VirusType type);
 

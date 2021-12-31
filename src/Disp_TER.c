@@ -36,15 +36,29 @@ void dispUpcomingWave(Virus * VL) {
     }
 }
 
-void dispChipsPrompt(int current_price) {
-    printf("Purse: %d BitCoins\nEnter the chips, followed by its line (1-%d) and position (1-%d)", current_price, NBLINE, NBPOS);
+void dispChipsPrices() {
+    printf("\t  | price | name     | power | life \n");
     for(int i=0; i<TABCHIPS_LEN; i++) {
-        printf("\t%c : (%3d) %s\n", table_of_chips[i].chips.type, table_of_chips[i].chips.price, table_of_chips[i].nom);
+        printf("\t%c : $%4d   %-8s   %5d   %4d \n", table_of_chips[i].chips.type, table_of_chips[i].chips.price, table_of_chips[i].nom, table_of_chips[i].chips.power, table_of_chips[i].chips.life);
     }
+    printf("\n\tq : Finish \n");
+    printf("\n");
+}
+
+void dispChipsPrompt(int current_price) {
+    printf("Purse: %d BitCoins\nEnter the chips, followed by its line (1-%d) and position (1-%d)\n", current_price, NBLINE, NBPOS);
 }
 
 void dispTurn(Game * game) {
     printf("Game turn %d\n\n", game->turn);
+}
+
+void dispError(int type) {
+    switch (type) {
+    case 0: default:
+        printf("Invalid input\n");
+        break;
+    }
 }
 
 void dispGame(Game * game) {
@@ -60,11 +74,12 @@ void dispGame(Game * game) {
         tmpc = tmpc->next;
     }
     while(tmpv != NULL) {
-        getVirusString(t[tmpv->line-1][tmpv->position-1], tmpv);
+        if(tmpv->position != OOB) 
+            getVirusString(t[tmpv->line-1][tmpv->position-1], tmpv);
         tmpv = tmpv->next;
     }
     for(int l=0; l<NBLINE; l++) {
-        printf("%d | ", l);
+        printf("%d | ", l+1);
         for(int p=0; p<NBPOS; p++) {
             printf("%s ", t[l][p]);
         }
@@ -81,7 +96,27 @@ int  inputChips(char * type, int * line, int * position) {
 
 int promptConfirm(char type, int line, int position) {
     char answer;
-    printf("Want to continue your purchace ?\n\tType: %c\n\tPos : %d %d\n\n(Y|N)", type, line, position);
+    ChipsData * chp = getChipsFromType(type);
+    printf(
+        "Want to continue your purchace ?\n"
+        "\tType : %s\n"
+        "\tLife : %d\n"
+        "\tPower: %d\n"
+        "\tPos  : %d %d\n"
+        "\n"
+        "(Y|N)", chp->nom, chp->chips.life, chp->chips.power, line, position);
+    scanf(" %c", &answer);
+    switch (answer) {
+    case 'Y': case 'y': case 'O': case 'o':
+        return 1;
+    default: case 'N': case 'n':
+        return 0;
+    }
+}
+
+int promptFinish() {
+    char answer;
+    printf("Are you satisfied with your setup ?\n\n(Y|N)");
     scanf(" %c", &answer);
     switch (answer) {
     case 'Y': case 'y': case 'O': case 'o':

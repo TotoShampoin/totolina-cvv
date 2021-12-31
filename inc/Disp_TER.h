@@ -8,10 +8,16 @@ void getVirusString(char * str, Virus * virus);
 
 void dispUpcomingWave(Virus * virus_list);
 
+void dispChipsPrices();
+
 void dispChipsPrompt(int current_price);
+
+void dispError(int type);
 
 void dispGame(Game * game);
 
 int  inputChips(char * type, int * line, int * position);
 
 int promptConfirm(char type, int line, int position);
+
+int promptFinish();
