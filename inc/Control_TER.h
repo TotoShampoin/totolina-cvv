@@ -1,6 +1,5 @@
-#include <CVV/CVV.h>
-#include <Disp_TER.h>
+#include <CVV/CVV_TYPE.h>
 
 
-int mainTER(Game * game);
+int mainTER();
 
