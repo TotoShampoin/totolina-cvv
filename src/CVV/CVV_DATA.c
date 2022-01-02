@@ -115,8 +115,8 @@ Virus * shiftVirus(Virus * PV) {
     if(V->next_line) VNL = V->next_line;
     if(V->prev_line) VPL = V->prev_line;
     PV->next = NV;
-    VNL->prev_line = VPL;
-    VPL->next_line = VNL;
+    if(VNL) VNL->prev_line = VPL;
+    if(VPL) VPL->next_line = VNL;
     V->next = NULL;
     V->next_line = NULL;
     V->prev_line = NULL;

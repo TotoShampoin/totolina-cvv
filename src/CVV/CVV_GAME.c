@@ -18,7 +18,7 @@ int areaAvailable(Game * G, int line, int position) {
 
 int chipsShootVirus(Chips * C, Virus * VL) {
     while(VL != NULL){
-        if ( C->line == VL->line && VL->prev_line == NULL) {
+        if ( C->line == VL->line && VL->prev_line == NULL && VL->position != OOB) {
             VL-> life -= C-> power ;
         }
         VL = VL->next;
@@ -40,15 +40,15 @@ int virusMove(Virus * V, Chips * CL) {
     if( V->position > -1 ) {
         int will_advance = 1;
         while( CL !=NULL ) {
-            if( V->line == CL->line && V->position - CL->position < V->speed ) {
+            if( V->line == CL->line && V->position - CL->position <= V->speed ) {
                 V->position = CL->position + 1;
                 will_advance = 0;
                 break;
             }
             CL = CL->next ;
         }
-        if( V->next_line && V->position - V->next_line->position < V->speed ) {
-            V->position = V->next_line->position + 1;
+        if( V->prev_line && V->position - V->prev_line->position <= V->speed ) {
+            V->position = V->prev_line->position + 1;
             will_advance = 0;
         }
         if( will_advance ) V->position -= V->speed;
@@ -92,12 +92,15 @@ int removeDeadChips(Chips ** CL) {
         if( chips->life <= 0 ) {
             remover = shiftChips(prev);
             freeChips(remover);
+            continue;
         }
         prev = chips;
     }
-    if((*CL)->life == 0) {
+    if((*CL)->life <= 0) {
+        chips = *CL;
+        if(chips->next != NULL) *CL = chips->next;
+        else *CL = NULL;
         freeChips(*CL);
-        *CL = NULL;
     }
     return 1;
 }
@@ -110,25 +113,39 @@ int removeDeadVirus(Virus ** VL) {
         if( virus->life <= 0 ) {
             remover = shiftVirus(prev);
             freeVirus(remover);
+            continue;
         }
         prev = virus;
     }
-    if((*VL)->life == 0) {
-        freeVirus(*VL);
-        *VL = NULL;
+    if((*VL)->life <= 0) {
+        virus = *VL;
+        if(virus->next_line != NULL) {
+            virus->next_line->prev_line = NULL;
+            virus->next_line = NULL;
+        }
+        if(virus->next != NULL) *VL = virus->next;
+        else *VL = NULL;
+        freeVirus(virus);
     }
     return 1;
 }
 
 int gameTurn(Game * game) {
-    spawnVirus(game);
     actionChips(game);
     actionVirus(game);
     removeDeadChips(&(game->chips));
     removeDeadVirus(&(game->virus));
-    game->turn ++;
 }
 
 int initGame(Game ** game) {
     if(*game == NULL) *game = malloc(sizeof(Game));
+}
+
+int isGameOver( Virus *V){
+    if ( V==NULL) return 1;
+    while(V != NULL){
+        if (V->position== 0) return 1;
+        V= V->next ;
+    } 
+    return 0 ;
 }

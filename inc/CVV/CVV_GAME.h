@@ -23,5 +23,7 @@ int gameTurn(Game * game);
 
 int initGame(Game ** game);
 
+int isGameOver(Virus * virus);
+
 #define __CVV_GAME
 #endif

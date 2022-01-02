@@ -2,6 +2,16 @@
 #include <string.h>
 #include <Disp_TER.h>
 
+void clear() {
+    #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
+        system("clear");
+    #endif
+
+    #if defined(_WIN32) || defined(_WIN64)
+        system("cls");
+    #endif
+}
+
 void getChipsString(char * str, Chips * chips) {
     char s[ELMT_STR_LEN+1];
     sprintf(s, "%c%d", chips->type, chips->life);
@@ -97,14 +107,11 @@ int  inputChips(char * type, int * line, int * position) {
 int promptConfirm(char type, int line, int position) {
     char answer;
     ChipsData * chp = getChipsFromType(type);
-    printf(
-        "Want to continue your purchace ?\n"
-        "\tType : %s\n"
-        "\tLife : %d\n"
-        "\tPower: %d\n"
-        "\tPos  : %d %d\n"
-        "\n"
-        "(Y|N)", chp->nom, chp->chips.life, chp->chips.power, line, position);
+    printf("Want to continue your purchace ?\n");
+    printf("\tprice | name     | line | position \n"
+            "\t$%4d   %-8s   %-4d   %-8d \n"
+            "(Y|N)",
+        chp->chips.price, chp->nom, line, position);
     scanf(" %c", &answer);
     switch (answer) {
     case 'Y': case 'y': case 'O': case 'o':
