@@ -79,6 +79,12 @@ int spawnVirus(Game * game) {
     while( VL != NULL && VL->turn <= game->turn ) {
         if( VL->turn == game->turn ) {
             VL->position = NBPOS;
+            // Cette partie sert a s'assurer que les virus n'apparaissent pas a la meme case
+            if(VL->prev_line) {
+                while(VL->position <= VL->prev_line->position) {
+                    VL->position++;
+                }
+            }
         }
         VL = VL->next;
     }
@@ -96,7 +102,7 @@ int removeDeadChips(Chips ** CL) {
         }
         prev = chips;
     }
-    if((*CL)->life <= 0) {
+    if((*CL) != NULL && (*CL)->life <= 0) {
         chips = *CL;
         if(chips->next != NULL) *CL = chips->next;
         else *CL = NULL;
@@ -117,7 +123,7 @@ int removeDeadVirus(Virus ** VL) {
         }
         prev = virus;
     }
-    while((*VL)->life <= 0) {
+    if((*VL) != NULL && (*VL)->life <= 0) {
         virus = *VL;
         if(virus->next_line != NULL) {
             virus->next_line->prev_line = NULL;

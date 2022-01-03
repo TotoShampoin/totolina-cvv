@@ -3,14 +3,7 @@
 #include <Disp_TER.h>
 
 void clear() {
-    printf("\n");
-    #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
-        system("clear");
-    #endif
-
-    #if defined(_WIN32) || defined(_WIN64)
-        system("cls");
-    #endif
+    printf("\n\e[1;1H\e[2J");
 }
 
 void getChipsString(char * str, Chips * chips) {
@@ -98,9 +91,9 @@ void dispGame(Game * game) {
     }
     for(int l=0; l<NBLINE; l++) {
         if(reacher && reacher->line == l+1)
-            printf("X | ", l+1);
+            printf("X| ", l+1);
         else
-            printf("%d | ", l+1);
+            printf("%d| ", l+1);
         for(int p=0; p<NBPOS+1; p++) {
             printf("%s ", t[l][p]);
         }
