@@ -1,5 +1,5 @@
 #include <CVV/CVV_TYPE.h>
 
 
-int mainTER();
+int mainTER(const char * lvl);
 

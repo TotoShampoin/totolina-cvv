@@ -3,6 +3,7 @@
 #include <Disp_TER.h>
 
 void clear() {
+    printf("\n");
     #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
         system("clear");
     #endif
@@ -63,34 +64,44 @@ void dispTurn(Game * game) {
     printf("Game turn %d\n\n", game->turn);
 }
 
-void dispError(int type) {
-    switch (type) {
-    case 0: default:
-        printf("Invalid input\n");
-        break;
-    }
+void dispError(int error) {
+    if( !((error >> 4) & 1) 
+      && ((error >> 0) & 1) ) printf("Not enough money\n");
+    if( !((error >> 3) & 1) ) printf("Spot already taken\n");
+    if( !((error >> 2) & 1) ) printf("Position out of range\n");
+    if( !((error >> 1) & 1) ) printf("Line out of range\n");
+    if( !((error >> 0) & 1) ) printf("Type invalid\n");
 }
 
 void dispGame(Game * game) {
-    char t [NBLINE][NBPOS][ELMT_STR_LEN+1];
+    char t [NBLINE][NBPOS+1][ELMT_STR_LEN+1];
     for(int l=0; l<NBLINE; l++) {
-        for(int p=0; p<NBPOS; p++) {
+        for(int p=0; p<NBPOS+1; p++) {
             sprintf(t[l][p], "%*s", ELMT_STR_LEN, " ");
         }
     }
-    Chips * tmpc = game->chips; Virus * tmpv = game->virus;
+    Chips * tmpc = game->chips; Virus * tmpv = game->virus; Virus * reacher = NULL;
     while(tmpc != NULL) {
         getChipsString(t[tmpc->line-1][tmpc->position-1], tmpc);
         tmpc = tmpc->next;
     }
     while(tmpv != NULL) {
-        if(tmpv->position != OOB) 
-            getVirusString(t[tmpv->line-1][tmpv->position-1], tmpv);
+        if(tmpv->position != OOB) {
+            if(tmpv->position <= NBPOS)
+                if(tmpv->position > 0)
+                    getVirusString(t[tmpv->line-1][tmpv->position-1], tmpv);
+                else reacher = tmpv;
+            else
+                t[tmpv->line-1][NBPOS][0] = '>';
+        }
         tmpv = tmpv->next;
     }
     for(int l=0; l<NBLINE; l++) {
-        printf("%d | ", l+1);
-        for(int p=0; p<NBPOS; p++) {
+        if(reacher && reacher->line == l+1)
+            printf("X | ", l+1);
+        else
+            printf("%d | ", l+1);
+        for(int p=0; p<NBPOS+1; p++) {
             printf("%s ", t[l][p]);
         }
         printf("\n");

@@ -5,7 +5,10 @@
 #include <Control_TER.h>
 
 int main(int argc, char const *argv[]) {
+    char lvl[256];
+    printf("Level file name (lvl000.txt) : ");
+    scanf(" %s", lvl);
     initTables();
-    mainTER();
+    mainTER(lvl);
     return 0;
 }

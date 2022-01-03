@@ -28,7 +28,7 @@ int chipsShootVirus(Chips * C, Virus * VL) {
 
 int virusEatChips(Virus * V, Chips * CL) {
     while(CL != NULL) {
-        if( CL->line == V->line && CL->position == V->position+1 ) {
+        if( CL->line == V->line && CL->position == V->position-1 && V->life > 0 ) {
             CL->life -= V->power;
         }
         CL = CL->next;
@@ -100,7 +100,7 @@ int removeDeadChips(Chips ** CL) {
         chips = *CL;
         if(chips->next != NULL) *CL = chips->next;
         else *CL = NULL;
-        freeChips(*CL);
+        freeChips(chips);
     }
     return 1;
 }
@@ -117,7 +117,7 @@ int removeDeadVirus(Virus ** VL) {
         }
         prev = virus;
     }
-    if((*VL)->life <= 0) {
+    while((*VL)->life <= 0) {
         virus = *VL;
         if(virus->next_line != NULL) {
             virus->next_line->prev_line = NULL;
@@ -144,7 +144,7 @@ int initGame(Game ** game) {
 int isGameOver( Virus *V){
     if ( V==NULL) return 1;
     while(V != NULL){
-        if (V->position== 0) return 1;
+        if (V->position== 0) return 2;
         V= V->next ;
     } 
     return 0 ;
