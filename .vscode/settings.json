@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "*.h": "c"
+        "*.ejs": "html",
+        "*.h": "c",
+        "type_traits": "c"
     }
 }
