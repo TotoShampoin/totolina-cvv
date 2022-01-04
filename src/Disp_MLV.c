@@ -41,6 +41,10 @@ int reinitMLV() {
     return 1;
 }
 
+void clearScreenMLV() {
+    MLV_clear_window(assets.colors.bg);
+}
+
 void dispStrMLV(int x, int y, char * t, int s) { // Fonction d'affichage, pour rendre le code plus lisible
     switch (s) {
     case 0: // Petit
@@ -59,11 +63,26 @@ void dispIntMLV(int x, int y, char * t, int n, int s) {
     dispStrMLV(x, y, ms, s);
 }
 
-void dispTurnMLV(int x, int y, int t) {
-    dispIntMLV(x, y, "Game turn : ", t, 1);
+void dispTurnMLV(int t) {
+    dispIntMLV(TO_X, TO_Y, "Game turn : ", t, 1);
 }
-void dispMoneyMLV(int x, int y, int m) {
-    dispIntMLV(x, y, "Money : $", m, 1);
+void dispMoneyMLV(int m) {
+    dispIntMLV(MO_X, MO_Y-40, "Money : $", m, 1);
+}
+
+void dispLogoMLV() {
+    MLV_draw_image(assets.sprites.lg, LO_X, LO_Y);
+}
+
+// bit 0 = money
+// bit 1 = place
+void dispErrorMLV(int error) {
+    if( !((error >> 0) & 1) ) {
+        dispStrMLV(EO_X, EO_Y, "Not enough money", 1);
+    }
+    if( !((error >> 1) & 1) ) {
+        dispStrMLV(EO_X ,EO_Y+8,"Spot already taken", 1);
+    }
 }
 
 void lifebarMLV(int x, int y, int l) { // La "barre de vie" sera le nombre life en dessous du chips ou du virus
@@ -81,23 +100,28 @@ void dispGridMLV(Game * game) {
     Chips * C = game->chips;
     Virus * V = game->virus;
     for(int i=0; i<7; i++) { // 7 lignes bleues pour symboliser les lines
-        MLV_draw_filled_rectangle(0, GO_Y+7+i*24, WIDTH, GO_Y+8, assets.colors.ln);
+        MLV_draw_filled_rectangle(0, GO_Y+7+i*24, WIDTH, 2, assets.colors.ln);
+        for(int j=0; j<24; j++) {
+            MLV_draw_filled_rectangle((GO_X+5+j*24), (GO_Y+5+i*24), 6, 6, assets.colors.ln);
+        }
     }
     while(C != NULL) { // On affiche les chips
-        int x = C->position, y = C->line;
+        int x = C->position-1, y = C->line-1;
         putSpriteMLV(GO_X+x*24, GO_Y+y*24, getChipsIndexFromType(C->type), C->life);
         C = C->next;
     }
     while(V != NULL) { // On affiche les virus
-        int x = V->position, y = V->line;
-        putSpriteMLV(GO_X+x*24, GO_Y+y*24, getVirusIndexFromType(V->type), V->life);
+        if(V->position != OOB) {
+        int x = V->position-1, y = V->line-1;
+        putSpriteMLV(GO_X+x*24, GO_Y+y*24, getVirusIndexFromType(V->type)+5, V->life);
+        }
         V = V->next;
     }
 }
 
 void dispMarketMLV() {
     char info[32];
-    dispStrMLV(MO_X+24, MO_Y-24, "name     price power life", 1);
+    dispStrMLV(MO_X+24, MO_Y-24, "Name     Price Power Life", 1);
     for(int i=0; i<TABCHIPS_LEN; i++) { // Les différents chips, ligne par ligne, avec leurs icônes
         char  * nom = table_of_chips[i].nom;
         Chips * chp = &(table_of_chips[i].chips);
@@ -108,14 +132,14 @@ void dispMarketMLV() {
         );
         dispStrMLV(MO_X+24, MO_Y+i*24, info, 1);
     }
-    dispStrMLV(MO_X+8, MO_Y+5*24, "Finish", 1);
+    dispStrMLV(MO_X+24, MO_Y+5*24, "Finish", 1);
 }
 
 void dispUpcomingWaveMLV(Virus * VL) {
     dispStrMLV(VO_X, VO_Y, "A wave of viruses are approaching...", 1);
     while (VL != NULL) {
-        int x = VO_X + VL->position * 24;
-        int y = VO_Y + 12 + VL->line * 24;
+        int x = VO_X + VL->turn * 24;
+        int y = VO_Y + VL->line * 24;
         int s = getVirusIndexFromType(VL->type) + 5;
         putSpriteMLV(x, y, s, NOLIFE);
         VL = VL->next;
@@ -124,10 +148,12 @@ void dispUpcomingWaveMLV(Virus * VL) {
 
 // Cette fonction sert à avoir une boite d'information à coté de la souris
 int showInfosMLV(int x, int y, InfoType type, void * data) {
-    char * nom; int life, power; Chips * chp = NULL; Virus * vrs = NULL;
+    char * nom; int life, power;
+    Chips * chp = NULL; Virus * vrs = NULL; int * datint; char * str;
     switch (type) {
     case SPRITE: // Quand la souris transporte un Chips (pour la partie achat)
-        putSpriteMLV(x+16, y+16, *((int*)data), NOLIFE);
+        datint = (int*)data;
+        putSpriteMLV(x+16, y+16, *datint, NOLIFE);
         return 1;
     case CHIPS: // Quand la souris pointe un Chips sur la grille
         chp = (Chips*)data;
@@ -139,6 +165,10 @@ int showInfosMLV(int x, int y, InfoType type, void * data) {
         nom = getVirusFromType(vrs->type)->nom;
         life = vrs->life; power = vrs->power;
         break;
+    case DEBUG:
+        str = (char*)data;
+        dispStrMLV(x+16, y+16, str, 1);
+        return 1;
     default: case NONE: // Quand rien du tout
         return 0;
     }
@@ -152,6 +182,7 @@ int showInfosMLV(int x, int y, InfoType type, void * data) {
 
 void fetchMousePositionMLV(int * x, int * y, char * buttons) {
     MLV_get_mouse_position(x, y);
+    *buttons = 0;
     *buttons += (MLV_get_mouse_button_state(MLV_BUTTON_LEFT  ) == MLV_PRESSED) << 0;
     *buttons += (MLV_get_mouse_button_state(MLV_BUTTON_MIDDLE) == MLV_PRESSED) << 1;
     *buttons += (MLV_get_mouse_button_state(MLV_BUTTON_RIGHT ) == MLV_PRESSED) << 2;
@@ -162,8 +193,8 @@ int getGridPositionFromMouseMLV(int * l, int * p, int x, int y) {
         x > GO_X - 4 && x < GO_X + 24*24 - 4 &&
         y > GO_Y - 4 && y < GO_Y +  7*24 - 4
     ) {
-        *l = (x-4)/24 - GO_X;
-        *p = (y-4)/24 - GO_Y;
+        *p = (x+4-GO_X)/24 +1;
+        *l = (y+4-GO_Y)/24 +1;
         return 1;
     } return 0;
 }
@@ -173,7 +204,7 @@ int getChipsIndexOnMarketFromMouseMLV(int * i, int x, int y) {
         x > MO_X - 4 && x < MO_X - 4 + 8*24 &&
         y > MO_Y - 4 && y < MO_Y - 4 + 24*6
     ) {
-        *i = (y-4)/24 - MO_Y;
+        *i = (y+4-MO_Y)/24;
         return 1;
     } return 0;
 }

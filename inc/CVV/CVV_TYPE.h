@@ -65,6 +65,8 @@ ChipsData * getChipsFromType(ChipsType type);
 VirusData * getVirusFromType(VirusType type);
 Chips * createChipsFromType(ChipsType type);
 Virus * createVirusFromType(VirusType type);
+Chips * createChipsFromIndex(int index);
+Virus * createVirusFromInedx(int index);
 
 typedef struct {
     Virus* virus;

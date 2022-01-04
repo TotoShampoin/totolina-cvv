@@ -99,3 +99,19 @@ Virus * createVirusFromType(VirusType type) {
     memcpy(tmp, typ, sizeof(Virus));
     return tmp;
 }
+
+Chips * createChipsFromIndex(int i) {
+    Chips * tmp = allocChips();
+    if(i >= 0 && i < TABCHIPS_LEN) {
+        memcpy(tmp, &(table_of_chips[i].chips), sizeof(Chips));
+        return tmp;
+    } return NULL;
+}
+
+Virus * createVirusFromIndex(int i) {
+    Virus * tmp = allocVirus();
+    if(i >= 0 && i < TABVIRUS_LEN) {
+        memcpy(tmp, &(table_of_virus[i].virus), sizeof(Virus));
+        return tmp;
+    } return NULL;
+}

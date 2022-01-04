@@ -6,15 +6,21 @@
 #define HEIGTH 480
 
 /**
- * Grid Offset | Market Offset | Wabe Offset
- * La position XY du coin haut gauche de la grille | du marché | de la vague
+ * Grid Offset | Market Offset | Wabe Offset | Logo Offset | Turn Offset | Error Offset
+ * La position XY du coin haut gauche de la grille | du marché | de la vague | du logo | du tour | des erreurs
  */
 #define GO_X 48
 #define GO_Y 96
 #define MO_X 32
 #define MO_Y 320
-#define VO_X 160
-#define VO_Y 320
+#define VO_X 320
+#define VO_Y 280
+#define LO_X 24
+#define LO_Y 16 
+#define TO_X 320
+#define TO_Y 64
+#define EO_X 320
+#define EO_Y 16
 
 #define NOLIFE -1
 
@@ -59,12 +65,17 @@ int unloadAssetsMLV();
 /**
  * @brief Initialisation de la fenêtre et des ressources graphiques
  * 
- * @param scale Le jeu peut être en taille x1 ou x2, pour s'adapter à tous les écrans
  * @return succès de chargement
  */
 int initMLV();
 int closeMLV();
 int reinitMLV();
+
+/**
+ * @brief Efface l'écran et le colorie en bleu
+ * 
+ */
+void clearScreenMLV();
 
 /**
  * @brief Affiche un texte
@@ -90,12 +101,24 @@ void dispIntMLV(int x, int y, char * text, int number, int size);
 /**
  * @brief Affiche le tour
  */
-void dispTurnMLV(int x, int y, int turn);
+void dispTurnMLV(int turn);
 
 /**
  * @brief Affiche l'argent
  */
-void dispMoneyMLV(int x, int y, int money);
+void dispMoneyMLV(int money);
+
+/**
+ * @brief Affiche le logo
+ * 
+ */
+void dispLogoMLV();
+
+/**
+ * @brief Affiche les erreurs
+ * 
+ */
+void dispErrorMLV(int error);
 
 /**
  * @brief Affiche l'ndicateur de life, en nombre
@@ -131,7 +154,7 @@ void dispMarketMLV();
  */
 void dispUpcomingWaveMLV(Virus * virus_list);
 
-typedef enum {NONE, SPRITE, CHIPS, VIRUS} InfoType;
+typedef enum {NONE, SPRITE, CHIPS, VIRUS, DEBUG} InfoType;
 /**
  * @brief (Avancé) Une petite boîte qui affiche les informations d'un élément pointée par la souris
  * 
@@ -167,7 +190,7 @@ int getGridPositionFromMouseMLV(int * line, int * position, int x, int y);
 /**
  * @brief Détermine le type de Chips à partir de la souris
  * 
- * @param type 
+ * @param index 
  * @param x 
  * @param y 
  * @return Si la souris détermine bien un type
