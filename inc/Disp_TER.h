@@ -1,5 +1,6 @@
 #include <CVV/CVV_TYPE.h>
 
+#ifndef CVV_DISP_TER
 #define ELMT_STR_LEN 3
 
 void clear();
@@ -25,3 +26,6 @@ int  inputChips(char * type, int * line, int * position);
 int promptConfirm(char type, int line, int position);
 
 int promptFinish();
+
+#define CVV_DISP_TER
+#endif

@@ -38,7 +38,7 @@ void loadGame(Game * game, FILE * f) {
     }
 }
 
-int openGame(Game * game, char * nom_du_fichier) {
+int openGame(Game * game, const char * nom_du_fichier) {
     FILE *f = fopen(nom_du_fichier, "r");
     if(f==NULL) return 0;
     loadGame(game , f);

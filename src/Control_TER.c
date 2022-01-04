@@ -75,4 +75,5 @@ int mainTER(const char * lvl) {
         printf("The game is over\n");
         break;
     }
+    return 1;
 }

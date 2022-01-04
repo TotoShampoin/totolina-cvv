@@ -91,7 +91,7 @@ void dispGame(Game * game) {
     }
     for(int l=0; l<NBLINE; l++) {
         if(reacher && reacher->line == l+1)
-            printf("X| ", l+1);
+            printf("X| ");
         else
             printf("%d| ", l+1);
         for(int p=0; p<NBPOS+1; p++) {

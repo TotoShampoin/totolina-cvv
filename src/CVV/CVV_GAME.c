@@ -66,15 +66,18 @@ int actionChips(Game * game) {
 }
 
 int actionVirus(Game * game) {
+    if(game->virus == NULL) return 0;
     Virus * V = game->virus;
     while( V != NULL ) {
         virusEatChips(V, game->chips);
         virusMove(V, game->chips);
         V = V->next;
     }
+    return 1;
 }
 
 int spawnVirus(Game * game) {
+    if(game->virus == NULL) return 0;
     Virus * VL = game->virus;
     while( VL != NULL && VL->turn <= game->turn ) {
         if( VL->turn == game->turn ) {
@@ -88,6 +91,7 @@ int spawnVirus(Game * game) {
         }
         VL = VL->next;
     }
+    return 1;
 }
 
 int removeDeadChips(Chips ** CL) {
@@ -137,14 +141,17 @@ int removeDeadVirus(Virus ** VL) {
 }
 
 int gameTurn(Game * game) {
+    if(game == NULL) return 0;
     actionChips(game);
     actionVirus(game);
     removeDeadChips(&(game->chips));
     removeDeadVirus(&(game->virus));
+    return 1;
 }
 
 int initGame(Game ** game) {
     if(*game == NULL) *game = malloc(sizeof(Game));
+    return 1;
 }
 
 int isGameOver( Virus *V){
