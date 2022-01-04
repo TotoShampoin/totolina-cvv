@@ -59,6 +59,8 @@ ChipsData table_of_chips[TABCHIPS_LEN];
 VirusData table_of_virus[TABVIRUS_LEN];
 
 void initTables();
+int getChipsIndexFromType(ChipsType type);
+int getVirusIndexFromType(VirusType type);
 ChipsData * getChipsFromType(ChipsType type);
 VirusData * getVirusFromType(VirusType type);
 Chips * createChipsFromType(ChipsType type);

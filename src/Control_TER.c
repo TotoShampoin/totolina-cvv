@@ -43,6 +43,7 @@ int mainTER(const char * lvl) {
         dispError(error);
         prompt(game);
         keep_buying = (inputChips(&type, &line, &position) || !promptFinish());
+        if(!keep_buying) break;
         if(0b11111 != (error = checkChipsValid(game, type, line, position))) {
             continue;
         }

@@ -55,24 +55,31 @@ void initTables() {  //a expliquer dans le rapport
         table_of_virus[4].virus.speed =   4;
 }
 
+int getChipsIndexFromType(ChipsType type) {
+    int i;
+    for(i=0; i<TABCHIPS_LEN; i++) {
+        if(table_of_chips[i].chips.type == type) break;
+    }
+    return i;
+}
+int getVirusIndexFromType(VirusType type) {
+    int i;
+    for(i=0; i<TABVIRUS_LEN; i++) {
+        if(table_of_virus[i].virus.type == type) break;
+    }
+    return i;
+}
+
 ChipsData * getChipsFromType(ChipsType type) {
-    ChipsData * typ;
-    int i = 0;
-    do {
-        typ = &(table_of_chips[i]);
-        i++;
-    } while(typ->chips.type != type && i < TABCHIPS_LEN);
-    return typ;
+    int i = getChipsIndexFromType(type);
+    if(i < TABCHIPS_LEN) return &(table_of_chips[i]);
+    else return NULL;
 }
 
 VirusData * getVirusFromType(VirusType type) {
-    VirusData * typ;
-    int i = 0;
-    do {
-        typ = &(table_of_virus[i]);
-        i++;
-    } while(typ->virus.type != type && i < TABCHIPS_LEN);
-    return typ;
+    int i = getVirusIndexFromType(type);
+    if(i < TABVIRUS_LEN) return &(table_of_virus[i]);
+    else return NULL;
 }
 
 Chips * createChipsFromType(ChipsType type) {
