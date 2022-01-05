@@ -61,7 +61,7 @@ int mainTER() {
         clear();
         dispTurn(game);
         dispGame(game);
-        msleep(300);
+        msleep(INTERVAL);
         gameTurn(game);
         game->turn ++;
     };

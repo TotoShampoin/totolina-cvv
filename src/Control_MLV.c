@@ -92,6 +92,7 @@ int mainMLV() {
         is_gd = getGridPositionFromMouseMLV( &line , &position , mx , my );
         is_vr = getVirusOnWaveFromMouseMLV(game->virus, mx, my);
         is_cp = getChipsFromCoordinates(game->chips, line, position);
+        if(!is_gd) is_cp = NULL;
 
         if( (mb >> 0) & 1 ) { // Si clic gauche
             is_mk = getChipsIndexOnMarketFromMouseMLV(&id, mx , my);
@@ -107,6 +108,7 @@ int mainMLV() {
             is_gd = getGridPositionFromMouseMLV( &line , &position , mx , my );
             if(is_gd) {
                 sellChips(game, line, position);
+                is_cp = NULL;
             }
         }
         MLV_update_window();
@@ -117,7 +119,7 @@ int mainMLV() {
         spawnVirus(game);
         displayMLV(game, (DataDisp){error, mx, my, id}, 0);
         MLV_update_window();
-        MLV_wait_milliseconds(300);
+        MLV_wait_milliseconds(INTERVAL);
         gameTurn(game);
         game->turn ++;
     }
