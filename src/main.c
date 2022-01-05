@@ -4,11 +4,14 @@
 #include <Control_MLV.h>
 
 int main(int argc, char const *argv[]) {
-    // char lvl[256];
-    // printf("Level file name (lvl000.txt) : ");
-    // scanf(" %s", lvl);
+    int mode = 0;
+    do {
+        printf("Quel mode choisissez vous ?\n\tTerminal: 1\n\tGraphique: 2\n> ");
+        scanf("%d", &mode);
+    } while(mode != 1 && mode != 2);
     initTables();
-    // mainTER(lvl);
-    mainMLV();
+    if(mode == 1) mainTER();
+    if(mode == 2) mainMLV();
     return 0;
 }
+

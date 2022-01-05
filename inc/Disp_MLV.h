@@ -168,6 +168,16 @@ typedef enum {NONE, SPRITE, CHIPS, VIRUS, DEBUG} InfoType;
 int showInfosMLV(int x, int y, InfoType type, void * data);
 
 /**
+ * @brief Affiche une boite de dialogue
+ * 
+ * @param input Si prompt = 2, texte de l'input
+ * @param str Texte de la boite
+ * @param prompt 0: [Ok] | 1: [Yes No] | 2: [Input]
+ * @return Réponse
+ */
+int msgBoxMLV(char ** input, char * str, int prompt);
+
+/**
  * @brief Récupère la position de la souris, ainsi que ses clics
  * 
  * @param x 
@@ -196,6 +206,16 @@ int getGridPositionFromMouseMLV(int * line, int * position, int x, int y);
  * @return Si la souris détermine bien un type
  */
 int getChipsIndexOnMarketFromMouseMLV(int * index, int x, int y);
+
+/**
+ * @brief Détermine le Virus pointé par la souris
+ * 
+ * @param virus_list 
+ * @param x 
+ * @param y 
+ * @return Virus* 
+ */
+Virus * getVirusOnWaveFromMouseMLV(Virus * virus_list, int x, int y);
 
 #define CVV_DISP_MLV
 #endif

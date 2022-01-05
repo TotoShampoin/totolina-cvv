@@ -16,6 +16,7 @@ int loadAssetsMLV() {
     assets.fonts  .ma   = MLV_load_font("assets/fonts/ps2p.ttf",  8);
     assets.fonts  .tn   = MLV_load_font("assets/fonts/sp7.ttf" ,  9); // C'est visuellement plus petit que .ma, mais la police est configurée comme ça
     assets.fonts  .bg   = MLV_load_font("assets/fonts/dos.ttf" , 16);
+    assets.sounds .ms   = MLV_load_music("assets/sounds/lsac.wav");
     return 1;
 }
 int unloadAssetsMLV() {
@@ -27,6 +28,7 @@ int unloadAssetsMLV() {
 
 int initMLV() {
     MLV_create_window("Chips vs Virus", "", WIDTH, HEIGTH);
+    MLV_init_audio();
     loadAssetsMLV();
     return 1;
 }
@@ -87,7 +89,7 @@ void dispErrorMLV(int error) {
 
 void lifebarMLV(int x, int y, int l) { // La "barre de vie" sera le nombre life en dessous du chips ou du virus
     char ls[5]; sprintf(ls, "%4d", l);
-    dispStrMLV(x, y+16, ls, 0);
+    dispStrMLV(x, y+15, ls, 0);
 }
 
 void putSpriteMLV(int x, int y, int s, int l) {
@@ -172,12 +174,83 @@ int showInfosMLV(int x, int y, InfoType type, void * data) {
     default: case NONE: // Quand rien du tout
         return 0;
     }
-    MLV_draw_rectangle(x+16, y-48, 88, 40, assets.colors.bd);
-    MLV_draw_filled_rectangle(x+16, y-48, 88, 40, assets.colors.bx);
+    MLV_draw_rectangle(x+16, y-48, 88, 48, assets.colors.bd);
+    MLV_draw_filled_rectangle(x+16, y-48, 88, 48, assets.colors.bx);
     dispStrMLV(x+24, y-40, nom, 1);
     dispIntMLV(x+24, y-24, "Life:  ", life , 1);
     dispIntMLV(x+24, y-16, "Power: ", power, 1);
     return 1;
+}
+
+int msgBoxMLV(char ** input , char* str , int prompt) {
+    int size_w = 0, size_h = 1, count = 0; char * str_c = str;
+    while(*str_c) {
+        if(*str_c == '\n') {
+            count = 0;
+            size_h++;
+        } else {
+            if(count > size_w) {
+                size_w = count;
+            }
+            count++;
+        }
+        str_c++;
+    }
+    MLV_draw_text_box_with_font(
+        WIDTH/2-32-8*size_w/2, HEIGTH/2-32-8*size_h/2, size_w*8+64, size_h*8+64,
+        str, assets.fonts.ma, 12,
+        assets.colors.bd, assets.colors.tx, assets.colors.bx,
+        MLV_TEXT_CENTER, MLV_HORIZONTAL_CENTER, MLV_VERTICAL_TOP
+    );
+    switch (prompt) {
+    case 0: default:
+        dispStrMLV(WIDTH/2 - 8, HEIGTH/2 +size_h*8+8 , "Ok", 1);
+        break;
+    case 1:
+        dispStrMLV(WIDTH/2 - 72, HEIGTH/2 +size_h*8+8 , "Yes", 1);
+        dispStrMLV(WIDTH/2 + 56, HEIGTH/2 +size_h*8+8 , "No", 1);
+        break;
+    case 2:
+        MLV_update_window();
+        MLV_wait_input_box_with_font(
+            WIDTH/4, HEIGTH/2 +size_h*8+8, WIDTH/2, 32,
+            assets.colors.bd, assets.colors.tx, assets.colors.bx,
+            "", input, assets.fonts.ma
+        );
+        return 1;
+    }
+    int mx, my, pointing;
+    char mb;
+    while(1) {
+        fetchMousePositionMLV(&mx, &my, &mb);
+        switch (prompt) {
+        case 0: default:
+            if( mx > WIDTH/2 - 20 && mx < WIDTH/2 + 20 && my > HEIGTH/2 + size_h*8-4 && my < HEIGTH/2 + size_h*8+24 ) {
+                pointing = 2;
+            }
+            else {
+                pointing = 0;
+            }
+            break;
+        case 1:
+            if( mx > WIDTH/2 - 84 && mx < WIDTH/2 - 50 && my > HEIGTH/2 + size_h*8-4 && my < HEIGTH/2 + size_h*8+24 ) {
+                pointing = 2;
+            }
+            else if( mx > WIDTH/2 + 44 && mx < WIDTH/2 + 82 && my > HEIGTH/2 + size_h*8-4 && my < HEIGTH/2 + size_h*8+24 ) {
+                pointing = 1;
+            }
+            else {
+                pointing = 0;
+            }
+            break;
+        }
+        if(mb & 1) {
+            if(pointing > 0) return pointing-1;
+        }
+        MLV_update_window();
+        MLV_wait_milliseconds(1000/24);
+    }
+    return 0;
 }
 
 void fetchMousePositionMLV(int * x, int * y, char * buttons) {
@@ -190,8 +263,8 @@ void fetchMousePositionMLV(int * x, int * y, char * buttons) {
 
 int getGridPositionFromMouseMLV(int * l, int * p, int x, int y) {
     if(
-        x > GO_X - 4 && x < GO_X + 24*24 - 4 &&
-        y > GO_Y - 4 && y < GO_Y +  7*24 - 4
+        x > GO_X - 4 && x < GO_X - 4 + 24*24 &&
+        y > GO_Y - 4 && y < GO_Y - 4 +  7*24
     ) {
         *p = (x+4-GO_X)/24 +1;
         *l = (y+4-GO_Y)/24 +1;
@@ -207,4 +280,21 @@ int getChipsIndexOnMarketFromMouseMLV(int * i, int x, int y) {
         *i = (y+4-MO_Y)/24;
         return 1;
     } return 0;
+}
+
+Virus * getVirusOnWaveFromMouseMLV(Virus * VL, int x, int y) {
+    if(
+        x > VO_X - 4 && x < VO_X - 4 + 24*12 &&
+        y > VO_Y - 4 && y < VO_Y - 4 + 24*8
+    ) {
+        int p = (x+4-VO_X)/24 +1;
+        int l = (y+4-VO_Y)/24 +1;
+        while(VL != NULL) {
+            if(VL->line == l-1 && VL->turn == p-1) {
+                return VL;
+            }
+            VL = VL->next;
+        }
+        return NULL;
+    } return NULL;
 }

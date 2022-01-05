@@ -33,7 +33,10 @@ void prompt(Game * game) {
     dispChipsPrices();
 }
 
-int mainTER(const char * lvl) {
+int mainTER() {
+    char lvl[256];
+    printf("Level file name (lvl000.txt) : ");
+    scanf(" %s", lvl);
     int keep_buying = 1, error = 0b11111, end_code = 0;
     char type; int line, position;
     Game * game = malloc(sizeof(Game));
@@ -58,7 +61,7 @@ int mainTER(const char * lvl) {
         clear();
         dispTurn(game);
         dispGame(game);
-        msleep(1500);
+        msleep(300);
         gameTurn(game);
         game->turn ++;
     };

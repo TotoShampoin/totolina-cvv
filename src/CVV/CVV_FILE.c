@@ -39,7 +39,9 @@ void loadGame(Game * game, FILE * f) {
 }
 
 int openGame(Game * game, const char * nom_du_fichier) {
-    FILE *f = fopen(nom_du_fichier, "r");
+    char lvl[513];
+    sprintf(lvl, "levels/%s", nom_du_fichier);
+    FILE *f = fopen(lvl, "r");
     if(f==NULL) return 0;
     loadGame(game , f);
     fclose(f);
