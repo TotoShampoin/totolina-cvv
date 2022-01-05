@@ -50,7 +50,7 @@ void dispChipsPrices() {
 }
 
 void dispChipsPrompt(int current_price) {
-    printf("Purse: %d BitCoins\nEnter the chips, followed by its line (1-%d) and position (1-%d)\n", current_price, NBLINE, NBPOS);
+    printf("Money: $%d\nEnter the chips letter, followed by its line (1-%d) and position (1-%d)\n", current_price, NBLINE, NBPOS);
 }
 
 void dispTurn(Game * game) {
