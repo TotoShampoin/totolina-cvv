@@ -1,0 +1,223 @@
+\hypertarget{Disp__TER_8c}{}\doxysection{Référence du fichier src/\+Disp\+\_\+\+T\+ER.c}
+\label{Disp__TER_8c}\index{src/Disp\_TER.c@{src/Disp\_TER.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$Disp\+\_\+\+T\+E\+R.\+h$>$}\newline
+Graphe des dépendances par inclusion de Disp\+\_\+\+T\+E\+R.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Disp__TER_8c_ac8bb3912a3ce86b15842e79d0b421204}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Nettoie le terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__TER_8c_abdae7b8f15f0fc126295e556b99f0bdb}{get\+Chips\+String}} (char $\ast$str, \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$\mbox{\hyperlink{structchips}{chips}})
+\begin{DoxyCompactList}\small\item\em Crée la chaîne de caractères sous la forme \mbox{[}Lettre\mbox{]}\mbox{[}Life\mbox{]} du chips indiqué \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__TER_8c_a65fa33b1533d763729cdbc1a5ab4a9fc}{get\+Virus\+String}} (char $\ast$str, \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$\mbox{\hyperlink{structvirus}{virus}})
+\begin{DoxyCompactList}\small\item\em Crée la chaîne de caractères sous la forme \mbox{[}Life\mbox{]}\mbox{[}Lettre\mbox{]} du virus indiqué \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__TER_8c_a165d177a8e168bb0f73e663eb57e55cd}{disp\+Upcoming\+Wave}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$VL)
+\begin{DoxyCompactList}\small\item\em Affiche la vague de virus qui se prépare pour la partie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__TER_8c_a1609e766be30ac515fd92626b7077b9b}{disp\+Chips\+Prices}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le marché des Chips, sous la forme d\textquotesingle{}un tableau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__TER_8c_a80a0229330afce599365f71c6dfc2416}{disp\+Chips\+Prompt}} (int current\+\_\+price)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}argent du joueur, suivit du message d\textquotesingle{}instruction pour acheter un Chips. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__TER_8c_ac537c451c7507b6fb80061d2b6faef6a}{disp\+Turn}} (int turn)
+\begin{DoxyCompactList}\small\item\em Affiche le numéro de tour du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__TER_8c_a52cd72ed3ca62cee67e0d4f3f0f1e601}{disp\+Error}} (int error)
+\begin{DoxyCompactList}\small\item\em Affiche les messages d\textquotesingle{}erreurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__TER_8c_aaf0336727f29023842927684abb72509}{disp\+Game}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Affiche la grille de jeu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__TER_8c_a73576726c51faf3d1181105f660ee296}{input\+Chips}} (char $\ast$type, int $\ast$line, int $\ast$position)
+\begin{DoxyCompactList}\small\item\em Prend en entrée le type de Chips, ainsi que ses coordonnées. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__TER_8c_a40dca99e05b600e890b201ad54eb41b3}{prompt\+Confirm}} (char type, int line, int position)
+\begin{DoxyCompactList}\small\item\em Demande au joueur s\textquotesingle{}il est certain de poursuivre son achat (Y/y/\+O/o $\vert$ N/n) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__TER_8c_adfac3debc9aa9512ef0e9d9bc5f315d1}{prompt\+Finish}} ()
+\begin{DoxyCompactList}\small\item\em Demande au joueur s\textquotesingle{}il veut vraiment arrêtre d\textquotesingle{}acheter des Chips (Y/y/\+O/o $\vert$ N/n) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{Disp__TER_8c_ac8bb3912a3ce86b15842e79d0b421204}\label{Disp__TER_8c_ac8bb3912a3ce86b15842e79d0b421204}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!clear@{clear}}
+\index{clear@{clear}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nettoie le terminal. 
+
+\mbox{\Hypertarget{Disp__TER_8c_a1609e766be30ac515fd92626b7077b9b}\label{Disp__TER_8c_a1609e766be30ac515fd92626b7077b9b}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!dispChipsPrices@{dispChipsPrices}}
+\index{dispChipsPrices@{dispChipsPrices}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{dispChipsPrices()}{dispChipsPrices()}}
+{\footnotesize\ttfamily void disp\+Chips\+Prices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le marché des Chips, sous la forme d\textquotesingle{}un tableau. 
+
+\mbox{\Hypertarget{Disp__TER_8c_a80a0229330afce599365f71c6dfc2416}\label{Disp__TER_8c_a80a0229330afce599365f71c6dfc2416}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!dispChipsPrompt@{dispChipsPrompt}}
+\index{dispChipsPrompt@{dispChipsPrompt}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{dispChipsPrompt()}{dispChipsPrompt()}}
+{\footnotesize\ttfamily void disp\+Chips\+Prompt (\begin{DoxyParamCaption}\item[{int}]{current\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}argent du joueur, suivit du message d\textquotesingle{}instruction pour acheter un Chips. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em current\+\_\+price} & L\textquotesingle{}argent du joueur (en \$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__TER_8c_a52cd72ed3ca62cee67e0d4f3f0f1e601}\label{Disp__TER_8c_a52cd72ed3ca62cee67e0d4f3f0f1e601}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!dispError@{dispError}}
+\index{dispError@{dispError}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{dispError()}{dispError()}}
+{\footnotesize\ttfamily void disp\+Error (\begin{DoxyParamCaption}\item[{int}]{error }\end{DoxyParamCaption})}
+
+
+
+Affiche les messages d\textquotesingle{}erreurs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em error} & Code d\textquotesingle{}erreur, sous la forme de 5 flags en binaire\+: type de Chips valide $\vert$ line entre 1 et 7 $\vert$ position entre 1 et 24 $\vert$ place disponible $\vert$ suffisance d\textquotesingle{}argent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__TER_8c_aaf0336727f29023842927684abb72509}\label{Disp__TER_8c_aaf0336727f29023842927684abb72509}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!dispGame@{dispGame}}
+\index{dispGame@{dispGame}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{dispGame()}{dispGame()}}
+{\footnotesize\ttfamily void disp\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Affiche la grille de jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le jeu, contenant les Chips et les Virus \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__TER_8c_ac537c451c7507b6fb80061d2b6faef6a}\label{Disp__TER_8c_ac537c451c7507b6fb80061d2b6faef6a}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!dispTurn@{dispTurn}}
+\index{dispTurn@{dispTurn}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{dispTurn()}{dispTurn()}}
+{\footnotesize\ttfamily void disp\+Turn (\begin{DoxyParamCaption}\item[{int}]{turn }\end{DoxyParamCaption})}
+
+
+
+Affiche le numéro de tour du jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em turn} & Numéro de tour du jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__TER_8c_a165d177a8e168bb0f73e663eb57e55cd}\label{Disp__TER_8c_a165d177a8e168bb0f73e663eb57e55cd}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!dispUpcomingWave@{dispUpcomingWave}}
+\index{dispUpcomingWave@{dispUpcomingWave}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{dispUpcomingWave()}{dispUpcomingWave()}}
+{\footnotesize\ttfamily void disp\+Upcoming\+Wave (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{virus\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Affiche la vague de virus qui se prépare pour la partie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em virus\+\_\+list} & La liste de virus \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__TER_8c_abdae7b8f15f0fc126295e556b99f0bdb}\label{Disp__TER_8c_abdae7b8f15f0fc126295e556b99f0bdb}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!getChipsString@{getChipsString}}
+\index{getChipsString@{getChipsString}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{getChipsString()}{getChipsString()}}
+{\footnotesize\ttfamily void get\+Chips\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{chips }\end{DoxyParamCaption})}
+
+
+
+Crée la chaîne de caractères sous la forme \mbox{[}Lettre\mbox{]}\mbox{[}Life\mbox{]} du chips indiqué 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em str} & La chaîne de caractères \\
+\hline
+{\em chips} & Le chips indiqué \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__TER_8c_a65fa33b1533d763729cdbc1a5ab4a9fc}\label{Disp__TER_8c_a65fa33b1533d763729cdbc1a5ab4a9fc}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!getVirusString@{getVirusString}}
+\index{getVirusString@{getVirusString}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{getVirusString()}{getVirusString()}}
+{\footnotesize\ttfamily void get\+Virus\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{virus }\end{DoxyParamCaption})}
+
+
+
+Crée la chaîne de caractères sous la forme \mbox{[}Life\mbox{]}\mbox{[}Lettre\mbox{]} du virus indiqué 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em str} & La chaîne de caractères \\
+\hline
+{\em virus} & Le virus indiqué \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__TER_8c_a73576726c51faf3d1181105f660ee296}\label{Disp__TER_8c_a73576726c51faf3d1181105f660ee296}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!inputChips@{inputChips}}
+\index{inputChips@{inputChips}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{inputChips()}{inputChips()}}
+{\footnotesize\ttfamily int input\+Chips (\begin{DoxyParamCaption}\item[{char $\ast$}]{type,  }\item[{int $\ast$}]{line,  }\item[{int $\ast$}]{position }\end{DoxyParamCaption})}
+
+
+
+Prend en entrée le type de Chips, ainsi que ses coordonnées. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de Chips \\
+\hline
+{\em line} & La line du Chips \\
+\hline
+{\em position} & La position du Chips \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Si type = \textquotesingle{}q\textquotesingle{}, renvoie 0. Sinon, renvoie 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__TER_8c_a40dca99e05b600e890b201ad54eb41b3}\label{Disp__TER_8c_a40dca99e05b600e890b201ad54eb41b3}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!promptConfirm@{promptConfirm}}
+\index{promptConfirm@{promptConfirm}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{promptConfirm()}{promptConfirm()}}
+{\footnotesize\ttfamily int prompt\+Confirm (\begin{DoxyParamCaption}\item[{char}]{type,  }\item[{int}]{line,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Demande au joueur s\textquotesingle{}il est certain de poursuivre son achat (Y/y/\+O/o $\vert$ N/n) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de Chips \\
+\hline
+{\em line} & La line du Chips \\
+\hline
+{\em position} & La position du Chips \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La réponse du joueur (1 ou 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__TER_8c_adfac3debc9aa9512ef0e9d9bc5f315d1}\label{Disp__TER_8c_adfac3debc9aa9512ef0e9d9bc5f315d1}} 
+\index{Disp\_TER.c@{Disp\_TER.c}!promptFinish@{promptFinish}}
+\index{promptFinish@{promptFinish}!Disp\_TER.c@{Disp\_TER.c}}
+\doxysubsubsection{\texorpdfstring{promptFinish()}{promptFinish()}}
+{\footnotesize\ttfamily int prompt\+Finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Demande au joueur s\textquotesingle{}il veut vraiment arrêtre d\textquotesingle{}acheter des Chips (Y/y/\+O/o $\vert$ N/n) 
+
+\begin{DoxyReturn}{Renvoie}
+La réponse du joueur (1 ou 0) 
+\end{DoxyReturn}

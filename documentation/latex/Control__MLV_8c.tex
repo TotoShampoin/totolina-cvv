@@ -1,0 +1,132 @@
+\hypertarget{Control__MLV_8c}{}\doxysection{Référence du fichier src/\+Control\+\_\+\+M\+LV.c}
+\label{Control__MLV_8c}\index{src/Control\_MLV.c@{src/Control\_MLV.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$C\+V\+V/\+C\+V\+V.\+h$>$}\newline
+{\ttfamily \#include $<$Control\+\_\+\+M\+L\+V.\+h$>$}\newline
+{\ttfamily \#include $<$Disp\+\_\+\+M\+L\+V.\+h$>$}\newline
+Graphe des dépendances par inclusion de Control\+\_\+\+M\+L\+V.\+c\+:
+% FIG 0
+\doxysubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDataDisp}{Data\+Disp}}
+\begin{DoxyCompactList}\small\item\em Structure de données à afficher, pour réduire artificiellement le nombre d\textquotesingle{}arguments de display\+M\+LV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Control__MLV_8c_a5c31d1c6d3f866b6b212ce4a56e371c5}{check\+Chips\+Valid\+M\+LV}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game, \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$tmp)
+\begin{DoxyCompactList}\small\item\em Indique si les infos appelées par le joueur sont valides pour un Chips ou non (version Graphique) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Control__MLV_8c_a41f679b26ddcc6347f5f3c6597a3244a}{display\+M\+LV}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game, \mbox{\hyperlink{structDataDisp}{Data\+Disp}} data, int mode)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}écran du jeu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Control__MLV_8c_af0f9a2854d1462fbadc0798d6074058e}{buy\+Chips}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game, int id, int line, int position, int $\ast$error)
+\begin{DoxyCompactList}\small\item\em Achète un Chips à partir des données et l\textquotesingle{}insère, ou affecte le code d\textquotesingle{}erreur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Control__MLV_8c_ad388212e55c6a387769689a9e9e749fe}{sell\+Chips}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game, int line, int position)
+\begin{DoxyCompactList}\small\item\em Retire le Chips pointé par les coordonnées line-\/position (qui est alors remboursé) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Control__MLV_8c_af8aad1cc788d6054a50f02be347dcc41}{main\+M\+LV}} ()
+\begin{DoxyCompactList}\small\item\em Le main du mode graphique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{Control__MLV_8c_af0f9a2854d1462fbadc0798d6074058e}\label{Control__MLV_8c_af0f9a2854d1462fbadc0798d6074058e}} 
+\index{Control\_MLV.c@{Control\_MLV.c}!buyChips@{buyChips}}
+\index{buyChips@{buyChips}!Control\_MLV.c@{Control\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{buyChips()}{buyChips()}}
+{\footnotesize\ttfamily int buy\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game,  }\item[{int}]{id,  }\item[{int}]{line,  }\item[{int}]{position,  }\item[{int $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Achète un Chips à partir des données et l\textquotesingle{}insère, ou affecte le code d\textquotesingle{}erreur. 
+
+\begin{DoxyNote}{Note}
+Le Chips acheté est alloué, puis libéré si l\textquotesingle{}insertion est impossible
+\end{DoxyNote}
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+{\em id} & Index dans la table de Chips prédéfinis \\
+\hline
+{\em line} & La line \\
+\hline
+{\em position} & La position \\
+\hline
+{\em error} & Le code d\textquotesingle{}erreur (voir check\+Chips\+Valid\+M\+LV) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Control__MLV_8c_a5c31d1c6d3f866b6b212ce4a56e371c5}\label{Control__MLV_8c_a5c31d1c6d3f866b6b212ce4a56e371c5}} 
+\index{Control\_MLV.c@{Control\_MLV.c}!checkChipsValidMLV@{checkChipsValidMLV}}
+\index{checkChipsValidMLV@{checkChipsValidMLV}!Control\_MLV.c@{Control\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{checkChipsValidMLV()}{checkChipsValidMLV()}}
+{\footnotesize\ttfamily int check\+Chips\+Valid\+M\+LV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{tmp }\end{DoxyParamCaption})}
+
+
+
+Indique si les infos appelées par le joueur sont valides pour un Chips ou non (version Graphique) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+{\em tmp} & Le Chips à insérer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Réponse sous la forme de 2 flags en bit \+: place disponible $\vert$ suffisance d\textquotesingle{}argent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Control__MLV_8c_a41f679b26ddcc6347f5f3c6597a3244a}\label{Control__MLV_8c_a41f679b26ddcc6347f5f3c6597a3244a}} 
+\index{Control\_MLV.c@{Control\_MLV.c}!displayMLV@{displayMLV}}
+\index{displayMLV@{displayMLV}!Control\_MLV.c@{Control\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{displayMLV()}{displayMLV()}}
+{\footnotesize\ttfamily void display\+M\+LV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{structDataDisp}{Data\+Disp}}}]{data,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}écran du jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+{\em data} & Les données supplémentaires (pointeur de souris, erreurs, id de Chips) \\
+\hline
+{\em mode} & Mode achat de Chips ou non \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Control__MLV_8c_af8aad1cc788d6054a50f02be347dcc41}\label{Control__MLV_8c_af8aad1cc788d6054a50f02be347dcc41}} 
+\index{Control\_MLV.c@{Control\_MLV.c}!mainMLV@{mainMLV}}
+\index{mainMLV@{mainMLV}!Control\_MLV.c@{Control\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{mainMLV()}{mainMLV()}}
+{\footnotesize\ttfamily int main\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Le main du mode graphique. 
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Control__MLV_8c_ad388212e55c6a387769689a9e9e749fe}\label{Control__MLV_8c_ad388212e55c6a387769689a9e9e749fe}} 
+\index{Control\_MLV.c@{Control\_MLV.c}!sellChips@{sellChips}}
+\index{sellChips@{sellChips}!Control\_MLV.c@{Control\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{sellChips()}{sellChips()}}
+{\footnotesize\ttfamily int sell\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game,  }\item[{int}]{line,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Retire le Chips pointé par les coordonnées line-\/position (qui est alors remboursé) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+{\em line} & La line \\
+\hline
+{\em position} & La position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 
+\end{DoxyReturn}

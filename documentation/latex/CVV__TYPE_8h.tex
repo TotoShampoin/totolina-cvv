@@ -1,0 +1,397 @@
+\hypertarget{CVV__TYPE_8h}{}\doxysection{Référence du fichier inc/\+C\+V\+V/\+C\+V\+V\+\_\+\+T\+Y\+PE.h}
+\label{CVV__TYPE_8h}\index{inc/CVV/CVV\_TYPE.h@{inc/CVV/CVV\_TYPE.h}}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 0
+\doxysubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structchips}{chips}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}un Chips. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structvirus}{virus}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}un Virus. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structChipsData}{Chips\+Data}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}une donnée de Chips prédéfini (contenant le Chips et le nom de son type) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structVirusData}{Virus\+Data}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}une donnée de Virus prédéfini (contenant le Virus et le nom de son type) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structGame}{Game}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}un plateau de jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{CVV__TYPE_8h_a03d9de28451c7852976793cd0a6d52c9}{O\+OB}}~-\/1
+\item 
+\#define \mbox{\hyperlink{CVV__TYPE_8h_a3f501395a50c045cd8879208893b19c7}{N\+B\+L\+I\+NE}}~7
+\item 
+\#define \mbox{\hyperlink{CVV__TYPE_8h_adb8a6efd0127cf9205fd1949299751a2}{N\+B\+P\+OS}}~24
+\item 
+\#define \mbox{\hyperlink{CVV__TYPE_8h_a1bdb12f16322e159c719b7fb5ec2665f}{T\+A\+B\+C\+H\+I\+P\+S\+\_\+\+L\+EN}}~5
+\item 
+\#define \mbox{\hyperlink{CVV__TYPE_8h_ae5543c491fcc04b68ac6875de5708e2e}{T\+A\+B\+V\+I\+R\+U\+S\+\_\+\+L\+EN}}~5
+\item 
+\#define \mbox{\hyperlink{CVV__TYPE_8h_a5cda8046056c9983414830157dcc396c}{\+\_\+\+\_\+\+C\+V\+V\+\_\+\+T\+Y\+PE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structchips}{chips}} \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}un Chips. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structvirus}{virus}} \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}un Virus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}} \{ \newline
+\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51af6ae22069d0427bb2d19adad213f2b35}{A\+LU}} = \textquotesingle{}A\textquotesingle{}, 
+\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a4e7c1c21b6fbbb620bd79131aabc22ab}{R\+AM}} = \textquotesingle{}R\textquotesingle{}, 
+\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a162d558be90705dfa6cfb6b78bf1cac4}{P\+M\+MU}} = \textquotesingle{}P\textquotesingle{}, 
+\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51af1be4d3ae9949cf9a5175c4da90b64f1}{Patchs}} = \textquotesingle{}X\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a93b693cd5e899a393c111304ceec66b0}{Firewall}} = \textquotesingle{}F\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Le type de Chips, sous forme d\textquotesingle{}un caractère. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}} \{ \newline
+\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa986d007ed97f0ef48204c8091c3def9d}{Div\+Zero}} = \textquotesingle{}E\textquotesingle{}, 
+\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa34666088d17fe9d7ca642edcc471ea37}{D\+D\+OS}} = \textquotesingle{}D\textquotesingle{}, 
+\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa34848895baa522a535fa8587aa9657d3}{Seg\+Fault}} = \textquotesingle{}S\textquotesingle{}, 
+\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa46945aac7aa8cf2e84887416df0c47f4}{Mem\+Corrupt}} = \textquotesingle{}M\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa9dbe1b913a2a87d6d05f1997b5d5f825}{Bug}} = \textquotesingle{}B\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Le type de Virus, sous forme d\textquotesingle{}un caractère. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{CVV__TYPE_8h_a6a3745a608949257cc9c8dcd35bb6e72}{init\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Initialise les tables de Chips et Virus prédéfinis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__TYPE_8h_a234f23489070a713433662b7736d5a79}{get\+Chips\+Index\+From\+Type}} (\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Cherche le Chips prédéfini à partir du type, et renvoie son index dans la table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__TYPE_8h_a5199c3fdf2fea4cc6b46a49e04ac2bc1}{get\+Virus\+Index\+From\+Type}} (\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Cherche le Virus prédéfini à partir du type, et renvoie son index dans la table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structChipsData}{Chips\+Data}} $\ast$ \mbox{\hyperlink{CVV__TYPE_8h_a806659876844d1927af18df0239fcfb4}{get\+Chips\+From\+Type}} (\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Cherche le Chips prédéfini à partir du type, et renvoie son \mbox{\hyperlink{structChipsData}{Chips\+Data}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVirusData}{Virus\+Data}} $\ast$ \mbox{\hyperlink{CVV__TYPE_8h_adc9014e95512434819059b48ba4006f2}{get\+Virus\+From\+Type}} (\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Cherche le Virus prédéfini à partir du type, et renvoie son \mbox{\hyperlink{structVirusData}{Virus\+Data}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$ \mbox{\hyperlink{CVV__TYPE_8h_a5cc99e854e0cb41dc8bad8fd69c3405c}{create\+Chips\+From\+Type}} (\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Cherche le Chips prédéfini à partir du type, et en renvoie une copie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$ \mbox{\hyperlink{CVV__TYPE_8h_aa5e07ce2dc66148889c3516e9fcdd5a1}{create\+Virus\+From\+Type}} (\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Cherche le Virus prédéfini à partir du type, et en renvoie une copie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$ \mbox{\hyperlink{CVV__TYPE_8h_ae8c6e1c10fbff742642ec2416900eb50}{create\+Chips\+From\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Cherche le Chips prédéfini à partir de son index dans la table, et en renvoie une copie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$ \mbox{\hyperlink{CVV__TYPE_8h_aa0838395344a0799d1b9906b0d836572}{create\+Virus\+From\+Inedx}} (int index)
+\begin{DoxyCompactList}\small\item\em Cherche le Virus prédéfini à partir de son index dans la table, et en renvoie une copie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structChipsData}{Chips\+Data}} \mbox{\hyperlink{CVV__TYPE_8h_a1bc775a49ea5e176a882d8734f2dd371}{table\+\_\+of\+\_\+chips}} \mbox{[}\mbox{\hyperlink{CVV__TYPE_8h_a1bdb12f16322e159c719b7fb5ec2665f}{T\+A\+B\+C\+H\+I\+P\+S\+\_\+\+L\+EN}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table des Chips prédéfinis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVirusData}{Virus\+Data}} \mbox{\hyperlink{CVV__TYPE_8h_a1e626c368dbb012df6d50a4b3dd62ef4}{table\+\_\+of\+\_\+virus}} \mbox{[}\mbox{\hyperlink{CVV__TYPE_8h_ae5543c491fcc04b68ac6875de5708e2e}{T\+A\+B\+V\+I\+R\+U\+S\+\_\+\+L\+EN}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table des Virus prédéfinis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{CVV__TYPE_8h_a5cda8046056c9983414830157dcc396c}\label{CVV__TYPE_8h_a5cda8046056c9983414830157dcc396c}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!\_\_CVV\_TYPE@{\_\_CVV\_TYPE}}
+\index{\_\_CVV\_TYPE@{\_\_CVV\_TYPE}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{\_\_CVV\_TYPE}{\_\_CVV\_TYPE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+C\+V\+V\+\_\+\+T\+Y\+PE}
+
+\mbox{\Hypertarget{CVV__TYPE_8h_a3f501395a50c045cd8879208893b19c7}\label{CVV__TYPE_8h_a3f501395a50c045cd8879208893b19c7}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!NBLINE@{NBLINE}}
+\index{NBLINE@{NBLINE}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{NBLINE}{NBLINE}}
+{\footnotesize\ttfamily \#define N\+B\+L\+I\+NE~7}
+
+\mbox{\Hypertarget{CVV__TYPE_8h_adb8a6efd0127cf9205fd1949299751a2}\label{CVV__TYPE_8h_adb8a6efd0127cf9205fd1949299751a2}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!NBPOS@{NBPOS}}
+\index{NBPOS@{NBPOS}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{NBPOS}{NBPOS}}
+{\footnotesize\ttfamily \#define N\+B\+P\+OS~24}
+
+\mbox{\Hypertarget{CVV__TYPE_8h_a03d9de28451c7852976793cd0a6d52c9}\label{CVV__TYPE_8h_a03d9de28451c7852976793cd0a6d52c9}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!OOB@{OOB}}
+\index{OOB@{OOB}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{OOB}{OOB}}
+{\footnotesize\ttfamily \#define O\+OB~-\/1}
+
+\mbox{\Hypertarget{CVV__TYPE_8h_a1bdb12f16322e159c719b7fb5ec2665f}\label{CVV__TYPE_8h_a1bdb12f16322e159c719b7fb5ec2665f}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!TABCHIPS\_LEN@{TABCHIPS\_LEN}}
+\index{TABCHIPS\_LEN@{TABCHIPS\_LEN}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{TABCHIPS\_LEN}{TABCHIPS\_LEN}}
+{\footnotesize\ttfamily \#define T\+A\+B\+C\+H\+I\+P\+S\+\_\+\+L\+EN~5}
+
+\mbox{\Hypertarget{CVV__TYPE_8h_ae5543c491fcc04b68ac6875de5708e2e}\label{CVV__TYPE_8h_ae5543c491fcc04b68ac6875de5708e2e}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!TABVIRUS\_LEN@{TABVIRUS\_LEN}}
+\index{TABVIRUS\_LEN@{TABVIRUS\_LEN}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{TABVIRUS\_LEN}{TABVIRUS\_LEN}}
+{\footnotesize\ttfamily \#define T\+A\+B\+V\+I\+R\+U\+S\+\_\+\+L\+EN~5}
+
+
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}\label{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!Chips@{Chips}}
+\index{Chips@{Chips}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{Chips}{Chips}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structchips}{chips}} \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}}
+
+
+
+Structure d\textquotesingle{}un Chips. 
+
+\mbox{\Hypertarget{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}\label{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!Virus@{Virus}}
+\index{Virus@{Virus}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{Virus}{Virus}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structvirus}{virus}} \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}}
+
+
+
+Structure d\textquotesingle{}un Virus. 
+
+
+
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\mbox{\Hypertarget{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}\label{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!ChipsType@{ChipsType}}
+\index{ChipsType@{ChipsType}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{ChipsType}{ChipsType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}}}
+
+
+
+Le type de Chips, sous forme d\textquotesingle{}un caractère. 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALU@{ALU}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!ALU@{ALU}}}\mbox{\Hypertarget{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51af6ae22069d0427bb2d19adad213f2b35}\label{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51af6ae22069d0427bb2d19adad213f2b35}} 
+A\+LU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAM@{RAM}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!RAM@{RAM}}}\mbox{\Hypertarget{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a4e7c1c21b6fbbb620bd79131aabc22ab}\label{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a4e7c1c21b6fbbb620bd79131aabc22ab}} 
+R\+AM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PMMU@{PMMU}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!PMMU@{PMMU}}}\mbox{\Hypertarget{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a162d558be90705dfa6cfb6b78bf1cac4}\label{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a162d558be90705dfa6cfb6b78bf1cac4}} 
+P\+M\+MU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Patchs@{Patchs}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!Patchs@{Patchs}}}\mbox{\Hypertarget{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51af1be4d3ae9949cf9a5175c4da90b64f1}\label{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51af1be4d3ae9949cf9a5175c4da90b64f1}} 
+Patchs&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Firewall@{Firewall}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!Firewall@{Firewall}}}\mbox{\Hypertarget{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a93b693cd5e899a393c111304ceec66b0}\label{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51a93b693cd5e899a393c111304ceec66b0}} 
+Firewall&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}\label{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!VirusType@{VirusType}}
+\index{VirusType@{VirusType}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{VirusType}{VirusType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}}}
+
+
+
+Le type de Virus, sous forme d\textquotesingle{}un caractère. 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DivZero@{DivZero}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!DivZero@{DivZero}}}\mbox{\Hypertarget{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa986d007ed97f0ef48204c8091c3def9d}\label{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa986d007ed97f0ef48204c8091c3def9d}} 
+Div\+Zero&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DDOS@{DDOS}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!DDOS@{DDOS}}}\mbox{\Hypertarget{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa34666088d17fe9d7ca642edcc471ea37}\label{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa34666088d17fe9d7ca642edcc471ea37}} 
+D\+D\+OS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SegFault@{SegFault}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!SegFault@{SegFault}}}\mbox{\Hypertarget{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa34848895baa522a535fa8587aa9657d3}\label{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa34848895baa522a535fa8587aa9657d3}} 
+Seg\+Fault&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemCorrupt@{MemCorrupt}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!MemCorrupt@{MemCorrupt}}}\mbox{\Hypertarget{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa46945aac7aa8cf2e84887416df0c47f4}\label{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa46945aac7aa8cf2e84887416df0c47f4}} 
+Mem\+Corrupt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bug@{Bug}!CVV\_TYPE.h@{CVV\_TYPE.h}}\index{CVV\_TYPE.h@{CVV\_TYPE.h}!Bug@{Bug}}}\mbox{\Hypertarget{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa9dbe1b913a2a87d6d05f1997b5d5f825}\label{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225caa9dbe1b913a2a87d6d05f1997b5d5f825}} 
+Bug&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{CVV__TYPE_8h_ae8c6e1c10fbff742642ec2416900eb50}\label{CVV__TYPE_8h_ae8c6e1c10fbff742642ec2416900eb50}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!createChipsFromIndex@{createChipsFromIndex}}
+\index{createChipsFromIndex@{createChipsFromIndex}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{createChipsFromIndex()}{createChipsFromIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}$\ast$ create\+Chips\+From\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Cherche le Chips prédéfini à partir de son index dans la table, et en renvoie une copie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em index} & L\textquotesingle{}index du Chips dans la table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur du Chips copié, ou N\+U\+LL si l\textquotesingle{}index est invalide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__TYPE_8h_a5cc99e854e0cb41dc8bad8fd69c3405c}\label{CVV__TYPE_8h_a5cc99e854e0cb41dc8bad8fd69c3405c}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!createChipsFromType@{createChipsFromType}}
+\index{createChipsFromType@{createChipsFromType}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{createChipsFromType()}{createChipsFromType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}$\ast$ create\+Chips\+From\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Cherche le Chips prédéfini à partir du type, et en renvoie une copie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de Chips recherché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur du Chips copié, ou N\+U\+LL si le type n\textquotesingle{}existe pas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__TYPE_8h_aa0838395344a0799d1b9906b0d836572}\label{CVV__TYPE_8h_aa0838395344a0799d1b9906b0d836572}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!createVirusFromInedx@{createVirusFromInedx}}
+\index{createVirusFromInedx@{createVirusFromInedx}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{createVirusFromInedx()}{createVirusFromInedx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}$\ast$ create\+Virus\+From\+Inedx (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Cherche le Virus prédéfini à partir de son index dans la table, et en renvoie une copie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em index} & L\textquotesingle{}index du Virus dans la table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur du Virus copié, ou N\+U\+LL si l\textquotesingle{}index est invalide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__TYPE_8h_aa5e07ce2dc66148889c3516e9fcdd5a1}\label{CVV__TYPE_8h_aa5e07ce2dc66148889c3516e9fcdd5a1}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!createVirusFromType@{createVirusFromType}}
+\index{createVirusFromType@{createVirusFromType}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{createVirusFromType()}{createVirusFromType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}$\ast$ create\+Virus\+From\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Cherche le Virus prédéfini à partir du type, et en renvoie une copie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de Virus recherché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur du Virus copié, ou N\+U\+LL si le type n\textquotesingle{}existe pas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__TYPE_8h_a806659876844d1927af18df0239fcfb4}\label{CVV__TYPE_8h_a806659876844d1927af18df0239fcfb4}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!getChipsFromType@{getChipsFromType}}
+\index{getChipsFromType@{getChipsFromType}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{getChipsFromType()}{getChipsFromType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structChipsData}{Chips\+Data}}$\ast$ get\+Chips\+From\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Cherche le Chips prédéfini à partir du type, et renvoie son \mbox{\hyperlink{structChipsData}{Chips\+Data}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de Chips recherché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur du \mbox{\hyperlink{structChipsData}{Chips\+Data}}, ou N\+U\+LL si le type n\textquotesingle{}existe pas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__TYPE_8h_a234f23489070a713433662b7736d5a79}\label{CVV__TYPE_8h_a234f23489070a713433662b7736d5a79}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!getChipsIndexFromType@{getChipsIndexFromType}}
+\index{getChipsIndexFromType@{getChipsIndexFromType}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{getChipsIndexFromType()}{getChipsIndexFromType()}}
+{\footnotesize\ttfamily int get\+Chips\+Index\+From\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Cherche le Chips prédéfini à partir du type, et renvoie son index dans la table. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de Chips recherché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+index dans la table de Chips, ou la longueur de la table si le type n\textquotesingle{}existe pas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__TYPE_8h_adc9014e95512434819059b48ba4006f2}\label{CVV__TYPE_8h_adc9014e95512434819059b48ba4006f2}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!getVirusFromType@{getVirusFromType}}
+\index{getVirusFromType@{getVirusFromType}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{getVirusFromType()}{getVirusFromType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVirusData}{Virus\+Data}}$\ast$ get\+Virus\+From\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Cherche le Virus prédéfini à partir du type, et renvoie son \mbox{\hyperlink{structVirusData}{Virus\+Data}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de Virus recherché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur du \mbox{\hyperlink{structVirusData}{Virus\+Data}}, ou N\+U\+LL si le type n\textquotesingle{}existe pas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__TYPE_8h_a5199c3fdf2fea4cc6b46a49e04ac2bc1}\label{CVV__TYPE_8h_a5199c3fdf2fea4cc6b46a49e04ac2bc1}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!getVirusIndexFromType@{getVirusIndexFromType}}
+\index{getVirusIndexFromType@{getVirusIndexFromType}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{getVirusIndexFromType()}{getVirusIndexFromType()}}
+{\footnotesize\ttfamily int get\+Virus\+Index\+From\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Cherche le Virus prédéfini à partir du type, et renvoie son index dans la table. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Le type de Virus recherché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+index dans la table de Virus, ou la longueur de la table si le type n\textquotesingle{}existe pas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__TYPE_8h_a6a3745a608949257cc9c8dcd35bb6e72}\label{CVV__TYPE_8h_a6a3745a608949257cc9c8dcd35bb6e72}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!initTables@{initTables}}
+\index{initTables@{initTables}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{initTables()}{initTables()}}
+{\footnotesize\ttfamily void init\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise les tables de Chips et Virus prédéfinis. 
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{CVV__TYPE_8h_a1bc775a49ea5e176a882d8734f2dd371}\label{CVV__TYPE_8h_a1bc775a49ea5e176a882d8734f2dd371}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!table\_of\_chips@{table\_of\_chips}}
+\index{table\_of\_chips@{table\_of\_chips}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{table\_of\_chips}{table\_of\_chips}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structChipsData}{Chips\+Data}} table\+\_\+of\+\_\+chips\mbox{[}\mbox{\hyperlink{CVV__TYPE_8h_a1bdb12f16322e159c719b7fb5ec2665f}{T\+A\+B\+C\+H\+I\+P\+S\+\_\+\+L\+EN}}\mbox{]}}
+
+
+
+Table des Chips prédéfinis. 
+
+\mbox{\Hypertarget{CVV__TYPE_8h_a1e626c368dbb012df6d50a4b3dd62ef4}\label{CVV__TYPE_8h_a1e626c368dbb012df6d50a4b3dd62ef4}} 
+\index{CVV\_TYPE.h@{CVV\_TYPE.h}!table\_of\_virus@{table\_of\_virus}}
+\index{table\_of\_virus@{table\_of\_virus}!CVV\_TYPE.h@{CVV\_TYPE.h}}
+\doxysubsubsection{\texorpdfstring{table\_of\_virus}{table\_of\_virus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVirusData}{Virus\+Data}} table\+\_\+of\+\_\+virus\mbox{[}\mbox{\hyperlink{CVV__TYPE_8h_ae5543c491fcc04b68ac6875de5708e2e}{T\+A\+B\+V\+I\+R\+U\+S\+\_\+\+L\+EN}}\mbox{]}}
+
+
+
+Table des Virus prédéfinis. 
+

@@ -20,12 +20,6 @@ int checkChipsValid(Game * game, char type, int line, int position) {
     return check;
 }
 
-Chips * createAndPlaceChips(char type, int line, int position) {
-    Chips * tmp = createChipsFromType(type);
-    tmp->line = line; tmp->position = position;
-    return tmp;
-}
-
 void prompt(Game * game) {
     dispUpcomingWave(game->virus);
     dispGame(game);
@@ -59,14 +53,14 @@ int mainTER() {
     while(!(end_code = isGameOver(game->virus))) {
         spawnVirus(game);
         clear();
-        dispTurn(game);
+        dispTurn(game->turn);
         dispGame(game);
         msleep(INTERVAL);
         gameTurn(game);
         game->turn ++;
     };
     clear();
-    dispTurn(game);
+    dispTurn(game->turn);
     dispGame(game);
     switch (end_code) {
     case 1:

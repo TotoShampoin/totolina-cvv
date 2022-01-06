@@ -1,0 +1,399 @@
+\hypertarget{Disp__MLV_8c}{}\doxysection{Référence du fichier src/\+Disp\+\_\+\+M\+LV.c}
+\label{Disp__MLV_8c}\index{src/Disp\_MLV.c@{src/Disp\_MLV.c}}
+{\ttfamily \#include $<$Disp\+\_\+\+M\+L\+V.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Graphe des dépendances par inclusion de Disp\+\_\+\+M\+L\+V.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Disp__MLV_8c_ac1f28a914cd5ce9ce28573f401a93f1c}{load\+Assets\+M\+LV}} ()
+\begin{DoxyCompactList}\small\item\em Charge les ressources et les met dans assets. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__MLV_8c_a7e878630a604dea4fa604d12c3e53f5e}{unload\+Assets\+M\+LV}} ()
+\item 
+int \mbox{\hyperlink{Disp__MLV_8c_a8fe1bdae02604d752459d0a29137d13d}{init\+M\+LV}} ()
+\begin{DoxyCompactList}\small\item\em Initialisation de la fenêtre et des ressources graphiques. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__MLV_8c_a00fe8544b5ce8bacc1a372fadc13d771}{close\+M\+LV}} ()
+\item 
+int \mbox{\hyperlink{Disp__MLV_8c_ae654450988d7dc945bea60fd0531c17b}{reinit\+M\+LV}} ()
+\item 
+void \mbox{\hyperlink{Disp__MLV_8c_a9abb47e8e2b579b739823eb478fd3094}{clear\+Screen\+M\+LV}} ()
+\begin{DoxyCompactList}\small\item\em Efface l\textquotesingle{}écran et le colorie en bleu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_a143d42ad43968cafa476f9cd5850f0fb}{disp\+Str\+M\+LV}} (int x, int y, char $\ast$t, int s)
+\begin{DoxyCompactList}\small\item\em Affiche un texte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_a925d3d98511cc07e5ef7019ce0325ce0}{disp\+Int\+M\+LV}} (int x, int y, char $\ast$t, int n, int s)
+\begin{DoxyCompactList}\small\item\em Affiche un texte suivit d\textquotesingle{}un nombre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_aa35ae3c025e257120fc2651d9d48e3a5}{disp\+Turn\+M\+LV}} (int t)
+\begin{DoxyCompactList}\small\item\em Affiche le tour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_ad365800b64a042827adc046939db07a4}{disp\+Money\+M\+LV}} (int m)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}argent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_a02e7c3699e34438a946c4708ea591de5}{disp\+Logo\+M\+LV}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le logo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_ab90d4717fa5aa6973c3f0ea796ce9382}{disp\+Error\+M\+LV}} (int error)
+\begin{DoxyCompactList}\small\item\em Affiche les erreurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_acd58e4066089ac3c9c0a4044fb4dfaf5}{lifebar\+M\+LV}} (int x, int y, int l)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}ndicateur de life, en nombre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_aff0ceec630e26d6c5ba69d99f7e5e664}{put\+Sprite\+M\+LV}} (int x, int y, int s, int l)
+\begin{DoxyCompactList}\small\item\em Place un Chips ou un virus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_a45216eebd71567cc1db0a17e6e271201}{disp\+Grid\+M\+LV}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Affiche la grille de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_af334b75cefcf161c6e6003b77cce8a27}{disp\+Market\+M\+LV}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le marché des Chips, sous la forme d\textquotesingle{}un tableau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_a70549c8999e4ad7e153c2e75637af4b9}{disp\+Upcoming\+Wave\+M\+LV}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$VL)
+\begin{DoxyCompactList}\small\item\em Affiche la vague de virus qui arrive. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__MLV_8c_a6cee8e7dfaab39cbc915a4aaf0906dde}{show\+Infos\+M\+LV}} (int x, int y, \mbox{\hyperlink{Disp__MLV_8h_a4fab2721054fd66cc89f138fd029fd1f}{Info\+Type}} type, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em (Avancé) Une petite boîte qui affiche les informations d\textquotesingle{}un élément pointée par la souris \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__MLV_8c_acf9207d89f5e97dad6fd3952dbd483fc}{msg\+Box\+M\+LV}} (char $\ast$$\ast$input, char $\ast$str, int \mbox{\hyperlink{Control__TER_8c_ad022b4979f6725fdd7889a913a9f8f21}{prompt}})
+\begin{DoxyCompactList}\small\item\em Affiche une boite de dialogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Disp__MLV_8c_a418460805a7755a9b3fbdeb9c65ba8fb}{fetch\+Mouse\+Position\+M\+LV}} (int $\ast$x, int $\ast$y, char $\ast$buttons)
+\begin{DoxyCompactList}\small\item\em Récupère la position de la souris, ainsi que ses clics. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__MLV_8c_af8f58f46cc0255b24add6aca9df890e6}{get\+Grid\+Position\+From\+Mouse\+M\+LV}} (int $\ast$l, int $\ast$p, int x, int y)
+\begin{DoxyCompactList}\small\item\em Détermine la position sur la grille à partir de la souris. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Disp__MLV_8c_aba2b9cf187f33aae6a35a77668b86bc2}{get\+Chips\+Index\+On\+Market\+From\+Mouse\+M\+LV}} (int $\ast$i, int x, int y)
+\begin{DoxyCompactList}\small\item\em Détermine le type du Chips pointé par la souris sur le marché à Chips, sous la forme de l\textquotesingle{}index sur la table des Chips. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$ \mbox{\hyperlink{Disp__MLV_8c_a48e64e7dfa407a718736cf0798ada822}{get\+Virus\+On\+Wave\+From\+Mouse\+M\+LV}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$VL, int x, int y)
+\begin{DoxyCompactList}\small\item\em Détermine le Virus pointé par la souris sur l\textquotesingle{}affichage de la vague. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{Disp__MLV_8c_a9abb47e8e2b579b739823eb478fd3094}\label{Disp__MLV_8c_a9abb47e8e2b579b739823eb478fd3094}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!clearScreenMLV@{clearScreenMLV}}
+\index{clearScreenMLV@{clearScreenMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{clearScreenMLV()}{clearScreenMLV()}}
+{\footnotesize\ttfamily void clear\+Screen\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Efface l\textquotesingle{}écran et le colorie en bleu. 
+
+\mbox{\Hypertarget{Disp__MLV_8c_a00fe8544b5ce8bacc1a372fadc13d771}\label{Disp__MLV_8c_a00fe8544b5ce8bacc1a372fadc13d771}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!closeMLV@{closeMLV}}
+\index{closeMLV@{closeMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{closeMLV()}{closeMLV()}}
+{\footnotesize\ttfamily int close\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Disp__MLV_8c_ab90d4717fa5aa6973c3f0ea796ce9382}\label{Disp__MLV_8c_ab90d4717fa5aa6973c3f0ea796ce9382}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispErrorMLV@{dispErrorMLV}}
+\index{dispErrorMLV@{dispErrorMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispErrorMLV()}{dispErrorMLV()}}
+{\footnotesize\ttfamily void disp\+Error\+M\+LV (\begin{DoxyParamCaption}\item[{int}]{error }\end{DoxyParamCaption})}
+
+
+
+Affiche les erreurs. 
+
+\mbox{\Hypertarget{Disp__MLV_8c_a45216eebd71567cc1db0a17e6e271201}\label{Disp__MLV_8c_a45216eebd71567cc1db0a17e6e271201}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispGridMLV@{dispGridMLV}}
+\index{dispGridMLV@{dispGridMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispGridMLV()}{dispGridMLV()}}
+{\footnotesize\ttfamily void disp\+Grid\+M\+LV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Affiche la grille de jeu. 
+
+\mbox{\Hypertarget{Disp__MLV_8c_a925d3d98511cc07e5ef7019ce0325ce0}\label{Disp__MLV_8c_a925d3d98511cc07e5ef7019ce0325ce0}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispIntMLV@{dispIntMLV}}
+\index{dispIntMLV@{dispIntMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispIntMLV()}{dispIntMLV()}}
+{\footnotesize\ttfamily void disp\+Int\+M\+LV (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{char $\ast$}]{text,  }\item[{int}]{number,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Affiche un texte suivit d\textquotesingle{}un nombre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+{\em text} & Texte posé avant le nombre (sans espace) \\
+\hline
+{\em number} & Le nombre \\
+\hline
+{\em size} & Taille de la police (0, 1 ou 2) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__MLV_8c_a02e7c3699e34438a946c4708ea591de5}\label{Disp__MLV_8c_a02e7c3699e34438a946c4708ea591de5}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispLogoMLV@{dispLogoMLV}}
+\index{dispLogoMLV@{dispLogoMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispLogoMLV()}{dispLogoMLV()}}
+{\footnotesize\ttfamily void disp\+Logo\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le logo. 
+
+\mbox{\Hypertarget{Disp__MLV_8c_af334b75cefcf161c6e6003b77cce8a27}\label{Disp__MLV_8c_af334b75cefcf161c6e6003b77cce8a27}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispMarketMLV@{dispMarketMLV}}
+\index{dispMarketMLV@{dispMarketMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispMarketMLV()}{dispMarketMLV()}}
+{\footnotesize\ttfamily void disp\+Market\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le marché des Chips, sous la forme d\textquotesingle{}un tableau. 
+
+\mbox{\Hypertarget{Disp__MLV_8c_ad365800b64a042827adc046939db07a4}\label{Disp__MLV_8c_ad365800b64a042827adc046939db07a4}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispMoneyMLV@{dispMoneyMLV}}
+\index{dispMoneyMLV@{dispMoneyMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispMoneyMLV()}{dispMoneyMLV()}}
+{\footnotesize\ttfamily void disp\+Money\+M\+LV (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}argent. 
+
+\mbox{\Hypertarget{Disp__MLV_8c_a143d42ad43968cafa476f9cd5850f0fb}\label{Disp__MLV_8c_a143d42ad43968cafa476f9cd5850f0fb}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispStrMLV@{dispStrMLV}}
+\index{dispStrMLV@{dispStrMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispStrMLV()}{dispStrMLV()}}
+{\footnotesize\ttfamily void disp\+Str\+M\+LV (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{char $\ast$}]{text,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Affiche un texte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+{\em text} & \\
+\hline
+{\em size} & Taille de la police (0, 1 ou 2) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__MLV_8c_aa35ae3c025e257120fc2651d9d48e3a5}\label{Disp__MLV_8c_aa35ae3c025e257120fc2651d9d48e3a5}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispTurnMLV@{dispTurnMLV}}
+\index{dispTurnMLV@{dispTurnMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispTurnMLV()}{dispTurnMLV()}}
+{\footnotesize\ttfamily void disp\+Turn\+M\+LV (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Affiche le tour. 
+
+\mbox{\Hypertarget{Disp__MLV_8c_a70549c8999e4ad7e153c2e75637af4b9}\label{Disp__MLV_8c_a70549c8999e4ad7e153c2e75637af4b9}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!dispUpcomingWaveMLV@{dispUpcomingWaveMLV}}
+\index{dispUpcomingWaveMLV@{dispUpcomingWaveMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{dispUpcomingWaveMLV()}{dispUpcomingWaveMLV()}}
+{\footnotesize\ttfamily void disp\+Upcoming\+Wave\+M\+LV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{VL }\end{DoxyParamCaption})}
+
+
+
+Affiche la vague de virus qui arrive. 
+
+\mbox{\Hypertarget{Disp__MLV_8c_a418460805a7755a9b3fbdeb9c65ba8fb}\label{Disp__MLV_8c_a418460805a7755a9b3fbdeb9c65ba8fb}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!fetchMousePositionMLV@{fetchMousePositionMLV}}
+\index{fetchMousePositionMLV@{fetchMousePositionMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{fetchMousePositionMLV()}{fetchMousePositionMLV()}}
+{\footnotesize\ttfamily void fetch\+Mouse\+Position\+M\+LV (\begin{DoxyParamCaption}\item[{int $\ast$}]{x,  }\item[{int $\ast$}]{y,  }\item[{char $\ast$}]{buttons }\end{DoxyParamCaption})}
+
+
+
+Récupère la position de la souris, ainsi que ses clics. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+{\em buttons} & Masque dont chaque bit correspond à un bouton \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__MLV_8c_aba2b9cf187f33aae6a35a77668b86bc2}\label{Disp__MLV_8c_aba2b9cf187f33aae6a35a77668b86bc2}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!getChipsIndexOnMarketFromMouseMLV@{getChipsIndexOnMarketFromMouseMLV}}
+\index{getChipsIndexOnMarketFromMouseMLV@{getChipsIndexOnMarketFromMouseMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{getChipsIndexOnMarketFromMouseMLV()}{getChipsIndexOnMarketFromMouseMLV()}}
+{\footnotesize\ttfamily int get\+Chips\+Index\+On\+Market\+From\+Mouse\+M\+LV (\begin{DoxyParamCaption}\item[{int $\ast$}]{index,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Détermine le type du Chips pointé par la souris sur le marché à Chips, sous la forme de l\textquotesingle{}index sur la table des Chips. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em index} & index sur la table des Chips \\
+\hline
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Si la souris détermine bien un type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__MLV_8c_af8f58f46cc0255b24add6aca9df890e6}\label{Disp__MLV_8c_af8f58f46cc0255b24add6aca9df890e6}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!getGridPositionFromMouseMLV@{getGridPositionFromMouseMLV}}
+\index{getGridPositionFromMouseMLV@{getGridPositionFromMouseMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{getGridPositionFromMouseMLV()}{getGridPositionFromMouseMLV()}}
+{\footnotesize\ttfamily int get\+Grid\+Position\+From\+Mouse\+M\+LV (\begin{DoxyParamCaption}\item[{int $\ast$}]{line,  }\item[{int $\ast$}]{position,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Détermine la position sur la grille à partir de la souris. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em line} & Line sur la grille \\
+\hline
+{\em position} & Position sur la grille \\
+\hline
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Si la souris détermine bien une position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__MLV_8c_a48e64e7dfa407a718736cf0798ada822}\label{Disp__MLV_8c_a48e64e7dfa407a718736cf0798ada822}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!getVirusOnWaveFromMouseMLV@{getVirusOnWaveFromMouseMLV}}
+\index{getVirusOnWaveFromMouseMLV@{getVirusOnWaveFromMouseMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{getVirusOnWaveFromMouseMLV()}{getVirusOnWaveFromMouseMLV()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}$\ast$ get\+Virus\+On\+Wave\+From\+Mouse\+M\+LV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{virus\+\_\+list,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Détermine le Virus pointé par la souris sur l\textquotesingle{}affichage de la vague. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em virus\+\_\+list} & la liste de virus du jeu \\
+\hline
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le virus 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__MLV_8c_a8fe1bdae02604d752459d0a29137d13d}\label{Disp__MLV_8c_a8fe1bdae02604d752459d0a29137d13d}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!initMLV@{initMLV}}
+\index{initMLV@{initMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{initMLV()}{initMLV()}}
+{\footnotesize\ttfamily int init\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialisation de la fenêtre et des ressources graphiques. 
+
+\begin{DoxyReturn}{Renvoie}
+succès de chargement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__MLV_8c_acd58e4066089ac3c9c0a4044fb4dfaf5}\label{Disp__MLV_8c_acd58e4066089ac3c9c0a4044fb4dfaf5}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!lifebarMLV@{lifebarMLV}}
+\index{lifebarMLV@{lifebarMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{lifebarMLV()}{lifebarMLV()}}
+{\footnotesize\ttfamily void lifebar\+M\+LV (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{life }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}ndicateur de life, en nombre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+{\em life} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__MLV_8c_ac1f28a914cd5ce9ce28573f401a93f1c}\label{Disp__MLV_8c_ac1f28a914cd5ce9ce28573f401a93f1c}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!loadAssetsMLV@{loadAssetsMLV}}
+\index{loadAssetsMLV@{loadAssetsMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{loadAssetsMLV()}{loadAssetsMLV()}}
+{\footnotesize\ttfamily int load\+Assets\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Charge les ressources et les met dans assets. 
+
+\begin{DoxyReturn}{Renvoie}
+succès de chargement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__MLV_8c_acf9207d89f5e97dad6fd3952dbd483fc}\label{Disp__MLV_8c_acf9207d89f5e97dad6fd3952dbd483fc}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!msgBoxMLV@{msgBoxMLV}}
+\index{msgBoxMLV@{msgBoxMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{msgBoxMLV()}{msgBoxMLV()}}
+{\footnotesize\ttfamily int msg\+Box\+M\+LV (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{input,  }\item[{char $\ast$}]{str,  }\item[{int}]{prompt }\end{DoxyParamCaption})}
+
+
+
+Affiche une boite de dialogue. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em input} & Si prompt = 2, texte de l\textquotesingle{}input \\
+\hline
+{\em str} & Texte de la boite \\
+\hline
+{\em prompt} & 0\+: \mbox{[}Ok\mbox{]} $\vert$ 1\+: \mbox{[}Yes No\mbox{]} $\vert$ 2\+: \mbox{[}Input\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Réponse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__MLV_8c_aff0ceec630e26d6c5ba69d99f7e5e664}\label{Disp__MLV_8c_aff0ceec630e26d6c5ba69d99f7e5e664}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!putSpriteMLV@{putSpriteMLV}}
+\index{putSpriteMLV@{putSpriteMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{putSpriteMLV()}{putSpriteMLV()}}
+{\footnotesize\ttfamily void put\+Sprite\+M\+LV (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{sprite,  }\item[{int}]{life }\end{DoxyParamCaption})}
+
+
+
+Place un Chips ou un virus. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+{\em sprite} & 0 à 4\+: Chips $\vert$ 5 à 9\+: Virus \\
+\hline
+{\em life} & Indicateur de life ; Si -\/1 alors n\textquotesingle{}affiche pas de barre \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Disp__MLV_8c_ae654450988d7dc945bea60fd0531c17b}\label{Disp__MLV_8c_ae654450988d7dc945bea60fd0531c17b}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!reinitMLV@{reinitMLV}}
+\index{reinitMLV@{reinitMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{reinitMLV()}{reinitMLV()}}
+{\footnotesize\ttfamily int reinit\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Disp__MLV_8c_a6cee8e7dfaab39cbc915a4aaf0906dde}\label{Disp__MLV_8c_a6cee8e7dfaab39cbc915a4aaf0906dde}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!showInfosMLV@{showInfosMLV}}
+\index{showInfosMLV@{showInfosMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{showInfosMLV()}{showInfosMLV()}}
+{\footnotesize\ttfamily int show\+Infos\+M\+LV (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{Disp__MLV_8h_a4fab2721054fd66cc89f138fd029fd1f}{Info\+Type}}}]{type,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+(Avancé) Une petite boîte qui affiche les informations d\textquotesingle{}un élément pointée par la souris 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Coordonnée x \\
+\hline
+{\em y} & Coordonnée y \\
+\hline
+{\em type} & Type de donnée à afficher (Sprite, Chips, Virus, ou chaine de caractères) \\
+\hline
+{\em data} & Virus $\ast$ ou Chips $\ast$ (un cast sera fait en fonction de type)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+succès 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Disp__MLV_8c_a7e878630a604dea4fa604d12c3e53f5e}\label{Disp__MLV_8c_a7e878630a604dea4fa604d12c3e53f5e}} 
+\index{Disp\_MLV.c@{Disp\_MLV.c}!unloadAssetsMLV@{unloadAssetsMLV}}
+\index{unloadAssetsMLV@{unloadAssetsMLV}!Disp\_MLV.c@{Disp\_MLV.c}}
+\doxysubsubsection{\texorpdfstring{unloadAssetsMLV()}{unloadAssetsMLV()}}
+{\footnotesize\ttfamily int unload\+Assets\+M\+LV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

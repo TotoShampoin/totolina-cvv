@@ -15,8 +15,8 @@ int loadAssetsMLV() {
     assets.sprites.sp   = MLV_load_image("assets/sprites/sprites.png");
     assets.fonts  .ma   = MLV_load_font("assets/fonts/ps2p.ttf",  8);
     assets.fonts  .tn   = MLV_load_font("assets/fonts/sp7.ttf" ,  9); // C'est visuellement plus petit que .ma, mais la police est configurée comme ça
-    assets.fonts  .bg   = MLV_load_font("assets/fonts/dos.ttf" , 16);
-    assets.sounds .ms   = MLV_load_music("assets/sounds/lsac.wav");
+    // assets.fonts  .bg   = MLV_load_font("assets/fonts/dos.ttf" , 16);
+    // assets.sounds .ms   = MLV_load_music("assets/sounds/lsac.wav");
     return 1;
 }
 int unloadAssetsMLV() {
@@ -55,9 +55,9 @@ void dispStrMLV(int x, int y, char * t, int s) { // Fonction d'affichage, pour r
     case 1: default: // Normal
         MLV_draw_text_with_font(x, y, t, assets.fonts.ma, assets.colors.tx);
         break;
-    case 2: // Grand
-        MLV_draw_text_with_font(x, y, t, assets.fonts.bg, assets.colors.tx);
-        break;
+    // case 2: // Grand
+    //     MLV_draw_text_with_font(x, y, t, assets.fonts.bg, assets.colors.tx);
+    //     break;
     }
 }
 void dispIntMLV(int x, int y, char * t, int n, int s) {
@@ -150,7 +150,7 @@ void dispUpcomingWaveMLV(Virus * VL) {
 
 // Cette fonction sert à avoir une boite d'information à coté de la souris
 int showInfosMLV(int x, int y, InfoType type, void * data) {
-    char * nom; int life, power;
+    char * nom; int life, power, speed;
     Chips * chp = NULL; Virus * vrs = NULL; int * datint; char * str;
     switch (type) {
     case SPRITE: // Quand la souris transporte un Chips (pour la partie achat)
@@ -161,11 +161,13 @@ int showInfosMLV(int x, int y, InfoType type, void * data) {
         chp = (Chips*)data;
         nom = getChipsFromType(chp->type)->nom;
         life = chp->life; power = chp->power;
+        speed = 0;
         break;
     case VIRUS: // Quand la souris pointe un Virus sur la grille ou sur la vague à venir
         vrs = (Virus*)data;
         nom = getVirusFromType(vrs->type)->nom;
         life = vrs->life; power = vrs->power;
+        speed = vrs->speed;
         break;
     case DEBUG:
         str = (char*)data;
@@ -174,11 +176,12 @@ int showInfosMLV(int x, int y, InfoType type, void * data) {
     default: case NONE: // Quand rien du tout
         return 0;
     }
-    MLV_draw_rectangle(x+16, y-48, 88, 48, assets.colors.bd);
-    MLV_draw_filled_rectangle(x+16, y-48, 88, 48, assets.colors.bx);
+    MLV_draw_rectangle(x+16, y-48, 96, 56, assets.colors.bd);
+    MLV_draw_filled_rectangle(x+16, y-48, 96, 56, assets.colors.bx);
     dispStrMLV(x+24, y-40, nom, 1);
     dispIntMLV(x+24, y-24, "Life:  ", life , 1);
     dispIntMLV(x+24, y-16, "Power: ", power, 1);
+    if(speed) dispIntMLV(x+24, y- 8, "Speed: ", speed, 1);
     return 1;
 }
 

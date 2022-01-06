@@ -1,0 +1,71 @@
+\hypertarget{Control__TER_8h}{}\doxysection{Référence du fichier inc/\+Control\+\_\+\+T\+ER.h}
+\label{Control__TER_8h}\index{inc/Control\_TER.h@{inc/Control\_TER.h}}
+{\ttfamily \#include $<$C\+V\+V/\+C\+V\+V\+\_\+\+T\+Y\+P\+E.\+h$>$}\newline
+Graphe des dépendances par inclusion de Control\+\_\+\+T\+E\+R.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Control__TER_8h_ad022b4979f6725fdd7889a913a9f8f21}{prompt}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Affiche toute les informations dont le joueur a besoin tandis qu\textquotesingle{}il achète des Chips. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Control__TER_8h_a01223dde28830e0f28f9aac021190c03}{check\+Chips\+Valid}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game, char type, int line, int position)
+\begin{DoxyCompactList}\small\item\em Indique si les infos entrées par le joueur sont valides pour un Chips ou non (version Terminal) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Control__TER_8h_a3bbe51237380844a9eeb09b8e40fdee8}{main\+T\+ER}} ()
+\begin{DoxyCompactList}\small\item\em Le main de la version Terminal du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{Control__TER_8h_a01223dde28830e0f28f9aac021190c03}\label{Control__TER_8h_a01223dde28830e0f28f9aac021190c03}} 
+\index{Control\_TER.h@{Control\_TER.h}!checkChipsValid@{checkChipsValid}}
+\index{checkChipsValid@{checkChipsValid}!Control\_TER.h@{Control\_TER.h}}
+\doxysubsubsection{\texorpdfstring{checkChipsValid()}{checkChipsValid()}}
+{\footnotesize\ttfamily int check\+Chips\+Valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game,  }\item[{char}]{type,  }\item[{int}]{line,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Indique si les infos entrées par le joueur sont valides pour un Chips ou non (version Terminal) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+{\em type} & Le type de chips \\
+\hline
+{\em line} & La line \\
+\hline
+{\em position} & La position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Réponse sous la forme de 5 flags en bit \+: type de Chips valide $\vert$ line entre 1 et 7 $\vert$ position entre 1 et 24 $\vert$ place disponible $\vert$ suffisance d\textquotesingle{}argent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Control__TER_8h_a3bbe51237380844a9eeb09b8e40fdee8}\label{Control__TER_8h_a3bbe51237380844a9eeb09b8e40fdee8}} 
+\index{Control\_TER.h@{Control\_TER.h}!mainTER@{mainTER}}
+\index{mainTER@{mainTER}!Control\_TER.h@{Control\_TER.h}}
+\doxysubsubsection{\texorpdfstring{mainTER()}{mainTER()}}
+{\footnotesize\ttfamily int main\+T\+ER (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Le main de la version Terminal du jeu. 
+
+\begin{DoxyReturn}{Renvoie}
+1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Control__TER_8h_ad022b4979f6725fdd7889a913a9f8f21}\label{Control__TER_8h_ad022b4979f6725fdd7889a913a9f8f21}} 
+\index{Control\_TER.h@{Control\_TER.h}!prompt@{prompt}}
+\index{prompt@{prompt}!Control\_TER.h@{Control\_TER.h}}
+\doxysubsubsection{\texorpdfstring{prompt()}{prompt()}}
+{\footnotesize\ttfamily void prompt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Affiche toute les informations dont le joueur a besoin tandis qu\textquotesingle{}il achète des Chips. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,33 @@
+Par Thomas Garnier et Lina Guerroui, en 2021-\/2022
+
+Chips vs Virus est un tower-\/defense largement inspiré de Plants vs Zombies.\hypertarget{index_autotoc_md1}{}\doxysection{Règles du jeu}\label{index_autotoc_md1}
+Le jeu présente au joueur une vague de Virus qui s\textquotesingle{}apprète à envahir son réseau informatique. Son but est d\textquotesingle{}acheter des défenses (ou Chips) qui vont bloquer et anhéantir ces Virus.
+
+Le jeu commence par une première phase où le joueur peut acheter les Chips et les positionner, puis vient la deuxième phase où les Virus progressent sur le réseau informatique tandis que les Chips les attaquent.
+
+La partie est terminée lorsqu\textquotesingle{}un des Virus atteint l\textquotesingle{}autre bout du réseau (donc l\textquotesingle{}ordinateur du joueur), ou lorsque tous les Virus de la vague sont anhéantis.\hypertarget{index_autotoc_md2}{}\doxysection{Comment jouer}\label{index_autotoc_md2}
+Dans le répertoire du jeu ({\ttfamily ./bin}), entrer {\ttfamily ./cvv}.
+
+Le jeu demandera alors au joueur s\textquotesingle{}il veut jouer en mode Terminal ou en mode Graphique.
+
+Dans les deux cas, vous pourrez entrer le nom du niveau que vous voulez jouer. Voici une liste des niveaux disponibles dans le dossier level\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{lvl000_8txt}{lvl000.\+txt}}
+\item \mbox{\hyperlink{lvl001_8txt}{lvl001.\+txt}}
+\item \mbox{\hyperlink{testall_8txt}{testall.\+txt}} (niveau un peu bac-\/à-\/sable)
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysubsection{Mode Terminal}\label{index_autotoc_md3}
+Entrer respectivement la lettre du Chips, sa ligne, et sa colonne. Valider son choix avec {\ttfamily Y}, ou {\ttfamily N} pour ne pas valider.
+
+Pour terminer la phase d\textquotesingle{}achat, entrer {\ttfamily q}, puis valider avec {\ttfamily Y}.
+
+Note\+: Il est possible d\textquotesingle{}entrer une série de Chips, séparés chacun par un {\ttfamily Y}. \begin{quote}
+{\ttfamily A 1 1 Y A 2 1 Y A 3 Y}
+
+Crée un Chips sur les lignes 1, 2 et 3, à la première colonne. \end{quote}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{Mode Graphique}\label{index_autotoc_md4}
+Cliquer sur un des Chips de la table en bas à gauche, puis cliquer sur une case de la grille au dessus pour placer un Chips.
+
+Faire un clic droit sur un des Chips de la grille pour vendre celle-\/ci.
+
+Pour terminer la phase d\textquotesingle{}achat, cliquer sur \char`\"{}\+Finish\char`\"{}, puis valider via la boîte de dialogue qui s\textquotesingle{}affiche.\hypertarget{index_autotoc_md5}{}\doxysection{Comment compiler}\label{index_autotoc_md5}
+Dans le répertoire du projet (parent au dossier {\ttfamily bin}), exécuter la commande {\ttfamily make}. 

@@ -1,0 +1,309 @@
+\hypertarget{CVV__DATA_8c}{}\doxysection{Référence du fichier src/\+C\+V\+V/\+C\+V\+V\+\_\+\+D\+A\+TA.c}
+\label{CVV__DATA_8c}\index{src/CVV/CVV\_DATA.c@{src/CVV/CVV\_DATA.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$C\+V\+V/\+C\+V\+V\+\_\+\+D\+A\+T\+A.\+h$>$}\newline
+Graphe des dépendances par inclusion de C\+V\+V\+\_\+\+D\+A\+T\+A.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$ \mbox{\hyperlink{CVV__DATA_8c_ab205cf4302bd668ca4c3642353b126a4}{alloc\+Chips}} ()
+\begin{DoxyCompactList}\small\item\em Alloue une place mémoire pour un Chips. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__DATA_8c_aa591a0b3fca481336e00b220f6bb3b5c}{init\+Chips}} (\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$C, \mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}} type, int line, int position, int life, int price, int power)
+\begin{DoxyCompactList}\small\item\em Initialise le Chips avec les valeurs indiquées. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$ \mbox{\hyperlink{CVV__DATA_8c_a7dad25af65a860a31209dca46183b6fc}{create\+Chips}} (\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}} type, int line, int position, int life, int price, int power)
+\begin{DoxyCompactList}\small\item\em Alloue et initialise un Chips tout à la fois. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$ \mbox{\hyperlink{CVV__DATA_8c_ac37debfc4a57f1f524024cdc18409881}{create\+And\+Place\+Chips}} (char type, int line, int position)
+\begin{DoxyCompactList}\small\item\em Crée un Chips prédéfini (voir C\+V\+V/\+C\+V\+V\+\_\+\+T\+Y\+PE) à partir du type et lui affecte line et position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__DATA_8c_a99fe7b3304c1d834b4af692c44dedb30}{append\+Chips}} (\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$$\ast$CL, \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$C)
+\begin{DoxyCompactList}\small\item\em Insère un Chips au bout de la liste (ou au début si la liste est vide) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$ \mbox{\hyperlink{CVV__DATA_8c_a5808e06431e21b58014570a08e7caf93}{shift\+Chips}} (\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$PC)
+\begin{DoxyCompactList}\small\item\em Extrait de la liste le Chips qui suit celui indiqué \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CVV__DATA_8c_afc0ccd1258e7b856ea6b9eefa7627fa0}{free\+Chips}} (\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$C)
+\begin{DoxyCompactList}\small\item\em Libère la zone mémoire correspondant au Chips indiqué \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$ \mbox{\hyperlink{CVV__DATA_8c_a9125f7c70433c923407dd2ce424a65dd}{alloc\+Virus}} ()
+\begin{DoxyCompactList}\small\item\em Alloue une place mémoire pour un Virus. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__DATA_8c_a5bbb814b3daa934118f7a45c9e4f7f22}{init\+Virus}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$V, \mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}} type, int line, int life, int speed, int turn, int power)
+\begin{DoxyCompactList}\small\item\em Initialise le Virus avec les valeurs indiquées. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$ \mbox{\hyperlink{CVV__DATA_8c_af16855930c36ea51aa366e6ff0326e76}{create\+Virus}} (\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}} type, int line, int life, int speed, int turn, int power)
+\begin{DoxyCompactList}\small\item\em Alloue et initialise un Virus tout à la fois. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__DATA_8c_a77994e585e6fcb9f4936115e40b5a67a}{append\+Virus}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$$\ast$VL, \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$V)
+\begin{DoxyCompactList}\small\item\em Insère un Virus au bout de la liste (ou au début si la liste est vide) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$ \mbox{\hyperlink{CVV__DATA_8c_a0417e74a6a9741b8515c924f3e706d73}{shift\+Virus}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$PV)
+\begin{DoxyCompactList}\small\item\em Extrait de la liste le Virus qui suit celui indiqué \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CVV__DATA_8c_a5219333bdedc423e460921713f6afd8e}{free\+Virus}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$V)
+\begin{DoxyCompactList}\small\item\em Libère la zone mémoire correspondant au Virus indiqué \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{CVV__DATA_8c_ab205cf4302bd668ca4c3642353b126a4}\label{CVV__DATA_8c_ab205cf4302bd668ca4c3642353b126a4}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!allocChips@{allocChips}}
+\index{allocChips@{allocChips}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{allocChips()}{allocChips()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}$\ast$ alloc\+Chips (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Alloue une place mémoire pour un Chips. 
+
+\begin{DoxyReturn}{Renvoie}
+Le pointeur vers Chips (ou N\+U\+LL si non disponible) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_a9125f7c70433c923407dd2ce424a65dd}\label{CVV__DATA_8c_a9125f7c70433c923407dd2ce424a65dd}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!allocVirus@{allocVirus}}
+\index{allocVirus@{allocVirus}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{allocVirus()}{allocVirus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}$\ast$ alloc\+Virus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Alloue une place mémoire pour un Virus. 
+
+\begin{DoxyReturn}{Renvoie}
+Le pointeur vers Virus (ou N\+U\+LL si non disponible) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_a99fe7b3304c1d834b4af692c44dedb30}\label{CVV__DATA_8c_a99fe7b3304c1d834b4af692c44dedb30}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!appendChips@{appendChips}}
+\index{appendChips@{appendChips}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{appendChips()}{appendChips()}}
+{\footnotesize\ttfamily int append\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$$\ast$}]{chips\+\_\+list,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{this\+\_\+chips }\end{DoxyParamCaption})}
+
+
+
+Insère un Chips au bout de la liste (ou au début si la liste est vide) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chips\+\_\+list} & Pointeur vers la liste affectée \\
+\hline
+{\em this\+\_\+chips} & Le Chips a insérer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si le Chips, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_a77994e585e6fcb9f4936115e40b5a67a}\label{CVV__DATA_8c_a77994e585e6fcb9f4936115e40b5a67a}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!appendVirus@{appendVirus}}
+\index{appendVirus@{appendVirus}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{appendVirus()}{appendVirus()}}
+{\footnotesize\ttfamily int append\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$$\ast$}]{virus\+\_\+list,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{this\+\_\+virus }\end{DoxyParamCaption})}
+
+
+
+Insère un Virus au bout de la liste (ou au début si la liste est vide) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em virus\+\_\+list} & Pointeur vers la liste affectée \\
+\hline
+{\em this\+\_\+virus} & Le Virus a insérer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si le Virus, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_ac37debfc4a57f1f524024cdc18409881}\label{CVV__DATA_8c_ac37debfc4a57f1f524024cdc18409881}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!createAndPlaceChips@{createAndPlaceChips}}
+\index{createAndPlaceChips@{createAndPlaceChips}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{createAndPlaceChips()}{createAndPlaceChips()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}$\ast$ create\+And\+Place\+Chips (\begin{DoxyParamCaption}\item[{char}]{type,  }\item[{int}]{line,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Crée un Chips prédéfini (voir C\+V\+V/\+C\+V\+V\+\_\+\+T\+Y\+PE) à partir du type et lui affecte line et position. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Type de Chips, référé par la table de Chips prédéfinis \\
+\hline
+{\em line} & \\
+\hline
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le pointeur vers Chips (ou N\+U\+LL si non dispobible ou type invalide) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_a7dad25af65a860a31209dca46183b6fc}\label{CVV__DATA_8c_a7dad25af65a860a31209dca46183b6fc}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!createChips@{createChips}}
+\index{createChips@{createChips}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{createChips()}{createChips()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}$\ast$ create\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}}}]{type,  }\item[{int}]{line,  }\item[{int}]{position,  }\item[{int}]{life,  }\item[{int}]{price,  }\item[{int}]{power }\end{DoxyParamCaption})}
+
+
+
+Alloue et initialise un Chips tout à la fois. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & \\
+\hline
+{\em line} & \\
+\hline
+{\em position} & \\
+\hline
+{\em life} & \\
+\hline
+{\em price} & \\
+\hline
+{\em power} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le pointeur vers Chips (ou N\+U\+LL si non disponible) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_af16855930c36ea51aa366e6ff0326e76}\label{CVV__DATA_8c_af16855930c36ea51aa366e6ff0326e76}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!createVirus@{createVirus}}
+\index{createVirus@{createVirus}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{createVirus()}{createVirus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}$\ast$ create\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}}}]{type,  }\item[{int}]{line,  }\item[{int}]{life,  }\item[{int}]{speed,  }\item[{int}]{turn,  }\item[{int}]{power }\end{DoxyParamCaption})}
+
+
+
+Alloue et initialise un Virus tout à la fois. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & \\
+\hline
+{\em line} & \\
+\hline
+{\em life} & \\
+\hline
+{\em speed} & \\
+\hline
+{\em turn} & \\
+\hline
+{\em power} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le pointeur vers Virus (ou N\+U\+LL si non disponible) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_afc0ccd1258e7b856ea6b9eefa7627fa0}\label{CVV__DATA_8c_afc0ccd1258e7b856ea6b9eefa7627fa0}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!freeChips@{freeChips}}
+\index{freeChips@{freeChips}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{freeChips()}{freeChips()}}
+{\footnotesize\ttfamily void free\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{chips }\end{DoxyParamCaption})}
+
+
+
+Libère la zone mémoire correspondant au Chips indiqué 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chips} & Le Chips à libérer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{CVV__DATA_8c_a5219333bdedc423e460921713f6afd8e}\label{CVV__DATA_8c_a5219333bdedc423e460921713f6afd8e}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!freeVirus@{freeVirus}}
+\index{freeVirus@{freeVirus}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{freeVirus()}{freeVirus()}}
+{\footnotesize\ttfamily void free\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{virus }\end{DoxyParamCaption})}
+
+
+
+Libère la zone mémoire correspondant au Virus indiqué 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em virus} & Le Virus à libérer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{CVV__DATA_8c_aa591a0b3fca481336e00b220f6bb3b5c}\label{CVV__DATA_8c_aa591a0b3fca481336e00b220f6bb3b5c}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!initChips@{initChips}}
+\index{initChips@{initChips}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{initChips()}{initChips()}}
+{\footnotesize\ttfamily int init\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{chips,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_af26cc46b3e44fc0d5fce593e3017fe51}{Chips\+Type}}}]{type,  }\item[{int}]{line,  }\item[{int}]{position,  }\item[{int}]{life,  }\item[{int}]{price,  }\item[{int}]{power }\end{DoxyParamCaption})}
+
+
+
+Initialise le Chips avec les valeurs indiquées. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chips} & Chips a initialiser \\
+\hline
+{\em type} & \\
+\hline
+{\em line} & \\
+\hline
+{\em position} & \\
+\hline
+{\em life} & \\
+\hline
+{\em price} & \\
+\hline
+{\em power} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si Chips est alloué, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_a5bbb814b3daa934118f7a45c9e4f7f22}\label{CVV__DATA_8c_a5bbb814b3daa934118f7a45c9e4f7f22}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!initVirus@{initVirus}}
+\index{initVirus@{initVirus}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{initVirus()}{initVirus()}}
+{\footnotesize\ttfamily int init\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{virus,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}}}]{type,  }\item[{int}]{line,  }\item[{int}]{life,  }\item[{int}]{speed,  }\item[{int}]{turn,  }\item[{int}]{power }\end{DoxyParamCaption})}
+
+
+
+Initialise le Virus avec les valeurs indiquées. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em virus} & Virus a initialiser \\
+\hline
+{\em type} & \\
+\hline
+{\em line} & \\
+\hline
+{\em life} & \\
+\hline
+{\em speed} & \\
+\hline
+{\em turn} & \\
+\hline
+{\em power} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si Virus est alloué, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_a5808e06431e21b58014570a08e7caf93}\label{CVV__DATA_8c_a5808e06431e21b58014570a08e7caf93}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!shiftChips@{shiftChips}}
+\index{shiftChips@{shiftChips}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{shiftChips()}{shiftChips()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}$\ast$ shift\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{prev\+\_\+chips }\end{DoxyParamCaption})}
+
+
+
+Extrait de la liste le Chips qui suit celui indiqué 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prev\+\_\+chips} & Le Chips dont on retire le suivant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le Chips retiré 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__DATA_8c_a0417e74a6a9741b8515c924f3e706d73}\label{CVV__DATA_8c_a0417e74a6a9741b8515c924f3e706d73}} 
+\index{CVV\_DATA.c@{CVV\_DATA.c}!shiftVirus@{shiftVirus}}
+\index{shiftVirus@{shiftVirus}!CVV\_DATA.c@{CVV\_DATA.c}}
+\doxysubsubsection{\texorpdfstring{shiftVirus()}{shiftVirus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}$\ast$ shift\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{prev\+\_\+virus }\end{DoxyParamCaption})}
+
+
+
+Extrait de la liste le Virus qui suit celui indiqué 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prev\+\_\+virus} & Le Virus dont on retire le suivant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le Virus retiré 
+\end{DoxyReturn}

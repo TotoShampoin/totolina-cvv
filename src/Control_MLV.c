@@ -3,12 +3,6 @@
 #include <Control_MLV.h>
 #include <Disp_MLV.h>
 
-typedef struct {
-    int error;
-    int mx;
-    int my;
-    int id;
-} DataDisp;
 
 int checkChipsValidMLV(Game * game, Chips* tmp) {
     int check = 0b00;
@@ -34,13 +28,6 @@ void displayMLV(Game * game, DataDisp data, int mode) {
     }
 }
 
-Chips * getChipsFromCoordinates(Chips * CL, int line, int position) {
-    while(CL != NULL) {
-        if(CL->line == line && CL->position == position) return CL;
-        CL = CL->next;
-    } return NULL;
-}
-
 int buyChips(Game * game, int id, int line, int position, int * error) {
     Chips * tmp = createChipsFromIndex(id);
     tmp->line = line;
@@ -48,6 +35,8 @@ int buyChips(Game * game, int id, int line, int position, int * error) {
     if((*error = checkChipsValidMLV(game, tmp)) == 0b11) {
         appendChips(&game->chips, tmp);
         game->money -= tmp->price;
+    } else {
+        freeChips(tmp);
     }
     return 1;
 }

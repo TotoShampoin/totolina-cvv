@@ -31,6 +31,12 @@ Chips * createChips(ChipsType type, int line, int position, int life, int price,
     return C;
 }
 
+Chips * createAndPlaceChips(char type, int line, int position) {
+    Chips * tmp = createChipsFromType(type);
+    tmp->line = line; tmp->position = position;
+    return tmp;
+}
+
 int appendChips(Chips ** CL, Chips * C) {
     if ( C==NULL)return 0;
     if (*CL == NULL){

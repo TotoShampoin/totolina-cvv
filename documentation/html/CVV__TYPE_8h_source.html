@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chips vs Virus:  Fichier source de inc/CVV/CVV_TYPE.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Chips vs Virus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_a4d80f5e18c63bb9e0b7c527da530a74.html">CVV</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CVV_TYPE.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="CVV__TYPE_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __CVV_TYPE</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a03d9de28451c7852976793cd0a6d52c9">    3</a></span>&#160;<span class="preprocessor">#define OOB    -1</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a3f501395a50c045cd8879208893b19c7">    4</a></span>&#160;<span class="preprocessor">#define NBLINE  7</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#adb8a6efd0127cf9205fd1949299751a2">    5</a></span>&#160;<span class="preprocessor">#define NBPOS  24</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51">   10</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51af6ae22069d0427bb2d19adad213f2b35">   11</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51af6ae22069d0427bb2d19adad213f2b35">ALU</a> = <span class="charliteral">&#39;A&#39;</span>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a4e7c1c21b6fbbb620bd79131aabc22ab">   12</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a4e7c1c21b6fbbb620bd79131aabc22ab">RAM</a> = <span class="charliteral">&#39;R&#39;</span>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a162d558be90705dfa6cfb6b78bf1cac4">   13</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a162d558be90705dfa6cfb6b78bf1cac4">PMMU</a> = <span class="charliteral">&#39;P&#39;</span>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51af1be4d3ae9949cf9a5175c4da90b64f1">   14</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51af1be4d3ae9949cf9a5175c4da90b64f1">Patchs</a> = <span class="charliteral">&#39;X&#39;</span>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a93b693cd5e899a393c111304ceec66b0">   15</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a93b693cd5e899a393c111304ceec66b0">Firewall</a> = <span class="charliteral">&#39;F&#39;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;} <a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51">ChipsType</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225ca">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa986d007ed97f0ef48204c8091c3def9d">   22</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa986d007ed97f0ef48204c8091c3def9d">DivZero</a> = <span class="charliteral">&#39;E&#39;</span>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa34666088d17fe9d7ca642edcc471ea37">   23</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa34666088d17fe9d7ca642edcc471ea37">DDOS</a> = <span class="charliteral">&#39;D&#39;</span>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa34848895baa522a535fa8587aa9657d3">   24</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa34848895baa522a535fa8587aa9657d3">SegFault</a> = <span class="charliteral">&#39;S&#39;</span>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa46945aac7aa8cf2e84887416df0c47f4">   25</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa46945aac7aa8cf2e84887416df0c47f4">MemCorrupt</a> = <span class="charliteral">&#39;M&#39;</span>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa9dbe1b913a2a87d6d05f1997b5d5f825">   26</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa9dbe1b913a2a87d6d05f1997b5d5f825">Bug</a> = <span class="charliteral">&#39;B&#39;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;} <a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225ca">VirusType</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structchips.html">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structchips.html">chips</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structchips.html#a195fd0cde6f4aea172a873528c5c1b45">   34</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51">ChipsType</a> <a class="code" href="structchips.html#a195fd0cde6f4aea172a873528c5c1b45">type</a>;     </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structchips.html#a1d32b7d2e606ed8f229ce793ad40dbf2">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structchips.html#a1d32b7d2e606ed8f229ce793ad40dbf2">life</a>;           </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structchips.html#a3715428be910367b61dba9369d78292d">   36</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structchips.html#a3715428be910367b61dba9369d78292d">line</a>;           </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structchips.html#a2f6c73b0357bc080e0e90c312c476a75">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structchips.html#a2f6c73b0357bc080e0e90c312c476a75">position</a>;       </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structchips.html#af401f37aff865b2203f06e3b5ee03e0f">   38</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structchips.html#af401f37aff865b2203f06e3b5ee03e0f">price</a>;          </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structchips.html#a59ef462c97f066ad99c483cb3cf9806e">   39</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structchips.html#a59ef462c97f066ad99c483cb3cf9806e">power</a>;          </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structchips.html#a8e571a06ce944f7ed2e22f615eb5db8a">   40</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structchips.html">chips</a>* <a class="code" href="structchips.html#a8e571a06ce944f7ed2e22f615eb5db8a">next</a>; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;} <a class="code" href="CVV__TYPE_8h.html#abb6af171f58fc0b19cb346f03f6a46e8">Chips</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structvirus.html">   47</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structvirus.html">virus</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structvirus.html#a186f6647c12005f7140cc68ca66190a1">   48</a></span>&#160;    <a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225ca">VirusType</a> <a class="code" href="structvirus.html#a186f6647c12005f7140cc68ca66190a1">type</a>;             </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structvirus.html#abe2ce37fb7b001e8e5acba60ca58bfa1">   49</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvirus.html#abe2ce37fb7b001e8e5acba60ca58bfa1">life</a>;                   </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structvirus.html#ad83b0232b3a2eed5355f30d7ce3b6d63">   50</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvirus.html#ad83b0232b3a2eed5355f30d7ce3b6d63">line</a>;                   </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structvirus.html#a1b3a08cf4c99fe0597e14b61c56ee0cc">   51</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvirus.html#a1b3a08cf4c99fe0597e14b61c56ee0cc">position</a>;               </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structvirus.html#af952b682874f8080fea53718dc136874">   52</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvirus.html#af952b682874f8080fea53718dc136874">speed</a>;                  </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structvirus.html#a3855bcea05c13a967b5a36d5bd270992">   53</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvirus.html#a3855bcea05c13a967b5a36d5bd270992">turn</a>;                   </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structvirus.html#ab555e6ef212e837b442713d8f95f055e">   54</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structvirus.html#ab555e6ef212e837b442713d8f95f055e">power</a>;                  </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structvirus.html#a531eef5f7d194e2d6beb07a369d742bd">   55</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structvirus.html">virus</a>* <a class="code" href="structvirus.html#a531eef5f7d194e2d6beb07a369d742bd">next</a>;         </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structvirus.html#a1dde04aabad14320538704fffd08bf35">   56</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structvirus.html">virus</a>* <a class="code" href="structvirus.html#a1dde04aabad14320538704fffd08bf35">next_line</a>;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structvirus.html#a3615dd2ece1c578f266273b064fea1b0">   57</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structvirus.html">virus</a>* <a class="code" href="structvirus.html#a3615dd2ece1c578f266273b064fea1b0">prev_line</a>;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <a class="code" href="CVV__TYPE_8h.html#a8d2e671ba474860b08ea68d941d4fcc9">Virus</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structChipsData.html">   64</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structChipsData.html#abf447fe2f3ea9d880e143ff5f987f26f">   65</a></span>&#160;    <a class="code" href="structchips.html">Chips</a> <a class="code" href="structChipsData.html#abf447fe2f3ea9d880e143ff5f987f26f">chips</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structChipsData.html#a40401138fed0519264d77fbd56993757">   66</a></span>&#160;    <span class="keywordtype">char</span> * <a class="code" href="structChipsData.html#a40401138fed0519264d77fbd56993757">nom</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;} <a class="code" href="structChipsData.html">ChipsData</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structVirusData.html">   73</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structVirusData.html#a1904d11c163a77c10cb14437f4cc8b27">   74</a></span>&#160;    <a class="code" href="structvirus.html">Virus</a> <a class="code" href="structVirusData.html#a1904d11c163a77c10cb14437f4cc8b27">virus</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structVirusData.html#a8ea11eaa57292eff092effdf01fb7be2">   75</a></span>&#160;    <span class="keywordtype">char</span> * <a class="code" href="structVirusData.html#a8ea11eaa57292eff092effdf01fb7be2">nom</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;} <a class="code" href="structVirusData.html">VirusData</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a1bdb12f16322e159c719b7fb5ec2665f">   78</a></span>&#160;<span class="preprocessor">#define TABCHIPS_LEN 5</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#ae5543c491fcc04b68ac6875de5708e2e">   79</a></span>&#160;<span class="preprocessor">#define TABVIRUS_LEN 5</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a1bc775a49ea5e176a882d8734f2dd371">   84</a></span>&#160;<a class="code" href="structChipsData.html">ChipsData</a> <a class="code" href="CVV__TYPE_8h.html#a1bc775a49ea5e176a882d8734f2dd371">table_of_chips</a>[<a class="code" href="CVV__TYPE_8h.html#a1bdb12f16322e159c719b7fb5ec2665f">TABCHIPS_LEN</a>];</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a1e626c368dbb012df6d50a4b3dd62ef4">   89</a></span>&#160;<a class="code" href="structVirusData.html">VirusData</a> <a class="code" href="CVV__TYPE_8h.html#a1e626c368dbb012df6d50a4b3dd62ef4">table_of_virus</a>[<a class="code" href="CVV__TYPE_8h.html#ae5543c491fcc04b68ac6875de5708e2e">TABVIRUS_LEN</a>];</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CVV__TYPE_8h.html#a6a3745a608949257cc9c8dcd35bb6e72">initTables</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">int</span> <a class="code" href="CVV__TYPE_8h.html#a234f23489070a713433662b7736d5a79">getChipsIndexFromType</a>(<a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51">ChipsType</a> type);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">int</span> <a class="code" href="CVV__TYPE_8h.html#a5199c3fdf2fea4cc6b46a49e04ac2bc1">getVirusIndexFromType</a>(<a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225ca">VirusType</a> type);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<a class="code" href="structChipsData.html">ChipsData</a> * <a class="code" href="CVV__TYPE_8h.html#a806659876844d1927af18df0239fcfb4">getChipsFromType</a>(<a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51">ChipsType</a> type);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<a class="code" href="structVirusData.html">VirusData</a> * <a class="code" href="CVV__TYPE_8h.html#adc9014e95512434819059b48ba4006f2">getVirusFromType</a>(<a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225ca">VirusType</a> type);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<a class="code" href="structchips.html">Chips</a> * <a class="code" href="CVV__TYPE_8h.html#a5cc99e854e0cb41dc8bad8fd69c3405c">createChipsFromType</a>(<a class="code" href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51">ChipsType</a> type);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<a class="code" href="structvirus.html">Virus</a> * <a class="code" href="CVV__TYPE_8h.html#aa5e07ce2dc66148889c3516e9fcdd5a1">createVirusFromType</a>(<a class="code" href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225ca">VirusType</a> type);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<a class="code" href="structchips.html">Chips</a> * <a class="code" href="CVV__TYPE_8h.html#ae8c6e1c10fbff742642ec2416900eb50">createChipsFromIndex</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<a class="code" href="structvirus.html">Virus</a> * <a class="code" href="CVV__TYPE_8h.html#aa0838395344a0799d1b9906b0d836572">createVirusFromInedx</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="structGame.html">  165</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="structGame.html#a675828b5c5c829c810770ad0f5261d58">  166</a></span>&#160;    <a class="code" href="structvirus.html">Virus</a>* <a class="code" href="structGame.html#a675828b5c5c829c810770ad0f5261d58">virus</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="structGame.html#a1dc020f87f8da1ea59d5d799b40be203">  167</a></span>&#160;    <a class="code" href="structchips.html">Chips</a>* <a class="code" href="structGame.html#a1dc020f87f8da1ea59d5d799b40be203">chips</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="structGame.html#aef6ba37517324fc3469dfa65d6f92d21">  168</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structGame.html#aef6ba37517324fc3469dfa65d6f92d21">turn</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="structGame.html#a8c9e80bd9cfbe0ca529de0728ae63b7b">  169</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structGame.html#a8c9e80bd9cfbe0ca529de0728ae63b7b">money</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;} <a class="code" href="structGame.html">Game</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="CVV__TYPE_8h.html#a5cda8046056c9983414830157dcc396c">  172</a></span>&#160;<span class="preprocessor">#define __CVV_TYPE</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aCVV__TYPE_8h_html_adc9014e95512434819059b48ba4006f2"><div class="ttname"><a href="CVV__TYPE_8h.html#adc9014e95512434819059b48ba4006f2">getVirusFromType</a></div><div class="ttdeci">VirusData * getVirusFromType(VirusType type)</div><div class="ttdoc">Cherche le Virus prédéfini à partir du type, et renvoie son VirusData.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.c:79</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a4f16ae4f6819766dbdefa48c2c2225caa46945aac7aa8cf2e84887416df0c47f4"><div class="ttname"><a href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa46945aac7aa8cf2e84887416df0c47f4">MemCorrupt</a></div><div class="ttdeci">@ MemCorrupt</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:25</div></div>
+<div class="ttc" id="astructvirus_html_a3855bcea05c13a967b5a36d5bd270992"><div class="ttname"><a href="structvirus.html#a3855bcea05c13a967b5a36d5bd270992">virus::turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:53</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_af26cc46b3e44fc0d5fce593e3017fe51af1be4d3ae9949cf9a5175c4da90b64f1"><div class="ttname"><a href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51af1be4d3ae9949cf9a5175c4da90b64f1">Patchs</a></div><div class="ttdeci">@ Patchs</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:14</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_af26cc46b3e44fc0d5fce593e3017fe51a4e7c1c21b6fbbb620bd79131aabc22ab"><div class="ttname"><a href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a4e7c1c21b6fbbb620bd79131aabc22ab">RAM</a></div><div class="ttdeci">@ RAM</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:12</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a6a3745a608949257cc9c8dcd35bb6e72"><div class="ttname"><a href="CVV__TYPE_8h.html#a6a3745a608949257cc9c8dcd35bb6e72">initTables</a></div><div class="ttdeci">void initTables()</div><div class="ttdoc">Initialise les tables de Chips et Virus prédéfinis.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.c:4</div></div>
+<div class="ttc" id="astructGame_html_a8c9e80bd9cfbe0ca529de0728ae63b7b"><div class="ttname"><a href="structGame.html#a8c9e80bd9cfbe0ca529de0728ae63b7b">Game::money</a></div><div class="ttdeci">int money</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:169</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_ae5543c491fcc04b68ac6875de5708e2e"><div class="ttname"><a href="CVV__TYPE_8h.html#ae5543c491fcc04b68ac6875de5708e2e">TABVIRUS_LEN</a></div><div class="ttdeci">#define TABVIRUS_LEN</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:79</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_aa0838395344a0799d1b9906b0d836572"><div class="ttname"><a href="CVV__TYPE_8h.html#aa0838395344a0799d1b9906b0d836572">createVirusFromInedx</a></div><div class="ttdeci">Virus * createVirusFromInedx(int index)</div><div class="ttdoc">Cherche le Virus prédéfini à partir de son index dans la table, et en renvoie une copie.</div></div>
+<div class="ttc" id="astructGame_html_a1dc020f87f8da1ea59d5d799b40be203"><div class="ttname"><a href="structGame.html#a1dc020f87f8da1ea59d5d799b40be203">Game::chips</a></div><div class="ttdeci">Chips * chips</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:167</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a1e626c368dbb012df6d50a4b3dd62ef4"><div class="ttname"><a href="CVV__TYPE_8h.html#a1e626c368dbb012df6d50a4b3dd62ef4">table_of_virus</a></div><div class="ttdeci">VirusData table_of_virus[TABVIRUS_LEN]</div><div class="ttdoc">Table des Virus prédéfinis.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:89</div></div>
+<div class="ttc" id="astructchips_html_af401f37aff865b2203f06e3b5ee03e0f"><div class="ttname"><a href="structchips.html#af401f37aff865b2203f06e3b5ee03e0f">chips::price</a></div><div class="ttdeci">int price</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:38</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_aa5e07ce2dc66148889c3516e9fcdd5a1"><div class="ttname"><a href="CVV__TYPE_8h.html#aa5e07ce2dc66148889c3516e9fcdd5a1">createVirusFromType</a></div><div class="ttdeci">Virus * createVirusFromType(VirusType type)</div><div class="ttdoc">Cherche le Virus prédéfini à partir du type, et en renvoie une copie.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.c:94</div></div>
+<div class="ttc" id="astructGame_html_aef6ba37517324fc3469dfa65d6f92d21"><div class="ttname"><a href="structGame.html#aef6ba37517324fc3469dfa65d6f92d21">Game::turn</a></div><div class="ttdeci">int turn</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:168</div></div>
+<div class="ttc" id="astructchips_html_a3715428be910367b61dba9369d78292d"><div class="ttname"><a href="structchips.html#a3715428be910367b61dba9369d78292d">chips::line</a></div><div class="ttdeci">int line</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:36</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a806659876844d1927af18df0239fcfb4"><div class="ttname"><a href="CVV__TYPE_8h.html#a806659876844d1927af18df0239fcfb4">getChipsFromType</a></div><div class="ttdeci">ChipsData * getChipsFromType(ChipsType type)</div><div class="ttdoc">Cherche le Chips prédéfini à partir du type, et renvoie son ChipsData.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.c:73</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a4f16ae4f6819766dbdefa48c2c2225caa986d007ed97f0ef48204c8091c3def9d"><div class="ttname"><a href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa986d007ed97f0ef48204c8091c3def9d">DivZero</a></div><div class="ttdeci">@ DivZero</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:22</div></div>
+<div class="ttc" id="astructvirus_html"><div class="ttname"><a href="structvirus.html">virus</a></div><div class="ttdoc">Structure d'un Virus.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:47</div></div>
+<div class="ttc" id="astructVirusData_html_a1904d11c163a77c10cb14437f4cc8b27"><div class="ttname"><a href="structVirusData.html#a1904d11c163a77c10cb14437f4cc8b27">VirusData::virus</a></div><div class="ttdeci">Virus virus</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:74</div></div>
+<div class="ttc" id="astructGame_html_a675828b5c5c829c810770ad0f5261d58"><div class="ttname"><a href="structGame.html#a675828b5c5c829c810770ad0f5261d58">Game::virus</a></div><div class="ttdeci">Virus * virus</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:166</div></div>
+<div class="ttc" id="astructvirus_html_a1dde04aabad14320538704fffd08bf35"><div class="ttname"><a href="structvirus.html#a1dde04aabad14320538704fffd08bf35">virus::next_line</a></div><div class="ttdeci">struct virus * next_line</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:56</div></div>
+<div class="ttc" id="astructvirus_html_ad83b0232b3a2eed5355f30d7ce3b6d63"><div class="ttname"><a href="structvirus.html#ad83b0232b3a2eed5355f30d7ce3b6d63">virus::line</a></div><div class="ttdeci">int line</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:50</div></div>
+<div class="ttc" id="astructchips_html_a195fd0cde6f4aea172a873528c5c1b45"><div class="ttname"><a href="structchips.html#a195fd0cde6f4aea172a873528c5c1b45">chips::type</a></div><div class="ttdeci">ChipsType type</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:34</div></div>
+<div class="ttc" id="astructGame_html"><div class="ttname"><a href="structGame.html">Game</a></div><div class="ttdoc">Structure d'un plateau de jeu.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:165</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_abb6af171f58fc0b19cb346f03f6a46e8"><div class="ttname"><a href="CVV__TYPE_8h.html#abb6af171f58fc0b19cb346f03f6a46e8">Chips</a></div><div class="ttdeci">struct chips Chips</div><div class="ttdoc">Structure d'un Chips.</div></div>
+<div class="ttc" id="astructChipsData_html_a40401138fed0519264d77fbd56993757"><div class="ttname"><a href="structChipsData.html#a40401138fed0519264d77fbd56993757">ChipsData::nom</a></div><div class="ttdeci">char * nom</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:66</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a4f16ae4f6819766dbdefa48c2c2225caa34666088d17fe9d7ca642edcc471ea37"><div class="ttname"><a href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa34666088d17fe9d7ca642edcc471ea37">DDOS</a></div><div class="ttdeci">@ DDOS</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:23</div></div>
+<div class="ttc" id="astructChipsData_html_abf447fe2f3ea9d880e143ff5f987f26f"><div class="ttname"><a href="structChipsData.html#abf447fe2f3ea9d880e143ff5f987f26f">ChipsData::chips</a></div><div class="ttdeci">Chips chips</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:65</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a4f16ae4f6819766dbdefa48c2c2225ca"><div class="ttname"><a href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225ca">VirusType</a></div><div class="ttdeci">VirusType</div><div class="ttdoc">Le type de Virus, sous forme d'un caractère.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:21</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a5199c3fdf2fea4cc6b46a49e04ac2bc1"><div class="ttname"><a href="CVV__TYPE_8h.html#a5199c3fdf2fea4cc6b46a49e04ac2bc1">getVirusIndexFromType</a></div><div class="ttdeci">int getVirusIndexFromType(VirusType type)</div><div class="ttdoc">Cherche le Virus prédéfini à partir du type, et renvoie son index dans la table.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.c:65</div></div>
+<div class="ttc" id="astructchips_html"><div class="ttname"><a href="structchips.html">chips</a></div><div class="ttdoc">Structure d'un Chips.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:33</div></div>
+<div class="ttc" id="astructvirus_html_af952b682874f8080fea53718dc136874"><div class="ttname"><a href="structvirus.html#af952b682874f8080fea53718dc136874">virus::speed</a></div><div class="ttdeci">int speed</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:52</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_af26cc46b3e44fc0d5fce593e3017fe51a93b693cd5e899a393c111304ceec66b0"><div class="ttname"><a href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a93b693cd5e899a393c111304ceec66b0">Firewall</a></div><div class="ttdeci">@ Firewall</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:15</div></div>
+<div class="ttc" id="astructchips_html_a8e571a06ce944f7ed2e22f615eb5db8a"><div class="ttname"><a href="structchips.html#a8e571a06ce944f7ed2e22f615eb5db8a">chips::next</a></div><div class="ttdeci">struct chips * next</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:40</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a1bc775a49ea5e176a882d8734f2dd371"><div class="ttname"><a href="CVV__TYPE_8h.html#a1bc775a49ea5e176a882d8734f2dd371">table_of_chips</a></div><div class="ttdeci">ChipsData table_of_chips[TABCHIPS_LEN]</div><div class="ttdoc">Table des Chips prédéfinis.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:84</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a5cc99e854e0cb41dc8bad8fd69c3405c"><div class="ttname"><a href="CVV__TYPE_8h.html#a5cc99e854e0cb41dc8bad8fd69c3405c">createChipsFromType</a></div><div class="ttdeci">Chips * createChipsFromType(ChipsType type)</div><div class="ttdoc">Cherche le Chips prédéfini à partir du type, et en renvoie une copie.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.c:85</div></div>
+<div class="ttc" id="astructChipsData_html"><div class="ttname"><a href="structChipsData.html">ChipsData</a></div><div class="ttdoc">Structure d'une donnée de Chips prédéfini (contenant le Chips et le nom de son type)</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:64</div></div>
+<div class="ttc" id="astructvirus_html_a186f6647c12005f7140cc68ca66190a1"><div class="ttname"><a href="structvirus.html#a186f6647c12005f7140cc68ca66190a1">virus::type</a></div><div class="ttdeci">VirusType type</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:48</div></div>
+<div class="ttc" id="astructchips_html_a59ef462c97f066ad99c483cb3cf9806e"><div class="ttname"><a href="structchips.html#a59ef462c97f066ad99c483cb3cf9806e">chips::power</a></div><div class="ttdeci">int power</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:39</div></div>
+<div class="ttc" id="astructvirus_html_ab555e6ef212e837b442713d8f95f055e"><div class="ttname"><a href="structvirus.html#ab555e6ef212e837b442713d8f95f055e">virus::power</a></div><div class="ttdeci">int power</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:54</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a8d2e671ba474860b08ea68d941d4fcc9"><div class="ttname"><a href="CVV__TYPE_8h.html#a8d2e671ba474860b08ea68d941d4fcc9">Virus</a></div><div class="ttdeci">struct virus Virus</div><div class="ttdoc">Structure d'un Virus.</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a234f23489070a713433662b7736d5a79"><div class="ttname"><a href="CVV__TYPE_8h.html#a234f23489070a713433662b7736d5a79">getChipsIndexFromType</a></div><div class="ttdeci">int getChipsIndexFromType(ChipsType type)</div><div class="ttdoc">Cherche le Chips prédéfini à partir du type, et renvoie son index dans la table.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.c:58</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_af26cc46b3e44fc0d5fce593e3017fe51af6ae22069d0427bb2d19adad213f2b35"><div class="ttname"><a href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51af6ae22069d0427bb2d19adad213f2b35">ALU</a></div><div class="ttdeci">@ ALU</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:11</div></div>
+<div class="ttc" id="astructvirus_html_a3615dd2ece1c578f266273b064fea1b0"><div class="ttname"><a href="structvirus.html#a3615dd2ece1c578f266273b064fea1b0">virus::prev_line</a></div><div class="ttdeci">struct virus * prev_line</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:57</div></div>
+<div class="ttc" id="astructVirusData_html"><div class="ttname"><a href="structVirusData.html">VirusData</a></div><div class="ttdoc">Structure d'une donnée de Virus prédéfini (contenant le Virus et le nom de son type)</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:73</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_af26cc46b3e44fc0d5fce593e3017fe51"><div class="ttname"><a href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51">ChipsType</a></div><div class="ttdeci">ChipsType</div><div class="ttdoc">Le type de Chips, sous forme d'un caractère.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:10</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a1bdb12f16322e159c719b7fb5ec2665f"><div class="ttname"><a href="CVV__TYPE_8h.html#a1bdb12f16322e159c719b7fb5ec2665f">TABCHIPS_LEN</a></div><div class="ttdeci">#define TABCHIPS_LEN</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:78</div></div>
+<div class="ttc" id="astructVirusData_html_a8ea11eaa57292eff092effdf01fb7be2"><div class="ttname"><a href="structVirusData.html#a8ea11eaa57292eff092effdf01fb7be2">VirusData::nom</a></div><div class="ttdeci">char * nom</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:75</div></div>
+<div class="ttc" id="astructchips_html_a1d32b7d2e606ed8f229ce793ad40dbf2"><div class="ttname"><a href="structchips.html#a1d32b7d2e606ed8f229ce793ad40dbf2">chips::life</a></div><div class="ttdeci">int life</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:35</div></div>
+<div class="ttc" id="astructvirus_html_a531eef5f7d194e2d6beb07a369d742bd"><div class="ttname"><a href="structvirus.html#a531eef5f7d194e2d6beb07a369d742bd">virus::next</a></div><div class="ttdeci">struct virus * next</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:55</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_ae8c6e1c10fbff742642ec2416900eb50"><div class="ttname"><a href="CVV__TYPE_8h.html#ae8c6e1c10fbff742642ec2416900eb50">createChipsFromIndex</a></div><div class="ttdeci">Chips * createChipsFromIndex(int index)</div><div class="ttdoc">Cherche le Chips prédéfini à partir de son index dans la table, et en renvoie une copie.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.c:103</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a4f16ae4f6819766dbdefa48c2c2225caa9dbe1b913a2a87d6d05f1997b5d5f825"><div class="ttname"><a href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa9dbe1b913a2a87d6d05f1997b5d5f825">Bug</a></div><div class="ttdeci">@ Bug</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:26</div></div>
+<div class="ttc" id="astructvirus_html_a1b3a08cf4c99fe0597e14b61c56ee0cc"><div class="ttname"><a href="structvirus.html#a1b3a08cf4c99fe0597e14b61c56ee0cc">virus::position</a></div><div class="ttdeci">int position</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:51</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_af26cc46b3e44fc0d5fce593e3017fe51a162d558be90705dfa6cfb6b78bf1cac4"><div class="ttname"><a href="CVV__TYPE_8h.html#af26cc46b3e44fc0d5fce593e3017fe51a162d558be90705dfa6cfb6b78bf1cac4">PMMU</a></div><div class="ttdeci">@ PMMU</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:13</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html_a4f16ae4f6819766dbdefa48c2c2225caa34848895baa522a535fa8587aa9657d3"><div class="ttname"><a href="CVV__TYPE_8h.html#a4f16ae4f6819766dbdefa48c2c2225caa34848895baa522a535fa8587aa9657d3">SegFault</a></div><div class="ttdeci">@ SegFault</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:24</div></div>
+<div class="ttc" id="astructchips_html_a2f6c73b0357bc080e0e90c312c476a75"><div class="ttname"><a href="structchips.html#a2f6c73b0357bc080e0e90c312c476a75">chips::position</a></div><div class="ttdeci">int position</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:37</div></div>
+<div class="ttc" id="astructvirus_html_abe2ce37fb7b001e8e5acba60ca58bfa1"><div class="ttname"><a href="structvirus.html#abe2ce37fb7b001e8e5acba60ca58bfa1">virus::life</a></div><div class="ttdeci">int life</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:49</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 #include <CVV/CVV_FILE.h>
@@ -22,7 +21,6 @@ Virus * parseVirus(const char * data) {
     tmp->turn = turn;
     tmp->position = OOB;
     return tmp;
-    // return createVirus(type, line, 3, 1, turn, 1);
 }
 
 void loadGame(Game * game, FILE * f) {

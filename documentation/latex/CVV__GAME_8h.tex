@@ -1,0 +1,281 @@
+\hypertarget{CVV__GAME_8h}{}\doxysection{Référence du fichier inc/\+C\+V\+V/\+C\+V\+V\+\_\+\+G\+A\+ME.h}
+\label{CVV__GAME_8h}\index{inc/CVV/CVV\_GAME.h@{inc/CVV/CVV\_GAME.h}}
+{\ttfamily \#include $<$C\+V\+V/\+C\+V\+V\+\_\+\+T\+Y\+P\+E.\+h$>$}\newline
+Graphe des dépendances par inclusion de C\+V\+V\+\_\+\+G\+A\+M\+E.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{CVV__GAME_8h_a061be745007ed1f47995102e7df1206c}{\+\_\+\+\_\+\+C\+V\+V\+\_\+\+G\+A\+ME}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{CVV__GAME_8h_aa679fab91c83d4603f21bc43f8c1c770}{area\+Available}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game, int line, int position)
+\begin{DoxyCompactList}\small\item\em Indique si la place est libre pour un Chips ou non. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_af7ab25731c59f4102b2c90f93a2258cf}{chips\+Shoot\+Virus}} (\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$this\+\_\+chips, \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$virus\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}action du Chips sélectionné, qui est de retirer au life du Virus en face le montant power dudit Chips. On notera qu\textquotesingle{}un Chips peut tirer à travers les autres Chips. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_a0ab1829702d00331ae26b0fa21fe5006}{virus\+Eat\+Chips}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$this\+\_\+virus, \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$chips\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}action du Virus sélectionné, qui est de retirer au life du Chips juste devant le montant power dudit Virus. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_a7f2453abd85fdf94fcf3f442c81264b3}{virus\+Move}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$this\+\_\+virus, \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$chips\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Fait se déplacer le Virus sélectionné de $<$speed$>$ pas. On notera qu\textquotesingle{}un Virus ne peut pas doubler son suivant sur la ligne, ni passer à travers un Chips se trouvant sur son chemin. On notera également qu\textquotesingle{}un Virus n\textquotesingle{}avancera pas s\textquotesingle{}il n\textquotesingle{}est pas sur le terrain (= si sa position est -\/1, ou O\+OB) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_aebb6431ea72f415e62c0423435089b95}{action\+Chips}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Fait exécuter à tous les Chips de la liste la fonction chips\+Shoot\+Virus. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_ace517da945f43128ff4d9014730b6157}{action\+Virus}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Fait exécuter à tous les Virus de la liste la fonction virus\+Eat\+Chips. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_a5cec0725d7b9dabf9e93bc35ff28e911}{spawn\+Virus}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Fait apparaître les Virus du tour présent sur le plateau de jeu (= les place à la position tout à droite) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_a66b6f1fb68d2fb6cbd420f3396314219}{remove\+Dead\+Chips}} (\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$$\ast$chips\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Parcoure la liste des Chips et supprime ceux dont life vaut 0 (y compris le premier de la liste) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_a373c93b3158fd9074cd4b4a8dc896215}{remove\+Dead\+Virus}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$$\ast$virus\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Parcoure la liste des Virus et supprime ceux dont life vaut 0 (y compris le premier de la liste) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_a8c0abe115763b374fe1dff121e38c9ed}{game\+Turn}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Exécute un tour du jeu (action\+Chips, action\+Virus, etc...) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__GAME_8h_a3bd6d2ce1c6879706b25ce10794afa9c}{is\+Game\+Over}} (\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$\mbox{\hyperlink{structvirus}{virus}})
+\begin{DoxyCompactList}\small\item\em Indique si le jeu est terminé et qui a gagné, selon l\textquotesingle{}existence de la liste des virus, et leurs positions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$ \mbox{\hyperlink{CVV__GAME_8h_a61466f01ff91de3e71f87067abbadd40}{get\+Chips\+From\+Coordinates}} (\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$chips\+\_\+list, int line, int position)
+\begin{DoxyCompactList}\small\item\em Récupère un Chips à partir des coordonnées line-\/position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{CVV__GAME_8h_a061be745007ed1f47995102e7df1206c}\label{CVV__GAME_8h_a061be745007ed1f47995102e7df1206c}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!\_\_CVV\_GAME@{\_\_CVV\_GAME}}
+\index{\_\_CVV\_GAME@{\_\_CVV\_GAME}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{\_\_CVV\_GAME}{\_\_CVV\_GAME}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+C\+V\+V\+\_\+\+G\+A\+ME}
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{CVV__GAME_8h_aebb6431ea72f415e62c0423435089b95}\label{CVV__GAME_8h_aebb6431ea72f415e62c0423435089b95}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!actionChips@{actionChips}}
+\index{actionChips@{actionChips}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{actionChips()}{actionChips()}}
+{\footnotesize\ttfamily int action\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Fait exécuter à tous les Chips de la liste la fonction chips\+Shoot\+Virus. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le jeu, contenant la liste des Chips et la liste des Virus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si la liste de Chips n\textquotesingle{}est pas vide, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_ace517da945f43128ff4d9014730b6157}\label{CVV__GAME_8h_ace517da945f43128ff4d9014730b6157}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!actionVirus@{actionVirus}}
+\index{actionVirus@{actionVirus}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{actionVirus()}{actionVirus()}}
+{\footnotesize\ttfamily int action\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Fait exécuter à tous les Virus de la liste la fonction virus\+Eat\+Chips. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le jeu, contenant la liste des Virus et la liste des Chips \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si la liste de Virus n\textquotesingle{}est pas vide, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_aa679fab91c83d4603f21bc43f8c1c770}\label{CVV__GAME_8h_aa679fab91c83d4603f21bc43f8c1c770}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!areaAvailable@{areaAvailable}}
+\index{areaAvailable@{areaAvailable}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{areaAvailable()}{areaAvailable()}}
+{\footnotesize\ttfamily int area\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game,  }\item[{int}]{line,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Indique si la place est libre pour un Chips ou non. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+{\em line} & La line \\
+\hline
+{\em position} & La position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 = vrai , 0 = faux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_af7ab25731c59f4102b2c90f93a2258cf}\label{CVV__GAME_8h_af7ab25731c59f4102b2c90f93a2258cf}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!chipsShootVirus@{chipsShootVirus}}
+\index{chipsShootVirus@{chipsShootVirus}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{chipsShootVirus()}{chipsShootVirus()}}
+{\footnotesize\ttfamily int chips\+Shoot\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{this\+\_\+chips,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{virus\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Exécute l\textquotesingle{}action du Chips sélectionné, qui est de retirer au life du Virus en face le montant power dudit Chips. On notera qu\textquotesingle{}un Chips peut tirer à travers les autres Chips. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em this\+\_\+chips} & Le Chips qui exécute l\textquotesingle{}action \\
+\hline
+{\em virus\+\_\+list} & La liste dans laquelle se trouve le Virus affecté \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_a8c0abe115763b374fe1dff121e38c9ed}\label{CVV__GAME_8h_a8c0abe115763b374fe1dff121e38c9ed}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!gameTurn@{gameTurn}}
+\index{gameTurn@{gameTurn}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{gameTurn()}{gameTurn()}}
+{\footnotesize\ttfamily int game\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Exécute un tour du jeu (action\+Chips, action\+Virus, etc...) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si le plateau de jeu existe, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_a61466f01ff91de3e71f87067abbadd40}\label{CVV__GAME_8h_a61466f01ff91de3e71f87067abbadd40}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!getChipsFromCoordinates@{getChipsFromCoordinates}}
+\index{getChipsFromCoordinates@{getChipsFromCoordinates}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{getChipsFromCoordinates()}{getChipsFromCoordinates()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}}$\ast$ get\+Chips\+From\+Coordinates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{chips\+\_\+list,  }\item[{int}]{line,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Récupère un Chips à partir des coordonnées line-\/position. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chips\+\_\+list} & Liste de Chips \\
+\hline
+{\em line} & La line du Chips à chercher \\
+\hline
+{\em position} & La position du Chips à chercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur du Chips trouvé, ou N\+U\+LL si pas trouvé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_a3bd6d2ce1c6879706b25ce10794afa9c}\label{CVV__GAME_8h_a3bd6d2ce1c6879706b25ce10794afa9c}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{isGameOver()}{isGameOver()}}
+{\footnotesize\ttfamily int is\+Game\+Over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{virus }\end{DoxyParamCaption})}
+
+
+
+Indique si le jeu est terminé et qui a gagné, selon l\textquotesingle{}existence de la liste des virus, et leurs positions. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em virus} & la liste de virus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si le joueur gagne, 2 si les virus gagnent, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_a66b6f1fb68d2fb6cbd420f3396314219}\label{CVV__GAME_8h_a66b6f1fb68d2fb6cbd420f3396314219}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!removeDeadChips@{removeDeadChips}}
+\index{removeDeadChips@{removeDeadChips}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{removeDeadChips()}{removeDeadChips()}}
+{\footnotesize\ttfamily int remove\+Dead\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$$\ast$}]{chips\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Parcoure la liste des Chips et supprime ceux dont life vaut 0 (y compris le premier de la liste) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chips\+\_\+list} & Pointeur vers la liste des Chips \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si la liste de Chips n\textquotesingle{}est pas vide, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_a373c93b3158fd9074cd4b4a8dc896215}\label{CVV__GAME_8h_a373c93b3158fd9074cd4b4a8dc896215}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!removeDeadVirus@{removeDeadVirus}}
+\index{removeDeadVirus@{removeDeadVirus}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{removeDeadVirus()}{removeDeadVirus()}}
+{\footnotesize\ttfamily int remove\+Dead\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$$\ast$}]{virus\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Parcoure la liste des Virus et supprime ceux dont life vaut 0 (y compris le premier de la liste) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em virus\+\_\+list} & Pointeur vers la liste des Virus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si la liste de Virus n\textquotesingle{}est pas vide, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_a5cec0725d7b9dabf9e93bc35ff28e911}\label{CVV__GAME_8h_a5cec0725d7b9dabf9e93bc35ff28e911}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!spawnVirus@{spawnVirus}}
+\index{spawnVirus@{spawnVirus}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{spawnVirus()}{spawnVirus()}}
+{\footnotesize\ttfamily int spawn\+Virus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Fait apparaître les Virus du tour présent sur le plateau de jeu (= les place à la position tout à droite) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu, contenant les Virus et le tour actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si la liste de Virus n\textquotesingle{}est pas vide, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_a0ab1829702d00331ae26b0fa21fe5006}\label{CVV__GAME_8h_a0ab1829702d00331ae26b0fa21fe5006}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!virusEatChips@{virusEatChips}}
+\index{virusEatChips@{virusEatChips}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{virusEatChips()}{virusEatChips()}}
+{\footnotesize\ttfamily int virus\+Eat\+Chips (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{this\+\_\+virus,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{chips\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Exécute l\textquotesingle{}action du Virus sélectionné, qui est de retirer au life du Chips juste devant le montant power dudit Virus. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em this\+\_\+virus} & Le Virus qui exécute l\textquotesingle{}action \\
+\hline
+{\em chips\+\_\+list} & La liste dans laquelle se trouve le Chips affecté \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__GAME_8h_a7f2453abd85fdf94fcf3f442c81264b3}\label{CVV__GAME_8h_a7f2453abd85fdf94fcf3f442c81264b3}} 
+\index{CVV\_GAME.h@{CVV\_GAME.h}!virusMove@{virusMove}}
+\index{virusMove@{virusMove}!CVV\_GAME.h@{CVV\_GAME.h}}
+\doxysubsubsection{\texorpdfstring{virusMove()}{virusMove()}}
+{\footnotesize\ttfamily int virus\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$}]{this\+\_\+virus,  }\item[{\mbox{\hyperlink{CVV__TYPE_8h_abb6af171f58fc0b19cb346f03f6a46e8}{Chips}} $\ast$}]{chips\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Fait se déplacer le Virus sélectionné de $<$speed$>$ pas. On notera qu\textquotesingle{}un Virus ne peut pas doubler son suivant sur la ligne, ni passer à travers un Chips se trouvant sur son chemin. On notera également qu\textquotesingle{}un Virus n\textquotesingle{}avancera pas s\textquotesingle{}il n\textquotesingle{}est pas sur le terrain (= si sa position est -\/1, ou O\+OB) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em this\+\_\+virus} & Le Virus qui avance \\
+\hline
+{\em chips\+\_\+list} & La liste dans laquelle se trouve l\textquotesingle{}éventuel Chips qui va bloquer le Virus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si le Virus avance, 0 sinon 
+\end{DoxyReturn}

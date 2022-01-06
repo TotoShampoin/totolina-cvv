@@ -1,0 +1,98 @@
+\hypertarget{CVV__FILE_8c}{}\doxysection{Référence du fichier src/\+C\+V\+V/\+C\+V\+V\+\_\+\+F\+I\+LE.c}
+\label{CVV__FILE_8c}\index{src/CVV/CVV\_FILE.c@{src/CVV/CVV\_FILE.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$C\+V\+V/\+C\+V\+V\+\_\+\+F\+I\+L\+E.\+h$>$}\newline
+{\ttfamily \#include $<$C\+V\+V/\+C\+V\+V\+\_\+\+D\+A\+T\+A.\+h$>$}\newline
+Graphe des dépendances par inclusion de C\+V\+V\+\_\+\+F\+I\+L\+E.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{CVV__FILE_8c_a6eda2462b32afc4ced662935977c06d4}{get\+Line}} (char $\ast$line, int len, F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Lis les caractères contenu dans file, jusqu\textquotesingle{}à atteindre un retour à la ligne. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}} $\ast$ \mbox{\hyperlink{CVV__FILE_8c_a372f9413dd9266a73ffc1dda6a95543a}{parse\+Virus}} (const char $\ast$data)
+\begin{DoxyCompactList}\small\item\em Convertie la ligne du fichier en Virus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CVV__FILE_8c_ae7a7ec413f1f6dbc0f59e2f13f1833ac}{load\+Game}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game, F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Lis tout le fichier pour initialiser le plateau de jeu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CVV__FILE_8c_a87fb6bbdd351cc35ed15a59ff4beb5c7}{open\+Game}} (\mbox{\hyperlink{structGame}{Game}} $\ast$game, const char $\ast$nom\+\_\+du\+\_\+fichier)
+\begin{DoxyCompactList}\small\item\em Exécute les fonctions de lecture de fichier et d\textquotesingle{}initialisation du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{CVV__FILE_8c_a6eda2462b32afc4ced662935977c06d4}\label{CVV__FILE_8c_a6eda2462b32afc4ced662935977c06d4}} 
+\index{CVV\_FILE.c@{CVV\_FILE.c}!getLine@{getLine}}
+\index{getLine@{getLine}!CVV\_FILE.c@{CVV\_FILE.c}}
+\doxysubsubsection{\texorpdfstring{getLine()}{getLine()}}
+{\footnotesize\ttfamily int get\+Line (\begin{DoxyParamCaption}\item[{char $\ast$}]{line,  }\item[{int}]{len,  }\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Lis les caractères contenu dans file, jusqu\textquotesingle{}à atteindre un retour à la ligne. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em line} & Chaîne de caractères qui contiendra la ligne lue \\
+\hline
+{\em len} & Longueur de line, pour éviter un Seg\+Fault \\
+\hline
+{\em file} & Fichier à lire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Indicateur de fin de fichier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__FILE_8c_ae7a7ec413f1f6dbc0f59e2f13f1833ac}\label{CVV__FILE_8c_ae7a7ec413f1f6dbc0f59e2f13f1833ac}} 
+\index{CVV\_FILE.c@{CVV\_FILE.c}!loadGame@{loadGame}}
+\index{loadGame@{loadGame}!CVV\_FILE.c@{CVV\_FILE.c}}
+\doxysubsubsection{\texorpdfstring{loadGame()}{loadGame()}}
+{\footnotesize\ttfamily void load\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game,  }\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Lis tout le fichier pour initialiser le plateau de jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+{\em file} & Le fichier à lire \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{CVV__FILE_8c_a87fb6bbdd351cc35ed15a59ff4beb5c7}\label{CVV__FILE_8c_a87fb6bbdd351cc35ed15a59ff4beb5c7}} 
+\index{CVV\_FILE.c@{CVV\_FILE.c}!openGame@{openGame}}
+\index{openGame@{openGame}!CVV\_FILE.c@{CVV\_FILE.c}}
+\doxysubsubsection{\texorpdfstring{openGame()}{openGame()}}
+{\footnotesize\ttfamily int open\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{game,  }\item[{const char $\ast$}]{nom\+\_\+du\+\_\+fichier }\end{DoxyParamCaption})}
+
+
+
+Exécute les fonctions de lecture de fichier et d\textquotesingle{}initialisation du jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em game} & Le plateau de jeu \\
+\hline
+{\em nom\+\_\+du\+\_\+fichier} & Le nom du fichier à lire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si le fichier existe, 1 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CVV__FILE_8c_a372f9413dd9266a73ffc1dda6a95543a}\label{CVV__FILE_8c_a372f9413dd9266a73ffc1dda6a95543a}} 
+\index{CVV\_FILE.c@{CVV\_FILE.c}!parseVirus@{parseVirus}}
+\index{parseVirus@{parseVirus}!CVV\_FILE.c@{CVV\_FILE.c}}
+\doxysubsubsection{\texorpdfstring{parseVirus()}{parseVirus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_a8d2e671ba474860b08ea68d941d4fcc9}{Virus}}$\ast$ parse\+Virus (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Convertie la ligne du fichier en Virus. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & Ligne du fichier contenant les données du Virus (son type et ses coordonnées) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le Virus créé par la conversion 
+\end{DoxyReturn}

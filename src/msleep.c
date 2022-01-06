@@ -1,26 +1,10 @@
 #include <msleep.h>
-// Code trouvé sur internet
-
 #include <time.h>
-#include <errno.h>
 
-/* msleep(): Sleep for the requested number of milliseconds. */
 int msleep(long msec) {
-    struct timespec ts;
-    int res;
-
-    if (msec < 0)
-    {
-        errno = EINVAL;
-        return -1;
-    }
-
+    struct timespec ts; int res;
     ts.tv_sec = msec / 1000;
     ts.tv_nsec = (msec % 1000) * 1000000;
-
-    do {
-        res = nanosleep(&ts, &ts);
-    } while (res && errno == EINTR);
-
+    while ((res = nanosleep(&ts, &ts)));
     return res;
 }

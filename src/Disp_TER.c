@@ -53,8 +53,8 @@ void dispChipsPrompt(int current_price) {
     printf("Money: $%d\nEnter the chips letter, followed by its line (1-%d) and position (1-%d)\n", current_price, NBLINE, NBPOS);
 }
 
-void dispTurn(Game * game) {
-    printf("Game turn %d\n\n", game->turn);
+void dispTurn(int turn) {
+    printf("Game turn %d\n\n", turn);
 }
 
 void dispError(int error) {

@@ -37,7 +37,7 @@ int virusEatChips(Virus * V, Chips * CL) {
 }
 
 int virusMove(Virus * V, Chips * CL) {
-    if( V->position > -1 ) {
+    if( V->position > OOB ) {
         int will_advance = 1;
         while( CL !=NULL ) {
             if( V->line == CL->line && V->position - CL->position <= V->speed ) {
@@ -57,6 +57,7 @@ int virusMove(Virus * V, Chips * CL) {
 }
 
 int actionChips(Game * game) {
+    if(game->chips == NULL) return 0;
     Chips * C = game->chips;
     while( C != NULL ) {
         chipsShootVirus(C, game->virus);
@@ -149,11 +150,6 @@ int gameTurn(Game * game) {
     return 1;
 }
 
-int initGame(Game ** game) {
-    if(*game == NULL) *game = malloc(sizeof(Game));
-    return 1;
-}
-
 int isGameOver( Virus *V){
     if ( V==NULL) return 1;
     while(V != NULL){
@@ -161,4 +157,11 @@ int isGameOver( Virus *V){
         V= V->next ;
     } 
     return 0 ;
+}
+
+Chips * getChipsFromCoordinates(Chips * CL, int line, int position) {
+    while(CL != NULL) {
+        if(CL->line == line && CL->position == position) return CL;
+        CL = CL->next;
+    } return NULL;
 }

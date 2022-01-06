@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chips vs Virus:  Fichier source de inc/Disp_MLV.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Chips vs Virus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Disp_MLV.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Disp__MLV_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="CVV__TYPE_8h.html">CVV/CVV_TYPE.h</a>&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef CVV_DISP_MLV</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;MLV/MLV_all.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a241aeeb764887ae5e3de58b98f04b16d">    5</a></span>&#160;<span class="preprocessor">#define WIDTH  640</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#ac0c4e728cc436ebebd9fc37273d2431d">    6</a></span>&#160;<span class="preprocessor">#define HEIGTH 480</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a1541b84b27c297b9090b9d5474a80c32">   12</a></span>&#160;<span class="preprocessor">#define GO_X 48</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#ae2d654968e1f109adcd9e52a4d9b42e4">   13</a></span>&#160;<span class="preprocessor">#define GO_Y 96</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a1691449c11d66cc4c93212033b2c0ed5">   14</a></span>&#160;<span class="preprocessor">#define MO_X 32</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a746a746c6694cf1948f05e3041869893">   15</a></span>&#160;<span class="preprocessor">#define MO_Y 320</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a8ca8ddbd7d1fc2825884426f24c93610">   16</a></span>&#160;<span class="preprocessor">#define VO_X 320</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#aab7cf7a4c84622891148f93b3235e544">   17</a></span>&#160;<span class="preprocessor">#define VO_Y 280</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a2c2482727fc22be0d0034921ebc25177">   18</a></span>&#160;<span class="preprocessor">#define LO_X 24</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a7568f8fdc124eb042a0baa1e0ec9d422">   19</a></span>&#160;<span class="preprocessor">#define LO_Y 16 </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a1d653288b57b4803cadeb668982a93ef">   20</a></span>&#160;<span class="preprocessor">#define TO_X 320</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a5a914b6048427bd352bee698f52d7d83">   21</a></span>&#160;<span class="preprocessor">#define TO_Y 64</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#ab4bde0eaeb5051df78fec70afcf1789e">   22</a></span>&#160;<span class="preprocessor">#define EO_X 320</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a9771341018754b820cecf370e75da51c">   23</a></span>&#160;<span class="preprocessor">#define EO_Y 16</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a0db1fb9656a2740f5c127c1eb09608d7">   25</a></span>&#160;<span class="preprocessor">#define NOLIFE -1</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a6c54e72c6142d317114a29adbcbb24b6">   27</a></span>&#160;<span class="preprocessor">#define TRANSPARENT 0x00000000</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">struct </span>{                </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a407aaebb9941b264afa524969da7f94c">   34</a></span>&#160;        MLV_Image * <a class="code" href="Disp__MLV_8h.html#a407aaebb9941b264afa524969da7f94c">lg</a>;         </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a9ab486a4b204a2283fbabb1a6cf54d50">   35</a></span>&#160;        MLV_Image * <a class="code" href="Disp__MLV_8h.html#a9ab486a4b204a2283fbabb1a6cf54d50">sp</a>;         </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    } <a class="code" href="Disp__MLV_8h.html#a245be68a74c2f2551825a2bf6c981391">sprites</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">struct </span>{                </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#ad141b9571b3a3afddc662f3e5016a4c9">   38</a></span>&#160;        MLV_Font * <a class="code" href="Disp__MLV_8h.html#ad141b9571b3a3afddc662f3e5016a4c9">tn</a>;          </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a22afb3f9cedbe6ca0061cd284b2cb0e2">   39</a></span>&#160;        MLV_Font * <a class="code" href="Disp__MLV_8h.html#a22afb3f9cedbe6ca0061cd284b2cb0e2">ma</a>;          </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// MLV_Font * bg;          /**&lt; Police grande (inutilisée) */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    } <a class="code" href="Disp__MLV_8h.html#a88665ea35e4643b0409078433cba48fd">fonts</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// struct {                // Les sons et musiques (inutilisées)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//     MLV_Music * ms;         // La musique du jeu</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//     MLV_Sound * cs;         // Chips shoot</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">//     MLV_Sound * vs;         // Virus shoot</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//     MLV_Sound * cd;         // Chips dead</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//     MLV_Sound * vd;         // Virus dead</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// } sounds;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">struct </span>{                </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a7d4220ce9faf9af1d6eb21bae2f45a5f">   50</a></span>&#160;        MLV_Color <a class="code" href="Disp__MLV_8h.html#a7d4220ce9faf9af1d6eb21bae2f45a5f">bg</a>;           </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a5a3746b0dc95299702954f8d0e64e44c">   51</a></span>&#160;        MLV_Color <a class="code" href="Disp__MLV_8h.html#a5a3746b0dc95299702954f8d0e64e44c">ln</a>;           </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a7e0d941277356c5ef3d6e8363719e799">   52</a></span>&#160;        MLV_Color <a class="code" href="Disp__MLV_8h.html#a7e0d941277356c5ef3d6e8363719e799">tx</a>;           </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#ae02f58e7bb449a6a65a4c43cb0d7a0bd">   53</a></span>&#160;        MLV_Color <a class="code" href="Disp__MLV_8h.html#ae02f58e7bb449a6a65a4c43cb0d7a0bd">bx</a>;           </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#ac41edd467c8162503e7d6fa29ed12ca4">   54</a></span>&#160;        MLV_Color <a class="code" href="Disp__MLV_8h.html#ac41edd467c8162503e7d6fa29ed12ca4">bd</a>;           </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    } <a class="code" href="Disp__MLV_8h.html#af6a99432dfe01e4e088e884e8ad3be89">colors</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} <a class="code" href="Disp__MLV_8h.html#a292b806ac5b752c7a810f952a7699f18">assets</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#ac1f28a914cd5ce9ce28573f401a93f1c">loadAssetsMLV</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#a7e878630a604dea4fa604d12c3e53f5e">unloadAssetsMLV</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#a8fe1bdae02604d752459d0a29137d13d">initMLV</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#a00fe8544b5ce8bacc1a372fadc13d771">closeMLV</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#ae654450988d7dc945bea60fd0531c17b">reinitMLV</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a9abb47e8e2b579b739823eb478fd3094">clearScreenMLV</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a6ed96152152d51cc5f4378d7a067edfe">dispStrMLV</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">char</span> * text, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a29f502283d0ea85365e3dec1a6e2b2d2">dispIntMLV</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">char</span> * text, <span class="keywordtype">int</span> number, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a5f88dcab44bca3db34af27e2e7004c0d">dispTurnMLV</a>(<span class="keywordtype">int</span> turn);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a23bbc8a5ccefa2f8abe11398c12647d3">dispMoneyMLV</a>(<span class="keywordtype">int</span> money);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a02e7c3699e34438a946c4708ea591de5">dispLogoMLV</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#ab90d4717fa5aa6973c3f0ea796ce9382">dispErrorMLV</a>(<span class="keywordtype">int</span> error);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a3c17bb9e8fd9df1f33a0d746cbdba039">lifebarMLV</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> life);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a457a6c9a7c40d345e4c28f9a3d301f28">putSpriteMLV</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> sprite, <span class="keywordtype">int</span> life);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a45216eebd71567cc1db0a17e6e271201">dispGridMLV</a>(<a class="code" href="structGame.html">Game</a> * game);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#af334b75cefcf161c6e6003b77cce8a27">dispMarketMLV</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a723ed92255d20a47ce68b74c0ba35302">dispUpcomingWaveMLV</a>(<a class="code" href="structvirus.html">Virus</a> * virus_list);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa2ecc848d166c270bf3e2e046c5aebcf6">  157</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {<a class="code" href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>, <a class="code" href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa2dd609ad1f04fe6e979d97ae1276f880">SPRITE</a>, <a class="code" href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa9683eed396eefe42dcddacfbbc511e1f">CHIPS</a>, <a class="code" href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa2ecc848d166c270bf3e2e046c5aebcf6">VIRUS</a>, <a class="code" href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa0593585da9181e972974c1274d8f2b4f">DEBUG</a>} <a class="code" href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1f">InfoType</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#a6cee8e7dfaab39cbc915a4aaf0906dde">showInfosMLV</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code" href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1f">InfoType</a> type, <span class="keywordtype">void</span> * data);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#acf9207d89f5e97dad6fd3952dbd483fc">msgBoxMLV</a>(<span class="keywordtype">char</span> ** input, <span class="keywordtype">char</span> * str, <span class="keywordtype">int</span> <a class="code" href="Control__TER_8h.html#ad022b4979f6725fdd7889a913a9f8f21">prompt</a>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Disp__MLV_8h.html#a418460805a7755a9b3fbdeb9c65ba8fb">fetchMousePositionMLV</a>(<span class="keywordtype">int</span> * x, <span class="keywordtype">int</span> * y, <span class="keywordtype">char</span> * buttons);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#ab324cf9373a22b81e9ac3a415548b30f">getGridPositionFromMouseMLV</a>(<span class="keywordtype">int</span> * line, <span class="keywordtype">int</span> * position, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Disp__MLV_8h.html#ac4d9481eb2062974e403d07a1160888d">getChipsIndexOnMarketFromMouseMLV</a>(<span class="keywordtype">int</span> * index, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<a class="code" href="structvirus.html">Virus</a> * <a class="code" href="Disp__MLV_8h.html#a1dc9fd12de752825ba90120fd3419826">getVirusOnWaveFromMouseMLV</a>(<a class="code" href="structvirus.html">Virus</a> * virus_list, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="Disp__MLV_8h.html#abe8e11fdb7c59b588a0d15e64cc4e6d0">  220</a></span>&#160;<span class="preprocessor">#define CVV_DISP_MLV</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aDisp__MLV_8h_html_af6a99432dfe01e4e088e884e8ad3be89"><div class="ttname"><a href="Disp__MLV_8h.html#af6a99432dfe01e4e088e884e8ad3be89">colors</a></div><div class="ttdeci">struct @0::@3 colors</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a6cee8e7dfaab39cbc915a4aaf0906dde"><div class="ttname"><a href="Disp__MLV_8h.html#a6cee8e7dfaab39cbc915a4aaf0906dde">showInfosMLV</a></div><div class="ttdeci">int showInfosMLV(int x, int y, InfoType type, void *data)</div><div class="ttdoc">(Avancé) Une petite boîte qui affiche les informations d'un élément pointée par la souris</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:152</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a245be68a74c2f2551825a2bf6c981391"><div class="ttname"><a href="Disp__MLV_8h.html#a245be68a74c2f2551825a2bf6c981391">sprites</a></div><div class="ttdeci">struct @0::@1 sprites</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a02e7c3699e34438a946c4708ea591de5"><div class="ttname"><a href="Disp__MLV_8h.html#a02e7c3699e34438a946c4708ea591de5">dispLogoMLV</a></div><div class="ttdeci">void dispLogoMLV()</div><div class="ttdoc">Affiche le logo.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:75</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a00fe8544b5ce8bacc1a372fadc13d771"><div class="ttname"><a href="Disp__MLV_8h.html#a00fe8544b5ce8bacc1a372fadc13d771">closeMLV</a></div><div class="ttdeci">int closeMLV()</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:35</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a4fab2721054fd66cc89f138fd029fd1fac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:157</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a457a6c9a7c40d345e4c28f9a3d301f28"><div class="ttname"><a href="Disp__MLV_8h.html#a457a6c9a7c40d345e4c28f9a3d301f28">putSpriteMLV</a></div><div class="ttdeci">void putSpriteMLV(int x, int y, int sprite, int life)</div><div class="ttdoc">Place un Chips ou un virus.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:95</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a5a3746b0dc95299702954f8d0e64e44c"><div class="ttname"><a href="Disp__MLV_8h.html#a5a3746b0dc95299702954f8d0e64e44c">ln</a></div><div class="ttdeci">MLV_Color ln</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:51</div></div>
+<div class="ttc" id="aCVV__TYPE_8h_html"><div class="ttname"><a href="CVV__TYPE_8h.html">CVV_TYPE.h</a></div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a88665ea35e4643b0409078433cba48fd"><div class="ttname"><a href="Disp__MLV_8h.html#a88665ea35e4643b0409078433cba48fd">fonts</a></div><div class="ttdeci">struct @0::@2 fonts</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_ab324cf9373a22b81e9ac3a415548b30f"><div class="ttname"><a href="Disp__MLV_8h.html#ab324cf9373a22b81e9ac3a415548b30f">getGridPositionFromMouseMLV</a></div><div class="ttdeci">int getGridPositionFromMouseMLV(int *line, int *position, int x, int y)</div><div class="ttdoc">Détermine la position sur la grille à partir de la souris.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:264</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a8fe1bdae02604d752459d0a29137d13d"><div class="ttname"><a href="Disp__MLV_8h.html#a8fe1bdae02604d752459d0a29137d13d">initMLV</a></div><div class="ttdeci">int initMLV()</div><div class="ttdoc">Initialisation de la fenêtre et des ressources graphiques.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:29</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a4fab2721054fd66cc89f138fd029fd1f"><div class="ttname"><a href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1f">InfoType</a></div><div class="ttdeci">InfoType</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:157</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a5f88dcab44bca3db34af27e2e7004c0d"><div class="ttname"><a href="Disp__MLV_8h.html#a5f88dcab44bca3db34af27e2e7004c0d">dispTurnMLV</a></div><div class="ttdeci">void dispTurnMLV(int turn)</div><div class="ttdoc">Affiche le tour.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:68</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a7e878630a604dea4fa604d12c3e53f5e"><div class="ttname"><a href="Disp__MLV_8h.html#a7e878630a604dea4fa604d12c3e53f5e">unloadAssetsMLV</a></div><div class="ttdeci">int unloadAssetsMLV()</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:22</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_ac4d9481eb2062974e403d07a1160888d"><div class="ttname"><a href="Disp__MLV_8h.html#ac4d9481eb2062974e403d07a1160888d">getChipsIndexOnMarketFromMouseMLV</a></div><div class="ttdeci">int getChipsIndexOnMarketFromMouseMLV(int *index, int x, int y)</div><div class="ttdoc">Détermine le type du Chips pointé par la souris sur le marché à Chips, sous la forme de l'index sur l...</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:275</div></div>
+<div class="ttc" id="astructvirus_html"><div class="ttname"><a href="structvirus.html">virus</a></div><div class="ttdoc">Structure d'un Virus.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:47</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a7e0d941277356c5ef3d6e8363719e799"><div class="ttname"><a href="Disp__MLV_8h.html#a7e0d941277356c5ef3d6e8363719e799">tx</a></div><div class="ttdeci">MLV_Color tx</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:52</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_ab90d4717fa5aa6973c3f0ea796ce9382"><div class="ttname"><a href="Disp__MLV_8h.html#ab90d4717fa5aa6973c3f0ea796ce9382">dispErrorMLV</a></div><div class="ttdeci">void dispErrorMLV(int error)</div><div class="ttdoc">Affiche les erreurs.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:81</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a4fab2721054fd66cc89f138fd029fd1fa9683eed396eefe42dcddacfbbc511e1f"><div class="ttname"><a href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa9683eed396eefe42dcddacfbbc511e1f">CHIPS</a></div><div class="ttdeci">@ CHIPS</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:157</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a292b806ac5b752c7a810f952a7699f18"><div class="ttname"><a href="Disp__MLV_8h.html#a292b806ac5b752c7a810f952a7699f18">assets</a></div><div class="ttdeci">struct @0 assets</div><div class="ttdoc">Ressources graphiques, sonores, et couleurs.</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a29f502283d0ea85365e3dec1a6e2b2d2"><div class="ttname"><a href="Disp__MLV_8h.html#a29f502283d0ea85365e3dec1a6e2b2d2">dispIntMLV</a></div><div class="ttdeci">void dispIntMLV(int x, int y, char *text, int number, int size)</div><div class="ttdoc">Affiche un texte suivit d'un nombre.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:63</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a418460805a7755a9b3fbdeb9c65ba8fb"><div class="ttname"><a href="Disp__MLV_8h.html#a418460805a7755a9b3fbdeb9c65ba8fb">fetchMousePositionMLV</a></div><div class="ttdeci">void fetchMousePositionMLV(int *x, int *y, char *buttons)</div><div class="ttdoc">Récupère la position de la souris, ainsi que ses clics.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:256</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a9ab486a4b204a2283fbabb1a6cf54d50"><div class="ttname"><a href="Disp__MLV_8h.html#a9ab486a4b204a2283fbabb1a6cf54d50">sp</a></div><div class="ttdeci">MLV_Image * sp</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:35</div></div>
+<div class="ttc" id="astructGame_html"><div class="ttname"><a href="structGame.html">Game</a></div><div class="ttdoc">Structure d'un plateau de jeu.</div><div class="ttdef"><b>Definition:</b> CVV_TYPE.h:165</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_ae02f58e7bb449a6a65a4c43cb0d7a0bd"><div class="ttname"><a href="Disp__MLV_8h.html#ae02f58e7bb449a6a65a4c43cb0d7a0bd">bx</a></div><div class="ttdeci">MLV_Color bx</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:53</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a4fab2721054fd66cc89f138fd029fd1fa0593585da9181e972974c1274d8f2b4f"><div class="ttname"><a href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa0593585da9181e972974c1274d8f2b4f">DEBUG</a></div><div class="ttdeci">@ DEBUG</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:157</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a1dc9fd12de752825ba90120fd3419826"><div class="ttname"><a href="Disp__MLV_8h.html#a1dc9fd12de752825ba90120fd3419826">getVirusOnWaveFromMouseMLV</a></div><div class="ttdeci">Virus * getVirusOnWaveFromMouseMLV(Virus *virus_list, int x, int y)</div><div class="ttdoc">Détermine le Virus pointé par la souris sur l'affichage de la vague.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:285</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_ac1f28a914cd5ce9ce28573f401a93f1c"><div class="ttname"><a href="Disp__MLV_8h.html#ac1f28a914cd5ce9ce28573f401a93f1c">loadAssetsMLV</a></div><div class="ttdeci">int loadAssetsMLV()</div><div class="ttdoc">Charge les ressources et les met dans assets.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:8</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a6ed96152152d51cc5f4378d7a067edfe"><div class="ttname"><a href="Disp__MLV_8h.html#a6ed96152152d51cc5f4378d7a067edfe">dispStrMLV</a></div><div class="ttdeci">void dispStrMLV(int x, int y, char *text, int size)</div><div class="ttdoc">Affiche un texte.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:50</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a9abb47e8e2b579b739823eb478fd3094"><div class="ttname"><a href="Disp__MLV_8h.html#a9abb47e8e2b579b739823eb478fd3094">clearScreenMLV</a></div><div class="ttdeci">void clearScreenMLV()</div><div class="ttdoc">Efface l'écran et le colorie en bleu.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:46</div></div>
+<div class="ttc" id="aControl__TER_8h_html_ad022b4979f6725fdd7889a913a9f8f21"><div class="ttname"><a href="Control__TER_8h.html#ad022b4979f6725fdd7889a913a9f8f21">prompt</a></div><div class="ttdeci">void prompt(Game *game)</div><div class="ttdoc">Affiche toute les informations dont le joueur a besoin tandis qu'il achète des Chips.</div><div class="ttdef"><b>Definition:</b> Control_TER.c:23</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a7d4220ce9faf9af1d6eb21bae2f45a5f"><div class="ttname"><a href="Disp__MLV_8h.html#a7d4220ce9faf9af1d6eb21bae2f45a5f">bg</a></div><div class="ttdeci">MLV_Color bg</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:50</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a45216eebd71567cc1db0a17e6e271201"><div class="ttname"><a href="Disp__MLV_8h.html#a45216eebd71567cc1db0a17e6e271201">dispGridMLV</a></div><div class="ttdeci">void dispGridMLV(Game *game)</div><div class="ttdoc">Affiche la grille de jeu.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:101</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a723ed92255d20a47ce68b74c0ba35302"><div class="ttname"><a href="Disp__MLV_8h.html#a723ed92255d20a47ce68b74c0ba35302">dispUpcomingWaveMLV</a></div><div class="ttdeci">void dispUpcomingWaveMLV(Virus *virus_list)</div><div class="ttdoc">Affiche la vague de virus qui arrive.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:140</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a407aaebb9941b264afa524969da7f94c"><div class="ttname"><a href="Disp__MLV_8h.html#a407aaebb9941b264afa524969da7f94c">lg</a></div><div class="ttdeci">MLV_Image * lg</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:34</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a23bbc8a5ccefa2f8abe11398c12647d3"><div class="ttname"><a href="Disp__MLV_8h.html#a23bbc8a5ccefa2f8abe11398c12647d3">dispMoneyMLV</a></div><div class="ttdeci">void dispMoneyMLV(int money)</div><div class="ttdoc">Affiche l'argent.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:71</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a4fab2721054fd66cc89f138fd029fd1fa2ecc848d166c270bf3e2e046c5aebcf6"><div class="ttname"><a href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa2ecc848d166c270bf3e2e046c5aebcf6">VIRUS</a></div><div class="ttdeci">@ VIRUS</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:157</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a3c17bb9e8fd9df1f33a0d746cbdba039"><div class="ttname"><a href="Disp__MLV_8h.html#a3c17bb9e8fd9df1f33a0d746cbdba039">lifebarMLV</a></div><div class="ttdeci">void lifebarMLV(int x, int y, int life)</div><div class="ttdoc">Affiche l'ndicateur de life, en nombre.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:90</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_acf9207d89f5e97dad6fd3952dbd483fc"><div class="ttname"><a href="Disp__MLV_8h.html#acf9207d89f5e97dad6fd3952dbd483fc">msgBoxMLV</a></div><div class="ttdeci">int msgBoxMLV(char **input, char *str, int prompt)</div><div class="ttdoc">Affiche une boite de dialogue.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:185</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a22afb3f9cedbe6ca0061cd284b2cb0e2"><div class="ttname"><a href="Disp__MLV_8h.html#a22afb3f9cedbe6ca0061cd284b2cb0e2">ma</a></div><div class="ttdeci">MLV_Font * ma</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:39</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_ac41edd467c8162503e7d6fa29ed12ca4"><div class="ttname"><a href="Disp__MLV_8h.html#ac41edd467c8162503e7d6fa29ed12ca4">bd</a></div><div class="ttdeci">MLV_Color bd</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:54</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_a4fab2721054fd66cc89f138fd029fd1fa2dd609ad1f04fe6e979d97ae1276f880"><div class="ttname"><a href="Disp__MLV_8h.html#a4fab2721054fd66cc89f138fd029fd1fa2dd609ad1f04fe6e979d97ae1276f880">SPRITE</a></div><div class="ttdeci">@ SPRITE</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:157</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_ad141b9571b3a3afddc662f3e5016a4c9"><div class="ttname"><a href="Disp__MLV_8h.html#ad141b9571b3a3afddc662f3e5016a4c9">tn</a></div><div class="ttdeci">MLV_Font * tn</div><div class="ttdef"><b>Definition:</b> Disp_MLV.h:38</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_af334b75cefcf161c6e6003b77cce8a27"><div class="ttname"><a href="Disp__MLV_8h.html#af334b75cefcf161c6e6003b77cce8a27">dispMarketMLV</a></div><div class="ttdeci">void dispMarketMLV()</div><div class="ttdoc">Affiche le marché des Chips, sous la forme d'un tableau.</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:124</div></div>
+<div class="ttc" id="aDisp__MLV_8h_html_ae654450988d7dc945bea60fd0531c17b"><div class="ttname"><a href="Disp__MLV_8h.html#ae654450988d7dc945bea60fd0531c17b">reinitMLV</a></div><div class="ttdeci">int reinitMLV()</div><div class="ttdef"><b>Definition:</b> Disp_MLV.c:40</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

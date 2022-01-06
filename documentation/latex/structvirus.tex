@@ -1,0 +1,111 @@
+\hypertarget{structvirus}{}\doxysection{Référence de la structure virus}
+\label{structvirus}\index{virus@{virus}}
+
+
+Structure d\textquotesingle{}un Virus.  
+
+
+
+
+{\ttfamily \#include $<$C\+V\+V\+\_\+\+T\+Y\+P\+E.\+h$>$}
+
+
+
+Graphe de collaboration de virus\+:
+% FIG 0
+\doxysubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}} \mbox{\hyperlink{structvirus_a186f6647c12005f7140cc68ca66190a1}{type}}
+\item 
+int \mbox{\hyperlink{structvirus_abe2ce37fb7b001e8e5acba60ca58bfa1}{life}}
+\item 
+int \mbox{\hyperlink{structvirus_ad83b0232b3a2eed5355f30d7ce3b6d63}{line}}
+\item 
+int \mbox{\hyperlink{structvirus_a1b3a08cf4c99fe0597e14b61c56ee0cc}{position}}
+\item 
+int \mbox{\hyperlink{structvirus_af952b682874f8080fea53718dc136874}{speed}}
+\item 
+int \mbox{\hyperlink{structvirus_a3855bcea05c13a967b5a36d5bd270992}{turn}}
+\item 
+int \mbox{\hyperlink{structvirus_ab555e6ef212e837b442713d8f95f055e}{power}}
+\item 
+struct \mbox{\hyperlink{structvirus}{virus}} $\ast$ \mbox{\hyperlink{structvirus_a531eef5f7d194e2d6beb07a369d742bd}{next}}
+\item 
+struct \mbox{\hyperlink{structvirus}{virus}} $\ast$ \mbox{\hyperlink{structvirus_a1dde04aabad14320538704fffd08bf35}{next\+\_\+line}}
+\item 
+struct \mbox{\hyperlink{structvirus}{virus}} $\ast$ \mbox{\hyperlink{structvirus_a3615dd2ece1c578f266273b064fea1b0}{prev\+\_\+line}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Structure d\textquotesingle{}un Virus. 
+
+
+
+\doxysubsection{Documentation des champs}
+\mbox{\Hypertarget{structvirus_abe2ce37fb7b001e8e5acba60ca58bfa1}\label{structvirus_abe2ce37fb7b001e8e5acba60ca58bfa1}} 
+\index{virus@{virus}!life@{life}}
+\index{life@{life}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{life}{life}}
+{\footnotesize\ttfamily int virus\+::life}
+
+Nombre de points de vies \mbox{\Hypertarget{structvirus_ad83b0232b3a2eed5355f30d7ce3b6d63}\label{structvirus_ad83b0232b3a2eed5355f30d7ce3b6d63}} 
+\index{virus@{virus}!line@{line}}
+\index{line@{line}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily int virus\+::line}
+
+Coordonnée verticale \mbox{\Hypertarget{structvirus_a531eef5f7d194e2d6beb07a369d742bd}\label{structvirus_a531eef5f7d194e2d6beb07a369d742bd}} 
+\index{virus@{virus}!next@{next}}
+\index{next@{next}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structvirus}{virus}}$\ast$ virus\+::next}
+
+Suivant sur la liste \mbox{\Hypertarget{structvirus_a1dde04aabad14320538704fffd08bf35}\label{structvirus_a1dde04aabad14320538704fffd08bf35}} 
+\index{virus@{virus}!next\_line@{next\_line}}
+\index{next\_line@{next\_line}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{next\_line}{next\_line}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structvirus}{virus}}$\ast$ virus\+::next\+\_\+line}
+
+Suivant sur la ligne \mbox{\Hypertarget{structvirus_a1b3a08cf4c99fe0597e14b61c56ee0cc}\label{structvirus_a1b3a08cf4c99fe0597e14b61c56ee0cc}} 
+\index{virus@{virus}!position@{position}}
+\index{position@{position}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily int virus\+::position}
+
+Coordonnée horizontale \mbox{\Hypertarget{structvirus_ab555e6ef212e837b442713d8f95f055e}\label{structvirus_ab555e6ef212e837b442713d8f95f055e}} 
+\index{virus@{virus}!power@{power}}
+\index{power@{power}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{power}{power}}
+{\footnotesize\ttfamily int virus\+::power}
+
+Puissance de tir \mbox{\Hypertarget{structvirus_a3615dd2ece1c578f266273b064fea1b0}\label{structvirus_a3615dd2ece1c578f266273b064fea1b0}} 
+\index{virus@{virus}!prev\_line@{prev\_line}}
+\index{prev\_line@{prev\_line}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{prev\_line}{prev\_line}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structvirus}{virus}}$\ast$ virus\+::prev\+\_\+line}
+
+Précédent sur la ligne \mbox{\Hypertarget{structvirus_af952b682874f8080fea53718dc136874}\label{structvirus_af952b682874f8080fea53718dc136874}} 
+\index{virus@{virus}!speed@{speed}}
+\index{speed@{speed}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily int virus\+::speed}
+
+Vitesse de déplacement \mbox{\Hypertarget{structvirus_a3855bcea05c13a967b5a36d5bd270992}\label{structvirus_a3855bcea05c13a967b5a36d5bd270992}} 
+\index{virus@{virus}!turn@{turn}}
+\index{turn@{turn}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{turn}{turn}}
+{\footnotesize\ttfamily int virus\+::turn}
+
+Tour d\textquotesingle{}apparition \mbox{\Hypertarget{structvirus_a186f6647c12005f7140cc68ca66190a1}\label{structvirus_a186f6647c12005f7140cc68ca66190a1}} 
+\index{virus@{virus}!type@{type}}
+\index{type@{type}!virus@{virus}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CVV__TYPE_8h_a4f16ae4f6819766dbdefa48c2c2225ca}{Virus\+Type}} virus\+::type}
+
+Type de Virus 
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+inc/\+C\+V\+V/\mbox{\hyperlink{CVV__TYPE_8h}{C\+V\+V\+\_\+\+T\+Y\+P\+E.\+h}}\end{DoxyCompactItemize}
