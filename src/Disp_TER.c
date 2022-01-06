@@ -35,7 +35,7 @@ void dispUpcomingWave(Virus * VL) {
     }
     printf("A wave of viruses are approaching...\n");
     for(l=0; l<NBLINE; l++) {
-        printf("\t%d| ", l);
+        printf("\t%d| ", l+1);
         for(p=0; p<NBPOS; p++) {
             printf(" %c", t[l][p]);
         }
