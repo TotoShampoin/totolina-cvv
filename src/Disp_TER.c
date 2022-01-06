@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <Disp_TER.h>
 
 void clear() {
-    printf("\n\e[1;1H\e[2J");
+    // printf("\n\e[1;1H\e[2J");
+    // printf("\n\e[1;1H\e[2J\e[3J");
+    system("clear");
 }
 
 void getChipsString(char * str, Chips * chips) {
